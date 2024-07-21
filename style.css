@@ -1,0 +1,307 @@
+/* Basic Reset */
+body, ul, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Font and Basic Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header and Navigation Styling */
+header {
+    background-color: #000;
+    padding: 10px 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: #2479f0;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.logo a .fletch {
+    color: #fff;
+}
+
+.logo a .maths {
+    color: #2479f0;
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-list li {
+    position: relative;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list a:hover {
+    color: #2479f0;
+}
+
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2479f0;
+    transition: width 0.3s ease;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+.nav-list li.contact {
+    border-radius: 12px;
+    background-color: #2479f0;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-list li.contact a {
+    color: #fff;
+    padding: 0;
+    text-decoration: none;
+    display: block;
+    border-radius: 12px;
+    transition: color 0.3s ease;
+}
+
+.nav-list li.contact:hover {
+    background-color: #fff;
+}
+
+.nav-list li.contact:hover a {
+    color: #2479f0;
+}
+
+/* Homepage Styles */
+.home-page {
+    padding: 20px;
+}
+
+/* Introduction Section Styling */
+.intro .content-box {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro h1 {
+    color: #2479f0;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Course Modules Section Styling */
+.course-modules {
+    margin-top: 40px;
+}
+
+.course-modules h2 {
+    color: #2479f0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.module-category {
+    margin-bottom: 40px;
+}
+
+.module-category h3 {
+    color: #2479f0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modules-container {
+    display: flex;
+    flex-direction: column; /* Vertical arrangement */
+    align-items: center; /* Center modules horizontally */
+    gap: 20px;
+}
+
+.module-box-container {
+    width: 100%;
+    max-width: 500px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+}
+
+.module-box {
+    background-color: #f0f4f8;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.module-box:hover {
+    background-color: #2479f0;
+    color: #fff;
+}
+
+/* Module Page Styles */
+.module-page {
+    display: flex;
+    padding: 20px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 20px; /* Adjust this value as needed */
+    width: 200px; /* Adjust to match the width of your sidebar */
+    padding: 20px;
+    background: #f1f1f1;
+    border-right: 1px solid #ddd;
+    max-height: calc(100vh - 40px); /* Adjust based on your padding/margins */
+    overflow-y: auto;
+}
+
+.sidebar h3 {
+    color: #2479f0;
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    color: #2479f0;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #e3e9f4;
+}
+
+/* Content Area Styling */
+.module-content {
+    flex: 3;
+    max-width: 1500px;
+}
+
+.content-box {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-box h2 {
+    color: #2479f0;
+    margin-bottom: 15px;
+}
+
+.content-box p {
+    margin-bottom: 20px;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.prev-button, .next-button {
+    background-color: #2479f0;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: #1e5bb2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-list li {
+        margin-bottom: 10px;
+    }
+    .home-page {
+        padding: 10px;
+    }
+    .module-page {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .sidebar {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%; /* Make sidebar full-width on smaller screens */
+    }
+}
+.centered{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.algebra_list a{
+    text-decoration: none;
+    color: #1e5bb2;
+}
