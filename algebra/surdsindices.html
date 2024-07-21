@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <title>topic - surds</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Ensure this path is correct for your project -->
+    <title>Topic - Surds</title>
     <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </head>
 <body>
@@ -55,12 +55,37 @@
         <section class="module-content">
             <div class="content-box">
                 <h2>Surds and Indices</h2>
-                <p>A <strong>surd</strong> is a type of irrational number in the form \( \sqrt{a} \) where <strong>a</strong> is not a square number.</p>
-                <p>For example: \( \sqrt{6} \) is a surd because 6 is not a square number.</p>
-                <p>On the other hand,\( \sqrt{4} \) is not a surd, as 4 is a square number. \( \sqrt{4} \) would just be equivalent to 2.</p>
-              
-                   
-                
+                <p>A <strong>surd</strong> is a type of irrational number in the form <span style="color: green;">\( \sqrt{a} \)</span> where <strong>a</strong> is not a square number.</p>
+                <p>For example: <span style="color: green;">\( \sqrt{6} \)</span> is a surd because 6 is not a square number.</p>
+                <p>On the other hand,<span style="color: rgb(128, 0, 0);">\( \sqrt{4} \)</span> is not a surd, as 4 is a square number.<span style="color: rgb(128, 0, 0);">\( \sqrt{4} \)</span> would just be equivalent to 2.</p>
+
+                <!-- First Question -->
+                <div class="question-box">
+                    <p><strong>QUESTION 1:</strong></p>
+                    <p>Which of the following is not a surd?</p>
+                    <div class="answer-boxes">
+                        <div class="answer-box" onclick="checkAnswer(1, 'A')">A. \( \sqrt{16} \)</div>
+                        <div class="answer-box" onclick="checkAnswer(1, 'B')">B. \( \sqrt{6} \)</div>
+                        <div class="answer-box" onclick="checkAnswer(1, 'C')">C. \( \sqrt{19} \)</div>
+                        <div class="answer-box" onclick="checkAnswer(1, 'D')">D. \( \sqrt{8} \)</div>
+                    </div>
+                    <div id="feedback1" class="feedback"></div>
+                </div>
+                    <p>We will come back</p>
+                    <br><br><br><br>
+                <!-- Second Question -->
+                <div class="question-box">
+                    <p><strong>QUESTION 2:</strong></p>
+                    <p>Which of the following simplifies to an integer?</p>
+                    <div class="answer-boxes">
+                        <div class="answer-box" onclick="checkAnswer(2, 'A')">A. \( \sqrt{9} \)</div>
+                        <div class="answer-box" onclick="checkAnswer(2, 'B')">B. \( \sqrt{12} \)</div>
+                        <div class="answer-box" onclick="checkAnswer(2, 'C')">C. \( \sqrt{20} \)</div>
+                        <div class="answer-box" onclick="checkAnswer(2, 'D')">D. \( \sqrt{7} \)</div>
+                    </div>
+                    <div id="feedback2" class="feedback"></div>
+                </div>
+
                 <!-- Navigation Buttons -->
                 <div class="navigation-buttons">
                     <a href="./algebra.html" class="prev-button">Previous</a>
@@ -69,5 +94,46 @@
             </div>
         </section>
     </main>
+
+    <!-- JavaScript for Feedback -->
+    <script>
+        function checkAnswer(questionNumber, option) {
+            // Get the feedback element for the specific question
+            var feedback = document.getElementById('feedback' + questionNumber);
+            
+            // Determine the correct option based on the question number
+            var correctOption;
+            var feedbackMessage;
+    
+            switch (questionNumber) {
+                case 1:
+                    correctOption = 'A';
+                    feedbackMessage = 'Correct! This is because 16 is a square number.';
+                    break;
+                case 2:
+                    correctOption = 'A';
+                    feedbackMessage = 'Correct! This is because 9 is a square number.';
+                    break;
+                case 3:
+                    correctOption = 'B'; // Assuming option B is correct for the third question
+                    feedbackMessage = 'Correct! This is because 25 is a square number.';
+                    break;
+                default:
+                    correctOption = '';
+                    feedbackMessage = 'Incorrect. Try again.';
+                    break;
+            }
+    
+            // Provide feedback based on the user’s answer
+            if (option === correctOption) {
+                feedback.textContent = feedbackMessage;
+                feedback.className = 'feedback correct';
+            } else {
+                feedback.textContent = 'Incorrect. Try again.';
+                feedback.className = 'feedback incorrect';
+            }
+        }
+    </script>
+    
 </body>
 </html>

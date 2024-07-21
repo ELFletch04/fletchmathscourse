@@ -4,6 +4,10 @@ body, ul, h1, h2, h3, p {
     padding: 0;
     list-style: none;
 }
+@keyframes slidein {
+    from { transform: translate(100% 0 0); }
+    to { transform: translate(0 0 0); }
+}
 
 /* Font and Basic Body Styling */
 body {
@@ -274,6 +278,44 @@ nav {
     background-color: #1e5bb2;
 }
 
+/* Question Box Styles */
+.question-box {
+    margin-bottom: 20px;
+}
+
+.answer-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.answer-box {
+    background-color: #f0f4f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.answer-box:hover {
+    background-color: #e3e9f4;
+}
+
+.feedback {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.feedback.correct {
+    color: #2c6d2f;
+}
+
+.feedback.incorrect {
+    color: #d53f3f;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-list {
@@ -295,13 +337,4 @@ nav {
         margin-bottom: 20px;
         width: 100%; /* Make sidebar full-width on smaller screens */
     }
-}
-.centered{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.algebra_list a{
-    text-decoration: none;
-    color: #1e5bb2;
 }
