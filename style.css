@@ -4,10 +4,7 @@ body, ul, h1, h2, h3, p {
     padding: 0;
     list-style: none;
 }
-@keyframes slidein {
-    from { transform: translate(100% 0 0); }
-    to { transform: translate(0 0 0); }
-}
+
 
 /* Font and Basic Body Styling */
 body {
