@@ -60,29 +60,26 @@
                 <p>On the other hand,<span style="color: rgb(128, 0, 0);">\( \sqrt{4} \)</span> is not a surd, as 4 is a square number.<span style="color: rgb(128, 0, 0);">\( \sqrt{4} \)</span> would just be equivalent to 2.</p>
 
                 <!-- First Question -->
-                <div class="question-box">
+                <div class="question-box" data-question="1">
                     <p><strong>QUESTION 1:</strong></p>
                     <p>Which of the following is not a surd?</p>
-                    <div class="answer-boxes">
-                        <div class="answer-box" onclick="checkAnswer(1, 'A')">A. \( \sqrt{16} \)</div>
-                        <div class="answer-box" onclick="checkAnswer(1, 'B')">B. \( \sqrt{6} \)</div>
-                        <div class="answer-box" onclick="checkAnswer(1, 'C')">C. \( \sqrt{19} \)</div>
-                        <div class="answer-box" onclick="checkAnswer(1, 'D')">D. \( \sqrt{8} \)</div>
-                    </div>
+                    <div class="answer-box" data-option="A" onclick="checkAnswer(1, 'A')">A. \( \sqrt{16} \)</div>
+                    <div class="answer-box" data-option="B" onclick="checkAnswer(1, 'B')">B. \( \sqrt{6} \)</div>
+                    <div class="answer-box" data-option="C" onclick="checkAnswer(1, 'C')">C. \( \sqrt{19} \)</div>
+                    <div class="answer-box" data-option="D" onclick="checkAnswer(1, 'D')">D. \( \sqrt{8} \)</div>
                     <div id="feedback1" class="feedback"></div>
                 </div>
+
                     <p>We will come back</p>
                     <br><br><br><br>
                 <!-- Second Question -->
-                <div class="question-box">
+                <div class="question-box" data-question="2">
                     <p><strong>QUESTION 2:</strong></p>
                     <p>Which of the following simplifies to an integer?</p>
-                    <div class="answer-boxes">
-                        <div class="answer-box" onclick="checkAnswer(2, 'A')">A. \( \sqrt{9} \)</div>
-                        <div class="answer-box" onclick="checkAnswer(2, 'B')">B. \( \sqrt{12} \)</div>
-                        <div class="answer-box" onclick="checkAnswer(2, 'C')">C. \( \sqrt{20} \)</div>
-                        <div class="answer-box" onclick="checkAnswer(2, 'D')">D. \( \sqrt{7} \)</div>
-                    </div>
+                    <div class="answer-box" data-option="A" onclick="checkAnswer(2, 'A')">A. \( \sqrt{9} \)</div>
+                    <div class="answer-box" data-option="B" onclick="checkAnswer(2, 'B')">B. \( \sqrt{6} \)</div>
+                    <div class="answer-box" data-option="C" onclick="checkAnswer(2, 'C')">C. \( \sqrt{19} \)</div>
+                    <div class="answer-box" data-option="D" onclick="checkAnswer(2, 'D')">D. \( \sqrt{8} \)</div>
                     <div id="feedback2" class="feedback"></div>
                 </div>
 
@@ -101,10 +98,17 @@
             // Get the feedback element for the specific question
             var feedback = document.getElementById('feedback' + questionNumber);
             
-            // Determine the correct option based on the question number
+            // Determine the correct option and feedback message based on the question number
             var correctOption;
             var feedbackMessage;
+            var answerBoxes = document.querySelectorAll(`.question-box[data-question="${questionNumber}"] .answer-box`);
     
+            // Remove previous feedback and styles
+            answerBoxes.forEach(box => {
+                box.classList.remove('correct', 'incorrect');
+            });
+    
+            // Determine correct option and feedback message based on the question number
             switch (questionNumber) {
                 case 1:
                     correctOption = 'A';
@@ -118,19 +122,29 @@
                     correctOption = 'B'; // Assuming option B is correct for the third question
                     feedbackMessage = 'Correct! This is because 25 is a square number.';
                     break;
+                // Add more cases for additional questions if needed
                 default:
                     correctOption = '';
                     feedbackMessage = 'Incorrect. Try again.';
                     break;
             }
     
+            // Find the selected answer box
+            var selectedBox = Array.from(answerBoxes).find(box => box.textContent.trim().startsWith(option));
+            
             // Provide feedback based on the user’s answer
             if (option === correctOption) {
                 feedback.textContent = feedbackMessage;
                 feedback.className = 'feedback correct';
+                if (selectedBox) {
+                    selectedBox.classList.add('correct');
+                }
             } else {
                 feedback.textContent = 'Incorrect. Try again.';
                 feedback.className = 'feedback incorrect';
+                if (selectedBox) {
+                    selectedBox.classList.add('incorrect');
+                }
             }
         }
     </script>
