@@ -360,10 +360,15 @@ nav {
 @media (max-width: 768px) {
     .sidebar {
         position: static; /* Remove sticky positioning */
-        width: 20%; /* Full width on mobile screens */
+        width: 30%; /* Full width on mobile screens */
         border-right: none; /* Remove border */
         border-bottom: 1px solid #ddd; /* Add border at the bottom */
         margin-bottom: 20px; /* Add space below */
         padding: 10px; /* Adjust padding */
+    }
+    .nav-list{
+    position: static; /* Remove sticky positioning */
+        width: 100%; /* Full width on mobile screens */
+
     }
 }
