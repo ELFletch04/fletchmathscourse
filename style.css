@@ -339,7 +339,7 @@ nav {
     .nav-list {
         width: 100%; /* Full width on mobile screens */
         justify-content: center;
-        gap: 10px; /* Reduce gap between items */
+       
     }
     
     .nav-list li.contact {
@@ -353,5 +353,8 @@ nav {
     
     .logo {
         margin-bottom: 10px;
+    }
+    .content-box {
+        max-width: max-content;
     }
 }
