@@ -326,10 +326,10 @@ nav {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 80%) {
     .sidebar {
         position: static; /* Remove sticky positioning */
-        width: 100%; /* Full width on mobile screens */
+        max-width: 20%; /* Full width on mobile screens */
         border-right: none; /* Remove border */
         border-bottom: 1px solid #ddd; /* Add border at the bottom */
         margin-bottom: 20px; /* Add space below */
