@@ -356,7 +356,9 @@ nav {
     }
     .content-box {
         max-width:fit-content;
+        
     }
+    .textbox{max-width:fit-content;}
 
 }
 .content-box h4{
