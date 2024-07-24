@@ -389,59 +389,38 @@ nav {
 }
 
 /* Responsive Design */
+/* Mobile Styles */
 @media (max-width: 768px) {
-    .sidebar {
-        position: static; /* Remove sticky positioning */
-        width: auto; /* Full width on mobile screens */
-        border-right: none; /* Remove border */
-        border-bottom: 1px solid #ddd; /* Add border at the bottom */
-        margin-bottom: 20px; /* Add space below */
-        padding: 10px; /* Adjust padding */
-    }
-    
-    .nav-list {
-        width: 100%; /* Full width on mobile screens */
-        justify-content: center;
-    }
-    
-    .nav-list li.contact {
-        width: auto;
-        padding: 0 10px;
-    }
-    
-    nav {
-        flex-direction: column;
-    }
-    
-    .logo {
-        margin-bottom: 10px;
-    }
-
-    .content-box {
-        max-width: fit-content;
-    }
-
-    .textbox {
-        padding: 15px; /* Slightly reduced padding for smaller screens */
-        margin: 10px; /* Adjust margin for better spacing */
-    }
-
     .module-page {
-        flex-direction: column;
+        flex-direction: column; /* Stack sidebar and content vertically */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width for sidebar on mobile */
+        margin-bottom: 20px; /* Space below the sidebar */
+        border-right: none; /* Remove right border */
+        border-bottom: 1px solid #ddd; /* Add bottom border */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    .module-content {
+        width: 100%; /* Full width for content area */
+        padding: 10px; /* Adjust padding for mobile */
     }
 }
 
 @media (max-width: 480px) {
     header .logo a {
-        font-size: 18px;
+        font-size: 18px; /* Adjust logo font size for small screens */
     }
 
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center; /* Center nav items */
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 10px 0; /* Space between nav items */
     }
 }
+
