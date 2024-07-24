@@ -415,6 +415,7 @@ nav {
     margin: 20px auto;
 }
 
+
 .textbox h2 {
     color: #2479f0;
     margin-bottom: 15px;
@@ -436,4 +437,13 @@ nav {
 
 .textbox p:last-of-type {
     margin-bottom: 0;
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .textbox {
+        padding: 15px; /* Slightly reduced padding for smaller screens */
+        margin: 10px; /* Adjust margin for better spacing */
+    }
 }
