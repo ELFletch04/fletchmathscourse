@@ -357,4 +357,81 @@ nav {
     .content-box {
         max-width: max-content;
     }
+
+}
+.content-box h4{
+    color: cornflowerblue;
+}
+
+.exam_tip{
+    width: 900px;
+    height: 150px;
+    background-color: rgb(185, 184, 184);
+    border-radius: 10px 10px 10px 10px;
+    display:flex;
+    flex-direction: column;
+    border: 3px solid black;
+    align-items: center;
+    padding-top: -30px;
+
+   
+    
+}
+.exam_tip h4{
+    color:#1e5bb2;
+    font-weight: bold;
+    padding-top: -20px;
+}
+.exam_tip p{
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.reveal-method-btn {
+    background-color: #2479f0;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+.reveal-method-btn:hover {
+    background-color: #1e5bb2;
+}
+.textbox {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+.textbox h2 {
+    color: #2479f0;
+    margin-bottom: 15px;
+}
+.textboxx h4 {
+    color: #2479f0;
+    margin-bottom: 15px;
+}
+
+.textbox h3 {
+    color: #1e5bb2;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.textbox p {
+    margin-bottom: 15px;
+}
+
+.textbox p:last-of-type {
+    margin-bottom: 0;
 }
