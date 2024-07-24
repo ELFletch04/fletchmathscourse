@@ -62,7 +62,6 @@ nav {
     padding: 10px 0;
     transition: color 0.3s ease;
     font-weight: 600;
-    position: relative;
     display: flex;
     align-items: center;
 }
@@ -99,7 +98,6 @@ nav {
     text-decoration: none;
     display: block;
     border-radius: 12px;
-    transition: color 0.3s ease;
 }
 
 .nav-list li.contact:hover {
@@ -141,7 +139,7 @@ nav {
     margin-top: 40px;
 }
 
-.course-modules h2 {
+.course-modules h2, .module-category h3 {
     color: #2479f0;
     margin-bottom: 20px;
     text-align: center;
@@ -149,12 +147,6 @@ nav {
 
 .module-category {
     margin-bottom: 40px;
-}
-
-.module-category h3 {
-    color: #2479f0;
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 .modules-container {
@@ -325,70 +317,30 @@ nav {
     border-color: #f5c6cb; /* Red border */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .sidebar {
-        position: static; /* Remove sticky positioning */
-        width:auto; /* Full width on mobile screens */
-        border-right: none; /* Remove border */
-        border-bottom: 1px solid #ddd; /* Add border at the bottom */
-        margin-bottom: 20px; /* Add space below */
-        padding: 10px; /* Adjust padding */
-    }
-    
-    .nav-list {
-        width: 100%; /* Full width on mobile screens */
-        justify-content: center;
-       
-    }
-    
-    .nav-list li.contact {
-        width: auto;
-        padding: 0 10px;
-    }
-    
-    nav {
-        flex-direction: column;
-    }
-    
-    .logo {
-        margin-bottom: 10px;
-    }
-    .content-box {
-        max-width:fit-content;
-        
-    }
-    .textbox{max-width:fit-content;}
-
-}
-.content-box h4{
-    color: cornflowerblue;
-}
-
-.exam_tip{
+/* Exam Tip Styles */
+.exam_tip {
     width: 900px;
     height: 150px;
     background-color: rgb(185, 184, 184);
-    border-radius: 10px 10px 10px 10px;
-    display:flex;
+    border-radius: 10px;
+    display: flex;
     flex-direction: column;
     border: 3px solid black;
     align-items: center;
-    padding-top: -30px;
+    padding-top: 20px;
+}
 
-   
-    
-}
-.exam_tip h4{
-    color:#1e5bb2;
+.exam_tip h4 {
+    color: #1e5bb2;
     font-weight: bold;
-    padding-top: -20px;
 }
-.exam_tip p{
+
+.exam_tip p {
     font-weight: bold;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px;
 }
+
+/* Reveal Method Button */
 .reveal-method-btn {
     background-color: #2479f0;
     color: #fff;
@@ -403,9 +355,12 @@ nav {
     font-size: 16px;
     font-weight: 600;
 }
+
 .reveal-method-btn:hover {
     background-color: #1e5bb2;
 }
+
+/* Textbox Styles */
 .textbox {
     background-color: #f9f9f9;
     border-radius: 12px;
@@ -415,20 +370,14 @@ nav {
     margin: 20px auto;
 }
 
-
-.textbox h2 {
-    color: #2479f0;
-    margin-bottom: 15px;
-}
-.textboxx h4 {
+.textbox h2, .textboxx h4 {
     color: #2479f0;
     margin-bottom: 15px;
 }
 
 .textbox h3 {
     color: #1e5bb2;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin: 15px 0 10px;
 }
 
 .textbox p {
@@ -439,21 +388,46 @@ nav {
     margin-bottom: 0;
 }
 
-
-/* Mobile Styles */
+/* Responsive Design */
 @media (max-width: 768px) {
+    .sidebar {
+        position: static; /* Remove sticky positioning */
+        width: auto; /* Full width on mobile screens */
+        border-right: none; /* Remove border */
+        border-bottom: 1px solid #ddd; /* Add border at the bottom */
+        margin-bottom: 20px; /* Add space below */
+        padding: 10px; /* Adjust padding */
+    }
+    
+    .nav-list {
+        width: 100%; /* Full width on mobile screens */
+        justify-content: center;
+    }
+    
+    .nav-list li.contact {
+        width: auto;
+        padding: 0 10px;
+    }
+    
+    nav {
+        flex-direction: column;
+    }
+    
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .content-box {
+        max-width: fit-content;
+    }
+
     .textbox {
         padding: 15px; /* Slightly reduced padding for smaller screens */
         margin: 10px; /* Adjust margin for better spacing */
     }
-}
-@media (max-width: 768px) {
+
     .module-page {
         flex-direction: column;
-    }
-
-    .sidebar {
-        margin-bottom: 20px;
     }
 }
 
