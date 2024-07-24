@@ -328,37 +328,38 @@ nav {
 /* Responsive Design */
 @media (max-width: 700px) {
     .sidebar {
-        position: static; /* Remove sticky positioning */
-        max-width: 50%; /* Full width on mobile screens */
+        width: 10%;
+        max-width: 10%; /* Ensures sidebar takes up 10% of the screen */
         border-right: none; /* Remove border */
         border-bottom: 1px solid #ddd; /* Add border at the bottom */
         margin-bottom: 20px; /* Add space below */
         padding: 10px; /* Adjust padding */
     }
-    
+
     .nav-list {
         width: 100%; /* Full width on mobile screens */
         justify-content: center;
-       
     }
-    
+
     .nav-list li.contact {
         width: auto;
         padding: 0 10px;
     }
-    
+
     nav {
         flex-direction: column;
     }
-    
+
     .logo {
         margin-bottom: 10px;
     }
-    .content-box {
-        max-width: max-content;
-    }
 
+    .content {
+        width: 90%;
+        padding: 10px;
+    }
 }
+
 .content-box h4{
     color: cornflowerblue;
 }
