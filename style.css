@@ -328,7 +328,7 @@ nav {
 /* Responsive Design */
 @media (max-width: 768px) {
     .sidebar {
-        position: static; /* Remove sticky positioning */
+        position: sticky; /* Remove sticky positioning */
         width: 100%; /* Full width on mobile screens */
         border-right: none; /* Remove border */
         border-bottom: 1px solid #ddd; /* Add border at the bottom */
@@ -355,7 +355,7 @@ nav {
         margin-bottom: 10px;
     }
     .content-box {
-        max-width: max-content;
+        max-width:fit-content;
     }
 
 }
