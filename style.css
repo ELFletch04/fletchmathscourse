@@ -319,7 +319,7 @@ nav {
 
 /* Exam Tip Styles */
 .exam_tip {
-    width: 900px;
+    width: auto;
     height: 150px;
     background-color: rgb(185, 184, 184);
     border-radius: 10px;
