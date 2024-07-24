@@ -447,3 +447,27 @@ nav {
         margin: 10px; /* Adjust margin for better spacing */
     }
 }
+@media (max-width: 768px) {
+    .module-page {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo a {
+        font-size: 18px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
