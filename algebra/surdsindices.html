@@ -57,7 +57,7 @@
             
             <div class="content-box">
                <div id="surdsandindices"><h2>Surds and Indices</h2>
-                <a  class="skip-button" href="#indices_section" style="margin-left: 70%;" onclick="smoothScroll(event)">Skip to indices</a></div>
+                <a  class="reveal-method-btn skip" href="#indices_section" style="margin-left: 70%;" onclick="smoothScroll(event)">Skip to indices</a></div>
                 
                 <p>A <strong>surd</strong> is a type of irrational number in the form <span style="color: green;">\( \sqrt{a} \)</span> where <strong>a</strong> is not a square number.</p>
                 <p>For example: <span style="color: green;">\( \sqrt{6} \)</span> is a surd because 6 is not a square number.</p>
@@ -166,8 +166,8 @@
                         <p>1. Multiply each term in the first bracket by each term in the second bracket:</p>
                         <p>
                             \[
-                            (a + \sqrt{b})(c + \sqrt{d}) = a \cdot c + a \cdot \sqrt{d} \]<br> \(+ \sqrt{b} \cdot c + \sqrt{b} \cdot \sqrt{d}
-                            \)
+                            (a + \sqrt{b})(c + \sqrt{d}) = a \cdot c + a \cdot \sqrt{d} \] \[+ \sqrt{b} \cdot c + \sqrt{b} \cdot \sqrt{d}
+                            \]
                         </p>
                         <p>2. Simplify the terms involving surds:</p>
                         <p>
@@ -332,15 +332,118 @@
                                 <p>Indices are a core part of maths, especially in this A-level course. They appear in almost every module, so it is vital that you understand
                                    the basic rules and principles when dealing with powers. </p>
                                    <p>For an expression in the form \(a^n\), we call the '\(a\)' term the <strong> base</strong>, and the '\(n\)' term the <strong>exponent</strong> or <strong>power.</strong></p>
-                                <h3>Laws of Indices:</h3>
+                             <div class="textbox">   <h3>Laws of Indices:</h3>
                                      <h4>Product of powers with the same base:</h4>
                                                 <p>When multiplying two numbers with the same base but different powers, you can add the powers and raise the base to this sum, like so:</p>
-                                                <strong>\[a^m \times a^n = a^{m+n}\]</strong>
+                                                <span>\[a^m \times a^n = a^{m+n}\]</span>
                                                 <p>Here is an example of this using numbers:</p>
                                                 <p>\[2^4 \times 2^3 = 2^7\]</p>
+                                     <h4>Quotient of powers with the same base:</h4>
+                                                <p>When dividing two numbers that share the same base but have different powers, you can simplify the expression by 
+                                                    subtracting the powers and raising the base to the resulting power, like so:</p>
+                                                <strong>\[{{a^m} \over {a^n}} = {a^{m-n}}\]</strong>
+                                                <p>Here is an example of this using numbers:</p>
+                                                <p>\[{{3^6} \over {3^4}} = {3^{2}}=9\]</p>
 
+                                     <h4>Powers of powers</h4>
+                                                <p>Sometimes, you may encounter a number raised to a power, which is itself raised to another power. 
+                                                    To simplify this, you multiply the exponents and use the product as the new exponent.
+                                                </p>
+                                                <strong>\[(a^m)^n=a^{mn}\]</strong>
+                                                <p>Here is an example of this using numbers:</p>
+                                                <p>\[(4^2)^3=4^6\]</p>
 
+                                      <h4>Powers of product</h4>
+                                                <p>When you raise a product of two or more factors to a power, you can apply the power to each factor individually.
+                                                </p>
+                                                <strong>\[(ab)^n=a^nb^n\]</strong>
+                                                <p>Here is an example of this using numbers:</p>
+                                                <p>\[(4x)^3=4^3x^3=64x^3\]</p>
+                                      <h4>Powers of quotient</h4>
+                                                <p>When you raise a quotient of two or more factors to a power, you can apply the power to each factor individually.
+                                                </p>
+                                                <strong>\[ \left( \frac{a}{b} \right)^n = \frac{a^n}{b^n} \]
+                                                </strong>
+                                                <p>Here is an example of this using numbers:</p>
+                                                <p>\[\left({3\over{4}}\right)^2={3^2\over{4^2}}=9/16\]</p>
+                                      <h4>Zero indices</h4>
+                                                <p>Raising any number to the power of zero results in a value of one.
+                                                </p>
+                                                <strong>\[a^0=1\]
+                                                </strong>
+                                                <p>Here are some examples of this using numbers:</p>
+                                                <p>\[999999999^0=1\]</p>
+                                                <p>\[-0.0006^0=1\]</p>
+                                      <h4>Negative indices</h4>
+                                                <p>Raising any number to a negative power will result in the reciprocal of the base raised to the corresponding positive power.
+                                                    <p class="note">Note: A reciprocal is the inverse of a number. To find the reciprocal of a number, you divide 1 by that number. For example
+                                                        , the reciprocal of 2 would be \(\frac{1}{2}\), and the reciprocal of \(\frac{2}{3}\) would be \(\frac{3}{2}\) etc.
+                                                    </p>
+                                                </p>
+                                                <strong>\[a^{-n}={\left({1\over{a}}\right)^n}\]
+                                                </strong>
+                                                <p>Here are some examples of this using numbers:</p>
+                                                <p>\[2^{-3}={\left({1\over{2}}\right)^3}={1\over{8}}\]</p>
+                                                <p>\[{\left({2\over{3}}\right)^{-4}}={\left({3\over{2}}\right)^4}={\frac{81}{16}}\]</p>
+                                      <h4>Fractional indices</h4>
+                                                <p>Raising any number to a fractional power involves raising the number to the power of the numerator and then taking the root indicated by the denominator.
+                                                </p>
+                                                <strong>\[\large {a^{\LARGE{\frac{m}{n}}}= 
+                                                    \ \sqrt[n]{a^m}}\]</strong>
+                                                <p class="note">Note: This should not be confused with \(n \times \sqrt{a^m}\). It is the nth root of \(\sqrt{a^m}\). Additionally, this process can be done in any order. 
+                                                    For example, if it's easier to take the nth root first and then raise it to the power of the numerator, you can do it in that sequence.
+                                                    </p>
+                                                   
+                                                
+                                                <p>Here are some examples of this using numbers:</p>
+                                                <strong>\[\large 8^{\frac{4}{3}}=\sqrt[3]{8^4}= \left(\sqrt[3]{8}\right)^4 = 2^4 = 16\]</strong>
+                                                <p>In this example, it is easier to take the cube root of 8 before applying the 4th power, as the cube root of 8 is 2.</p> 
+                                                <br>
+                                                <p>These are the fundamental rules for indices. It is important to thoroughly review and understand them, as they will frequently appear in most A-level Maths modules.
+                                                    Now, let's proceed to some equations involving indices.
+                                               </p>       
+                                            </div>
+                                        <h3>Equations involving indices:</h3>
+                                        <p> You can apply the rules you have just learned to different types of equations. For example, consider the following equation:</p>
+                                        <span style="color: red;">\[2^{3n}=2^{12}\]</span>
+                                        <p>Since the bases are the same, the powers must be equal. Therefore, we have:</p>
+                                        <span>\[3n=12\] <span style="color: rgb(104, 173, 104);">\[{n=4}\]</span></span>
+                                        <hr>
+                                       
+                                        <p> You may also see equations like this:</p>
+                                        <span style="color: red;">\[{2^6 \times {2^{2x}}}={2^{10}}\]</span>
+                                        <p>Using the first rule we learnt, we can deduce the following:</p>
+                                        <span>\[6+2x=10\]<span style="color: rgb(104, 173, 104);">\[x=2\]</span></span>
+                                        <hr>
 
+                                        <p>Another type of equation you might come across is this:</p>
+                                        <span style="color: red;">\[5^{2x+1}=125\]</span>
+                                        <p>You may recognise that \(125 = 5^3\), so</p>
+                                        <span>\[5^{2x+1}=5^3\]\[{2x+1}=3\]<span style="color: rgb(104, 173, 104);">\[x=1\]</span></span>
+                                        <hr>
+
+                                        <p>You might also see equations like:</p>
+                                        <span style="color: red;">\[x^{\frac{3}{2}} = 8\]</span>
+                                        <p>To solve this, you need to get rid of the exponent on the left side. You can do this by raising both sides of the equation to the power of \(\frac{2}{3}\). This will make the exponent on \( x \) equal to 1. Just remember to do the same to both sides of the equation.</p>
+                                        </p>
+                                        <span>\[ \left( x^{\frac{3}{2}} \right)^{\frac{2}{3}} = 8^{\frac{2}{3}} \]</span>
+                                        <p>This simplifies to:</p>
+                                        <span>\[ x = \left( 8^{\frac{2}{3}} \right) \]</span>
+                                        <p>Since the cube root of 8 is 2, and \(2^2 = 4\), we have:</p>
+                                        <span style="color: rgb(104, 173, 104);">\[ x = 4 \]</span>
+                                        <hr>
+                                        <p>
+                                            Great, that is pretty much indices covered! Let's review what we've gone over in this topic.
+                                        </p>
+                                        <ol>
+                                            <li>Identifying the base and power of an expression involving indices</li>
+                                            <li>Laws of indices</li>
+                                            <li>Solving equations involving indices</li>
+                                        </ol>
+                                        <div>
+                                            <button class="reveal-method-btn" onclick="url()">Practice Questions</button>
+                                            <button class="reveal-method-btn" onclick="url()">Topic summary sheet</button>
+                                            </div>
 
 
                         </div>  
