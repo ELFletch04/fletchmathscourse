@@ -56,7 +56,9 @@
         <section class="module-content textbox">
             
             <div class="content-box">
-                <h2>Surds and Indices</h2>
+               <div id="surdsandindices"><h2>Surds and Indices</h2>
+                <a  class="skip-button" href="#indices_section" style="margin-left: 70%;" onclick="smoothScroll(event)">Skip to indices</a></div>
+                
                 <p>A <strong>surd</strong> is a type of irrational number in the form <span style="color: green;">\( \sqrt{a} \)</span> where <strong>a</strong> is not a square number.</p>
                 <p>For example: <span style="color: green;">\( \sqrt{6} \)</span> is a surd because 6 is not a square number.</p>
                 <p>On the other hand,<span style="color: rgb(128, 0, 0);">\( \sqrt{4} \)</span> is not a surd, as 4 is a square number.<span style="color: rgb(128, 0, 0);">\( \sqrt{4} \)</span> would just be equivalent to 2.</p>
@@ -122,7 +124,7 @@
                     
                         <p>Now let's move on to adding and subtracting surds.</p>
                         <h3>Addition:</h3>
-                        <p>To add two surds together, they must have a common surd (similar to how adding fractions requires a common denominator)</p>
+                        <p>To add two numbers involving surds together, they must have a common surd (similar to how adding fractions requires a common denominator)</p>
                         <p>Let's do an example, it is very simple you'll see.</p>
                         <p>  $${3\sqrt{2}+4\sqrt{2}=7\sqrt{2} }$$ </p>
                         <p>All you have to do is keep the surd the same, and add the numbers before the surd together.</p>
@@ -164,8 +166,8 @@
                         <p>1. Multiply each term in the first bracket by each term in the second bracket:</p>
                         <p>
                             \[
-                            (a + \sqrt{b})(c + \sqrt{d}) = a \cdot c + a \cdot \sqrt{d} + \sqrt{b} \cdot c + \sqrt{b} \cdot \sqrt{d}
-                            \]
+                            (a + \sqrt{b})(c + \sqrt{d}) = a \cdot c + a \cdot \sqrt{d} \]<br> \(+ \sqrt{b} \cdot c + \sqrt{b} \cdot \sqrt{d}
+                            \)
                         </p>
                         <p>2. Simplify the terms involving surds:</p>
                         <p>
@@ -273,12 +275,12 @@
                 </div>
                 <div class="exam_tip">
                     <h4>Exam Tip:</h4>
-                    <p>On certain calculators, inputting an "un-rationalised" fraction will output a rationalised, and simplified version, which can be helpful for checking
+                    <p>On certain calculators, inputting an "un-rationalised" fraction will output a rationalised and simplified version, which can be helpful for checking
                         your answer. However, it also means that you should be very careful in showing every step of your working, or they might think you cheated!
                     </p>
                 </div>
                 <br><br>
-                <p>Okay, let's check your understanding of what you've just learnt, with a few questions.</p>
+                <p>Okay, let's check your understanding of what you've just learnt with a few questions.</p>
                 <div class="question-box" data-question="5">
                     <p><strong>Rationalise the following: $${2\over{\sqrt{3}}}$$</strong></p>
                     <div class="answer-box" data-option="A" onclick="checkAnswer(5, 'A')">A. \( 3\sqrt{2} \over{3} \)</div>
@@ -297,8 +299,8 @@
                 </div>
                 
     <div id="feedback-6" class="feedback"></div>
-                <button id="reveal-method-btn" class="reveal-method-btn" onclick="revealMethod()">Reveal Answer</button>
-                <div id="method" style="display:none;"></div>
+                <button class="reveal-method-btn" class="reveal-method-btn" onclick="revealMethod('surdsmethod')">Reveal Answer</button>
+                <div id="surdsmethod" style="display:none;"></div>
                 <script type="text/javascript">
 
     </script>
@@ -322,6 +324,26 @@
                     <div>
                         <button class="reveal-method-btn" onclick="url()">Practice Questions</button>
                         </div>
+
+                        <br><br><hr><br>
+                        <div id="indices_section">
+                            <h2>Indices</h2>
+                                <p>Now we have finished with surds, lets have a look at another GCSE topic in a bit more depth.</p>
+                                <p>Indices are a core part of maths, especially in this A-level course. They appear in almost every module, so it is vital that you understand
+                                   the basic rules and principles when dealing with powers. </p>
+                                   <p>For an expression in the form \(a^n\), we call the '\(a\)' term the <strong> base</strong>, and the '\(n\)' term the <strong>exponent</strong> or <strong>power.</strong></p>
+                                <h3>Laws of Indices:</h3>
+                                     <h4>Product of powers with the same base:</h4>
+                                                <p>When multiplying two numbers with the same base but different powers, you can add the powers and raise the base to this sum, like so:</p>
+                                                <strong>\[a^m \times a^n = a^{m+n}\]</strong>
+                                                <p>Here is an example of this using numbers:</p>
+                                                <p>\[2^4 \times 2^3 = 2^7\]</p>
+
+
+
+
+
+                        </div>  
                 
                 <!-- Navigation Buttons -->
                 <div class="navigation-buttons">
@@ -329,15 +351,23 @@
                     <a href="./quadratics.html" class="next-button">Next</a>
                 </div>
             </div>
+
+          
 </div>
-                    
+            
+
+
+
+
+
+
+
         </section> 
+
+        
     </main>
 
-    <!-- JavaScript for Feedback -->
-    <script>
-       
-    </script>
+   
     
     
 </body>

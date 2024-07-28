@@ -1,12 +1,4 @@
-function revealMethod() {
-    const methodDiv = document.getElementById('method');
-    methodDiv.innerHTML = 'Here is the detailed method: \\( \\frac{3}{2 + \\sqrt{3}} \\times \\frac{2 - \\sqrt{3}}{2 - \\sqrt{3}} = \\frac{3(2 - \\sqrt{3})}{(2 + \\sqrt{3})(2 - \\sqrt{3})} = \\frac{3(2 - \\sqrt{3})}{4 - 3} = 3(2 - \\sqrt{3}) = 6 - 3\\sqrt{3} = 3(2-\\sqrt{3}) \\)';
-    // Show the method div
-    methodDiv.style.display = 'block';
 
-     // Call MathJax to typeset the new content
-     MathJax.Hub.Queue(["Typeset", MathJax.Hub, methodDiv]);
-}
 
 function checkAnswer(questionNumber, option) {
     // Get the feedback element for the specific question
@@ -65,14 +57,64 @@ function checkAnswer(questionNumber, option) {
             selectedBox.classList.add('correct');
         }
     } else {
-        if (questionNumber === 4) {
+                if (questionNumber === 4) {
             feedback.textContent = 'Incorrect. Remember to simplify the first term before adding it.';
-        } else {
+             } 
+                else {
             feedback.textContent = 'Incorrect. Try again.';
-        }
+             }
+
+
         feedback.className = 'feedback incorrect';
         if (selectedBox) {
             selectedBox.classList.add('incorrect');
         }
     }
 }
+
+
+function smoothScroll(event) {
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (!targetElement) return;
+
+    const targetPosition = targetElement.offsetTop;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 1000;
+    let start = null;
+
+    window.requestAnimationFrame(step);
+
+    function step(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        const percentage = Math.min(progress / duration, 1);
+        const easing = easeOutQuad(percentage); // Using a custom easing function
+        window.scrollTo(0, startPosition + distance * easing);
+        if (progress < duration) {
+            window.requestAnimationFrame(step);
+        }
+    }
+
+    // Easing function: ease out quad
+    function easeOutQuad(t) {
+        return t * (2 - t);
+    }
+}
+
+function revealMethod(id) {
+    // Get the HTML element by its ID
+    const methodDiv = document.getElementById(id);
+
+    // Set the inner HTML of the element to the LaTeX method string
+    methodDiv.innerHTML = 'Here is the detailed method: \\( \\frac{3}{2 + \\sqrt{3}} \\times \\frac{2 - \\sqrt{3}}{2 - \\sqrt{3}} = \\frac{3(2 - \\sqrt{3})}{(2 + \\sqrt{3})(2 - \\sqrt{3})} = \\frac{3(2 - \\sqrt{3})}{4 - 3} = 3(2 - \\sqrt{3}) = 6 - 3\\sqrt{3} = 3(2-\\sqrt{3}) \\)';
+
+    // Display the element by setting its display style to 'block'
+    methodDiv.style.display = 'block';
+
+    // Call MathJax to typeset the new content
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, methodDiv]);}
+
+    
