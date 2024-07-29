@@ -104,17 +104,44 @@ function smoothScroll(event) {
     }
 }
 
+
+let revealCallCount = 0;
 function revealMethod(id) {
     // Get the HTML element by its ID
     const methodDiv = document.getElementById(id);
+    var revealButton = document.getElementById('reveal-method-btn')
+    revealCallCount++;
 
     // Set the inner HTML of the element to the LaTeX method string
-    methodDiv.innerHTML = 'Here is the detailed method: \\( \\frac{3}{2 + \\sqrt{3}} \\times \\frac{2 - \\sqrt{3}}{2 - \\sqrt{3}} = \\frac{3(2 - \\sqrt{3})}{(2 + \\sqrt{3})(2 - \\sqrt{3})} = \\frac{3(2 - \\sqrt{3})}{4 - 3} = 3(2 - \\sqrt{3}) = 6 - 3\\sqrt{3} = 3(2-\\sqrt{3}) \\)';
+switch(id){
+        case 'surdsmethod':
+        methodDiv.innerHTML = 'Here is the detailed method: \\( \\frac{3}{2 + \\sqrt{3}} \\times \\frac{2 - \\sqrt{3}}{2 - \\sqrt{3}} = \\frac{3(2 - \\sqrt{3})}{(2 + \\sqrt{3})(2 - \\sqrt{3})} = \\frac{3(2 - \\sqrt{3})}{4 - 3} = 3(2 - \\sqrt{3}) = 6 - 3\\sqrt{3} = 3(2-\\sqrt{3}) \\)';
+        break;
+}
+
+    revealButton.innerText = 'Hide Answer'
+    
+
 
     // Display the element by setting its display style to 'block'
     methodDiv.style.display = 'block';
 
     // Call MathJax to typeset the new content
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub, methodDiv]);}
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, methodDiv]);
+
+    
+
+    if (revealCallCount % 2===1) {
+        // Perform action for the second call
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, methodDiv]);
+        methodDiv.innerHTML = 'Here is the detailed method: \\( \\frac{3}{2 + \\sqrt{3}} \\times \\frac{2 - \\sqrt{3}}{2 - \\sqrt{3}} = \\frac{3(2 - \\sqrt{3})}{(2 + \\sqrt{3})(2 - \\sqrt{3})} = \\frac{3(2 - \\sqrt{3})}{4 - 3} = 3(2 - \\sqrt{3}) = 6 - 3\\sqrt{3} = 3(2-\\sqrt{3}) \\)';
+
+    } else {
+        methodDiv.innerHTML = '';
+        revealButton.innerText = 'Reveal Answer'
+        
+    }
+
+}
 
     
