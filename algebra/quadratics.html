@@ -64,13 +64,111 @@
                 <div><p>A quadratic equation typically produces a curve that appears as a parabola on a graph, like so:
                     <br><iframe src="https://www.desmos.com/calculator/io7a89qaa1?embed" width="200" height="200"  frameborder=0></iframe>
                 </p>
-                </div>
+                
                 <p>Here is an example of a quadratic equation using numbers:\[2x^2+3x+1=0\]</p>
-                    
-                    
-                          
-                   
+                <div>
+                    <h3>Solving Quadratics</h3>
+                    <p>There are 4 approaches you can take to solve a quadratic equation:</p>
+                    <ol class="solve-quadratics-methods">
+                        <li>Factorising</li>
+                        <li>Completing the square</li>
+                        <li>The quadratic formula</li>
+                        <li>Scientific calculator</li><br>
+                    </ul>
+                   <p>There are pros and cons of using each method, and certain methods are better than others depending on the nature of the question.</p>
+                   <p>Let's go through each of the methods.</p>
+                  <h4>1. Factorising</h4>
+                   <p>Factorising a quadratic equation involves rewriting it from the standard form \[ax^2 + bx + c = 0\] into its factorised form \[(px + m)(qx + n) = 0\] where \(p\), \(q\), \(m\), and \(n\) are constants.</p>
+                   <p>Once the quadratic equation is expressed in this factorised form, you can set each bracket equal to zero and solve for \(x\) to find the solutions.
+                   </p>
+                   <p> It is most commonly used when trying to find the *roots* of an equation.</p>
+                   <p>Remember, this method is a key technique you should be familiar with from your GCSE studies. Feel free to skip this section if you are already confident in factorising quadratics.</p><br>
+                   <p>Let's go through a worked example:</p>
+                   <p><strong>Question</strong></p>
+                   <p>Factorise and solve this quadratic equation\[x^2+5x+6=0\]</p>
+                   <p><strong>Solution</strong></p>
+                   <p>To factorise \(x^2+5x+6\), we need to express it in the form \((px+m)(qx+n)\).</p>
+                   <p>We are looking for two numbers that:</p> 
+                    <ul class="bulletpoint"> <li>Multiply to the constant term \(6\)</li><li>Add up to the coefficient of \(x\), which is \(5\)</li></ul>
+                   <p class="note">Note: This method only works when the coefficient of \(x^2\) is \(1\).</p>
+                   <p>The numbers 2 and 3 fit this criteria, since</p>
+                   <p>
+                    <ul class="bulletpoint"><li>\(2 \times{3}=6\) </li><li>\(2 + 3 = 5\)</li></ul></p>
+                   <p>So, we can factorise \(x^2+5x+6\) as \[(x+2)(x+3)\] Hence,
+                    \[(x+2)(x+3)=0\]
+                   </p>
+                   <p class="note">Note: In order to check this, you can expand it back out to get the original equation.</p>
+                   <p>Now we need to solve it for x. To do this, set each bracket equal to 0.</p>
+                   <p><ul class="bulletpoint"> <li>\((x+2)=0\) </li></ul></p> <p style="margin-left: 70px;">\(\Rightarrow x=-2\)</p>
+                   <p><ul class="bulletpoint"> <li>\((x+3)=0\) </li></ul></p> <p style="margin-left: 70px;">\(\Rightarrow x=-3\)</p>
+                   <p>Hence the solutions to \(x^2+5x+6\) are:</p><p> \(x=-2\)  <p>OR</p>  <p>\(x=-3\)</p>
+                    <p>Let's try another example:</p>
+                    <p><strong>Question</strong></p>
+                    <p>Factorise and solve the following quadratic equation:\[2x^2+7x+3=0\]</p>
+                    <p><strong>Solution</strong></p>
+                    <p>For quadratic equations where the coefficient of \(x^2\) is not equal to 1, the usual method of finding two numbers that
+                         add up to the middle coefficient and multiply to the constant term may not be directly applicable.</p>
+                    <p>Nevertheless, with some trial and error, it is often straightforward to factorise and solve such equations. Here is how you can approach it:</p><br>
+                    <p>When factorising the expression, you know that the coefficients of \(x\) in both brackets must multiply to equal 2, since this is the coefficient
+                        of \(x^2\) in the equation.
+                    </p>
+                    <p>We can use this knowledge to set up our brackets.</p>
+                    <p>\[(2x+a)(x+b)\]</p>
+                    <p>Now we just need to find the values of \(a\) and \(b\)</p>
+                    <p>It is clear that \(a \times b = 3\), just by looking at the original equation, as they are the only values with no \(x\)`s in. </p>
+                    <p>So we can assume \(a\) and \(b\) take values of 1 and 3, but we need to test which one is which. </p>
+                    <br><p>Let's try \(a=3\) and \(b=1\)</p>
+                    <p>\[(2x+3)(x+1)\]</p>
+                    <p>If you expand this, you will notice you do not get the original equation, you get \(2x^2+5x+3\), so we know it must be the other way around.</p>
+                    <p>Let's now try  \(a=1\) and \(b=3\)</p>
+                    <p>\[(2x+1)(x+3)\]</p>
+                    <p>When you expand this, you get \(2x^2+x+6x+3\), and upon collecting your like terms, you will get the original equation \(2x^2+7x+3=0\), meaning it has 
+                        been factorised successfully!
+                    </p>
+                    <p>Our factorised equation is: \[(2x+1)(x+3)=0\]</p>
+                    <p>The solving step is exactly the same as before; simply set each bracket equal to 0. </p>
+                    <p>Here \(x=-\frac{1}{2}\) or \(x=-3\)</p>
+
+                    <h4>2. Completing the square</h4>
+                    <p>Completing the square is a method of solving quadratics that is most commonly used when trying to find 
+                        the vertex or *turning point* of the curve. </p>
+                    <p>Some people tend to prefer this method to solve quadratics, as it can be more efficient for solving certain types of equations.</p>
+                    <p>Let's go through a few worked examples:</p>
+                   <p><strong>Question</strong></p>
+                   <p>Solve this equation by completing the square: \[x^2+5x+6=0\]</p>
+                   <p><strong>Solution</strong></p>
+                   <p>We are aiming to get this in the form \((ax+b)^2+c=0\)</p>
+                   <p>The coefficient \(a\) must be 1, since \(1^2\) is \(1\). The \(b\) will be half of the coefficient of \(x\). This method works because, when expanded, the squared term produces twice the middle term. In this case,
+                    the coefficient of \(x\) is 5, so the \(b\) will be \(\frac{5}{2}\). </p>
+                    <p>So our bracket will be \((x+{\frac{5}{2}})^2\)</p>
+                   <p>To find c, we already have a \(+6\) from the original equation. However, if we were to expand our new bracket,
+                    it would be equivalent to \(x^2+5x+\frac{25}{4}\)</p>
+                    <p>We don't want that \(\frac{25}{4}\), so we take it away.</p>
+                    <p class="note">Note: For a nice little trick, just remember to always take away the square of the constant in the bracket.</p>
+                    <p>That means we are left with \[\left(x+{\frac{5}{2}}\right)^2+6-{\frac{25}{4}}=0\]</p>
+                    <p>Which simplifies to \[\left(x+{\frac{5}{2}}\right)^2-{\frac{1}{4}}=0\]</p>
+                    <p>Now, to solve this equation we can simply just do some rearanging.</p>
+                    <p>\[\left(x+{\frac{5}{2}}\right)^2={\frac{1}{4}}\]</p>
+                    <p>\[\sqrt{\left(x+{\frac{5}{2}}\right)^2}={\sqrt{\frac{1}{4}}}\]</p>
+                    <p>Don't forget the two possible solutions to \(\sqrt{\frac{1}{4}}\)</p>
+                    <p>\[x+{\frac{5}{2}}={\pm\frac{1}{2}}\]</p>
+                    <p>Hence our two solutions are \[x=-{\frac{5}{2}}+\frac{1}{2}\]\[x=-{\frac{5}{2}}-\frac{1}{2}\]</p>
+                    <p>\(\Longrightarrow\) \[x=-2\]\[x=-3\]</p>
+
+                    <p><strong>Question</strong></p>
+                   <p>Solve this equation by completing the square: \[2x^2+7x+3=0\]</p>
+                   <p><strong>Solution</strong></p>
+
+
+
+
                 </div>
+               
+
+            
+                
+
+
                 <!-- Navigation Buttons -->
                 <div class="navigation-buttons">
                     <a href="./surdsindices.html" class="prev-button">Previous</a>
