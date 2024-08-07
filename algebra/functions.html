@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <title>topic - surds</title>
+    <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </head>
 <body>
     <!-- Header Navigation -->
@@ -53,18 +54,135 @@
         <!-- Content Area -->
         <section class="module-content">
             <div class="content-box">
-                <h2>Functions</h2>
-                <div>
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions - AQA A-Level Maths</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main>
+        <section>
+            <div class="content">
+                <div class="intro-box">
+                    <h2>Introduction to Functions</h2>
+                    <p>In mathematics, a function is a relation between a set of inputs and a set of permissible outputs. Each input is related to exactly one output.</p>
                 </div>
-                   
                 
+                <div class="content-box">
+                    <h3>Basic Concepts</h3>
+
+                    <h4>Function Notation</h4>
+                    <p>Functions are typically denoted by letters such as \( f \), \( g \), or \( h \). The notation \( f(x) \) represents a function named \( f \) with \( x \) as the input variable.</p>
+                    <strong>\[ f(x) = 2x + 3 \]</strong>
+                    <p>In this example, \( f(x) \) is a function where \( 2x + 3 \) represents the output for any input \( x \).</p>
+                    <p>Example:</p>
+                    <p>For \( f(x) = 2x + 3 \), find \( f(4) \):</p>
+                    <strong>\[ f(4) = 2(4) + 3 = 8 + 3 = 11 \]</strong>
+                    <p>Therefore, \( f(4) = 11 \).</p>
+                    
+                    <h4>Domain and Range</h4>
+                    <p>The domain of a function is the set of all possible inputs (x-values) for which the function is defined. The range is the set of all possible outputs (y-values).</p>
+                    <p>Example:</p>
+                    <p>For \( f(x) = \sqrt{x} \), the domain is \( x \geq 0 \) and the range is \( y \geq 0 \).</p>
+                    <p>For \( g(x) = \frac{1}{x} \), the domain is \( x \neq 0 \) and the range is \( y \neq 0 \).</p>
+
+                    <h4>Composite Functions</h4>
+                    <p>A composite function is formed when one function is applied to the result of another function. If \( f \) and \( g \) are functions, the composite function \( f(g(x)) \) is defined as:</p>
+                    <strong>\[ (f \circ g)(x) = f(g(x)) \]</strong>
+                    <p>Example:</p>
+                    <p>If \( f(x) = 2x + 1 \) and \( g(x) = x^2 \), then \( (f \circ g)(x) = f(g(x)) = f(x^2) = 2x^2 + 1 \).</p>
+                    <p>Find \( (g \circ f)(x) \):</p>
+                    <strong>\[ (g \circ f)(x) = g(f(x)) = g(2x + 1) = (2x + 1)^2 = 4x^2 + 4x + 1 \]</strong>
+                    <p>Therefore, \( (g \circ f)(x) = 4x^2 + 4x + 1 \).</p>
+
+                    <h4>Inverse Functions</h4>
+                    <p>An inverse function reverses the operation of the original function. If \( f \) is a function, its inverse is denoted by \( f^{-1} \). For \( f \) and \( f^{-1} \):</p>
+                    <strong>\[ f(f^{-1}(x)) = x \text{ and } f^{-1}(f(x)) = x \]</strong>
+                    <p>Example:</p>
+                    <p>If \( f(x) = 3x - 4 \), then to find \( f^{-1}(x) \), solve \( y = 3x - 4 \) for \( x \):</p>
+                    <strong>\[ y = 3x - 4 \]</strong>
+                    <p>Solve for \( x \):</p>
+                    <strong>\[ x = \frac{y + 4}{3} \]</strong>
+                    <p>Therefore, the inverse function is:</p>
+                    <strong>\[ f^{-1}(x) = \frac{x + 4}{3} \]</strong>
+
+                    <h4>Transformations of Functions</h4>
+                    <p>Transformations change the position or size of the graph of a function. Common transformations include translations, reflections, stretches, and compressions.</p>
+                    <ul>
+                        <li><strong>Translations:</strong> \( f(x) + c \) (vertical) or \( f(x + c) \) (horizontal)</li>
+                        <li><strong>Reflections:</strong> \( -f(x) \) (in x-axis) or \( f(-x) \) (in y-axis)</li>
+                        <li><strong>Stretches:</strong> \( af(x) \) (vertical by factor \( a \)) or \( f(bx) \) (horizontal by factor \( \frac{1}{b} \))</li>
+                    </ul>
+                    <p>Example:</p>
+                    <p>Given \( f(x) = x^2 \):</p>
+                    <ul>
+                        <li>Translation: \( f(x) + 3 \) shifts the graph up by 3 units.</li>
+                        <li>Translation: \( f(x - 2) \) shifts the graph right by 2 units.</li>
+                        <li>Reflection: \( -f(x) = -x^2 \) reflects the graph in the x-axis.</li>
+                        <li>Reflection: \( f(-x) = (-x)^2 = x^2 \) reflects the graph in the y-axis (no change for this specific function).</li>
+                        <li>Stretch: \( 2f(x) = 2x^2 \) stretches the graph vertically by a factor of 2.</li>
+                        <li>Stretch: \( f(2x) = (2x)^2 = 4x^2 \) compresses the graph horizontally by a factor of \(\frac{1}{2}\).</li>
+                    </ul>
+
+                    <h4>Examples and Applications</h4>
+                    <p>Let's look at some specific examples and how to solve them:</p>
+                    <p>1. Find \( (f \circ g)(x) \) where \( f(x) = 2x + 3 \) and \( g(x) = x^2 \):</p>
+                    <strong>\[ (f \circ g)(x) = f(g(x)) = f(x^2) = 2x^2 + 3 \]</strong>
+                    <hr>
+
+                    <p>2. Find the inverse of \( f(x) = 2x + 3 \):</p>
+                    <strong>\[ y = 2x + 3 \]</strong>
+                    <p>Solve for \( x \):</p>
+                    <strong>\[ x = \frac{y - 3}{2} \]</strong>
+                    <p>Therefore, the inverse function is:</p>
+                    <strong>\[ f^{-1}(x) = \frac{x - 3}{2} \]</strong>
+                    <hr>
+
+                    <p>3. Apply a transformation to \( f(x) = x^2 \) for a vertical stretch by 3 and a horizontal translation by 2:</p>
+                    <strong>\[ g(x) = 3(x - 2)^2 \]</strong>
+                    <hr>
+
+                    <h4>Practice Questions</h4>
+                    <div class="example_question_box">
+                        <p><strong>Solve the following:</strong></p>
+                        <p>1. If \( f(x) = x^2 + 1 \) and \( g(x) = 3x - 2 \), find \( (f \circ g)(x) \).</p>
+                        <p>2. Determine the inverse of \( h(x) = \frac{x + 1}{x - 1} \).</p>
+                        <p>3. Apply the transformation \( f(x) = 2x + 3 \) for a reflection in the y-axis.</p>
+                    </div>
+                </div>
+                
+                <div class="review-box">
+                    <h3>Topic Review: Functions</h3>
+                    <p>In this topic, you have learned the following key concepts:</p>
+                    <ul>
+                        <li>Function notation</li>
+                        <li>Domain and range</li>
+                        <li>Composite functions</li>
+                        <li>Inverse functions</li>
+                        <li>Transformations of functions</li>
+                        <li>Examples and practice problems</li>
+                    </ul>
+                </div>
+
                 <!-- Navigation Buttons -->
                 <div class="navigation-buttons">
-                    <a href="./sketching.html" class="prev-button">Previous</a>
-                    <a href="./graphtransformations.html" class="next-button">Next</a>
+                    <a href="./indices.html" class="prev-button">Previous</a>
+                    <a href="./functions-quiz.html" class="next-button">Next</a>
                 </div>
             </div>
-        </section>
+        </section> 
     </main>
+
+   
 </body>
+<footer>
+    <p>&copy; 2024 Fletch Maths. All rights reserved.</p>
+</footer>
 </html>
+

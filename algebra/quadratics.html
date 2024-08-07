@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="../style.css"> 
-    <title>Topic - Surds</title>
+    <title>Quadratics - Fletch Maths</title>
     <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <script  src="../script.js"></script>
+    <script src="../script.js"></script>
 </head>
 <body>
     <!-- Header Navigation -->
@@ -19,7 +19,7 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../modules.html">Modules</a></li>
                 <li><a href="../about.html">About</a></li>
-                <li class="contact"><a href="../about.html">Contact</a></li>
+                <li class="contact"><a href="../contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -55,133 +55,255 @@
         <!-- Content Area -->
         <section class="module-content textbox">
             <div class="content-box">
-                <h2>Quadratics</h2><br><br>
-                <div> <h3>An Introduction to Quadratics: </h3>
-                    
-                    <p>A quadratic equation is a type of polynomial equation that involves the square of the variable. It has the general form:
-                        \[ax^2+bx+c=0\] where \(a\),\(b\) and \(c\) are constants, and \(a\neq 0\)
-                    </p>
-                <div><p>A quadratic equation typically produces a curve that appears as a parabola on a graph, like so:
-                    <br><iframe src="https://www.desmos.com/calculator/io7a89qaa1?embed" width="200" height="200"  frameborder=0></iframe>
-                </p>
-                
-                <p>Here is an example of a quadratic equation using numbers:\[2x^2+3x+1=0\]</p>
+                <h2>Quadratics</h2>
                 <div>
-                    <h3>Solving Quadratics</h3>
-                    <p>There are 4 approaches you can take to solve a quadratic equation:</p>
-                    <ol class="solve-quadratics-methods">
+                    <h3>An Introduction to Quadratics</h3>
+                    <p>A quadratic equation is a polynomial equation of the second degree, having the general form:</p>
+                    <p>\[ax^2 + bx + c = 0\] where \(a\), \(b\), and \(c\) are constants, and \(a \neq 0\).</p>
+                    <p>Graphically, a quadratic equation produces a parabola. Here is an example:</p>
+                    <iframe src="https://www.desmos.com/calculator/io7a89qaa1?embed" width="200" height="200" frameborder="0"></iframe>
+                    <p>For instance, the quadratic equation \[2x^2 + 3x + 1 = 0\] can be graphed as shown.</p>
+                </div>
+
+                <div>
+                    <h3>Solving Quadratic Equations</h3>
+                    <p>There are four main methods for solving quadratic equations:</p>
+                    <ul style="list-style-type:disc;">
                         <li>Factorising</li>
                         <li>Completing the square</li>
                         <li>The quadratic formula</li>
-                        <li>Scientific calculator</li><br>
+                        <li>Scientific calculator</li>
                     </ul>
-                   <p>There are pros and cons of using each method, and certain methods are better than others depending on the nature of the question.</p>
-                   <p>Let's go through each of the methods.</p>
-                  <h4>1. Factorising</h4>
-                   <p>Factorising a quadratic equation involves rewriting it from the standard form \[ax^2 + bx + c = 0\] into its factorised form \[(px + m)(qx + n) = 0\] where \(p\), \(q\), \(m\), and \(n\) are constants.</p>
-                   <p>Once the quadratic equation is expressed in this factorised form, you can set each bracket equal to zero and solve for \(x\) to find the solutions.
-                   </p>
-                   <p> It is most commonly used when trying to find the *roots* of an equation.</p>
-                   <p>Remember, this method is a key technique you should be familiar with from your GCSE studies. Feel free to skip this section if you are already confident in factorising quadratics.</p><br>
-                   <p>Let's go through a worked example:</p>
-                   <p><strong>Question</strong></p>
-                   <p>Factorise and solve this quadratic equation\[x^2+5x+6=0\]</p>
-                   <p><strong>Solution</strong></p>
-                   <p>To factorise \(x^2+5x+6\), we need to express it in the form \((px+m)(qx+n)\).</p>
-                   <p>We are looking for two numbers that:</p> 
-                    <ul class="bulletpoint"> <li>Multiply to the constant term \(6\)</li><li>Add up to the coefficient of \(x\), which is \(5\)</li></ul>
-                   <p class="note">Note: This method only works when the coefficient of \(x^2\) is \(1\).</p>
-                   <p>The numbers 2 and 3 fit this criteria, since</p>
-                   <p>
-                    <ul class="bulletpoint"><li>\(2 \times{3}=6\) </li><li>\(2 + 3 = 5\)</li></ul></p>
-                   <p>So, we can factorise \(x^2+5x+6\) as \[(x+2)(x+3)\] Hence,
-                    \[(x+2)(x+3)=0\]
-                   </p>
-                   <p class="note">Note: In order to check this, you can expand it back out to get the original equation.</p>
-                   <p>Now we need to solve it for x. To do this, set each bracket equal to 0.</p>
-                   <p><ul class="bulletpoint"> <li>\((x+2)=0\) </li></ul></p> <p style="margin-left: 70px;">\(\Rightarrow x=-2\)</p>
-                   <p><ul class="bulletpoint"> <li>\((x+3)=0\) </li></ul></p> <p style="margin-left: 70px;">\(\Rightarrow x=-3\)</p>
-                   <p>Hence the solutions to \(x^2+5x+6\) are:</p><p> \(x=-2\)  <p>OR</p>  <p>\(x=-3\)</p>
-                    <p>Let's try another example:</p>
-                    <p><strong>Question</strong></p>
-                    <p>Factorise and solve the following quadratic equation:\[2x^2+7x+3=0\]</p>
-                    <p><strong>Solution</strong></p>
-                    <p>For quadratic equations where the coefficient of \(x^2\) is not equal to 1, the usual method of finding two numbers that
-                         add up to the middle coefficient and multiply to the constant term may not be directly applicable.</p>
-                    <p>Nevertheless, with some trial and error, it is often straightforward to factorise and solve such equations. Here is how you can approach it:</p><br>
-                    <p>When factorising the expression, you know that the coefficients of \(x\) in both brackets must multiply to equal 2, since this is the coefficient
-                        of \(x^2\) in the equation.
+                    <p>Each method has its advantages and is suited to different types of quadratic equations. We will explore each method, but before doing so let's see how we can speed
+                        up the process, by determining the number of roots (or solutions) an equation has before attampting to solve it, using something called the discriminant.
                     </p>
-                    <p>We can use this knowledge to set up our brackets.</p>
-                    <p>\[(2x+a)(x+b)\]</p>
-                    <p>Now we just need to find the values of \(a\) and \(b\)</p>
-                    <p>It is clear that \(a \times b = 3\), just by looking at the original equation, as they are the only values with no \(x\)`s in. </p>
-                    <p>So we can assume \(a\) and \(b\) take values of 1 and 3, but we need to test which one is which. </p>
-                    <br><p>Let's try \(a=3\) and \(b=1\)</p>
-                    <p>\[(2x+3)(x+1)\]</p>
-                    <p>If you expand this, you will notice you do not get the original equation, you get \(2x^2+5x+3\), so we know it must be the other way around.</p>
-                    <p>Let's now try  \(a=1\) and \(b=3\)</p>
-                    <p>\[(2x+1)(x+3)\]</p>
-                    <p>When you expand this, you get \(2x^2+x+6x+3\), and upon collecting your like terms, you will get the original equation \(2x^2+7x+3=0\), meaning it has 
-                        been factorised successfully!
-                    </p>
-                    <p>Our factorised equation is: \[(2x+1)(x+3)=0\]</p>
-                    <p>The solving step is exactly the same as before; simply set each bracket equal to 0. </p>
-                    <p>Here \(x=-\frac{1}{2}\) or \(x=-3\)</p>
+                    <h4>Discriminant:</h4>
+<p>The discriminant is part of the quadratic formula and provides insight into the roots of the quadratic equation:</p>
+<ul>
+    <li><strong>Two Distinct Real Roots:</strong> If \( b^2 - 4ac > 0 \), the quadratic equation has two distinct real roots.</li>
+    <li><strong>One Repeated Real Root:</strong> If \( b^2 - 4ac = 0 \), the quadratic equation has one repeated real root.</li>
+    <li><strong>No Real Roots (Complex Roots):</strong> If \( b^2 - 4ac < 0 \), the quadratic equation has no real roots.</li>
+</ul>
 
-                    <h4>2. Completing the square</h4>
-                    <p>Completing the square is a method of solving quadratics that is most commonly used when trying to find 
-                        the vertex or *turning point* of the curve. </p>
-                    <p>Some people tend to prefer this method to solve quadratics, as it can be more efficient for solving certain types of equations.</p>
-                    <p>Let's go through a few worked examples:</p>
-                   <p><strong>Question</strong></p>
-                   <p>Solve this equation by completing the square: \[x^2+5x+6=0\]</p>
-                   <p><strong>Solution</strong></p>
-                   <p>We are aiming to get this in the form \((ax+b)^2+c=0\)</p>
-                   <p>The coefficient \(a\) must be 1, since \(1^2\) is \(1\). The \(b\) will be half of the coefficient of \(x\). This method works because, when expanded, the squared term produces twice the middle term. In this case,
-                    the coefficient of \(x\) is 5, so the \(b\) will be \(\frac{5}{2}\). </p>
-                    <p>So our bracket will be \((x+{\frac{5}{2}})^2\)</p>
-                   <p>To find c, we already have a \(+6\) from the original equation. However, if we were to expand our new bracket,
-                    it would be equivalent to \(x^2+5x+\frac{25}{4}\)</p>
-                    <p>We don't want that \(\frac{25}{4}\), so we take it away.</p>
-                    <p class="note">Note: For a nice little trick, just remember to always take away the square of the constant in the bracket.</p>
-                    <p>That means we are left with \[\left(x+{\frac{5}{2}}\right)^2+6-{\frac{25}{4}}=0\]</p>
-                    <p>Which simplifies to \[\left(x+{\frac{5}{2}}\right)^2-{\frac{1}{4}}=0\]</p>
-                    <p>Now, to solve this equation we can simply just do some rearanging.</p>
-                    <p>\[\left(x+{\frac{5}{2}}\right)^2={\frac{1}{4}}\]</p>
-                    <p>\[\sqrt{\left(x+{\frac{5}{2}}\right)^2}={\sqrt{\frac{1}{4}}}\]</p>
-                    <p>Don't forget the two possible solutions to \(\sqrt{\frac{1}{4}}\)</p>
-                    <p>\[x+{\frac{5}{2}}={\pm\frac{1}{2}}\]</p>
-                    <p>Hence our two solutions are \[x=-{\frac{5}{2}}+\frac{1}{2}\]\[x=-{\frac{5}{2}}-\frac{1}{2}\]</p>
-                    <p>\(\Longrightarrow\) \[x=-2\]\[x=-3\]</p>
+                    <h4>1. Factorising</h4>
+                    <p>Factorising involves rewriting the quadratic equation from the form \[ax^2 + bx + c = 0\] into \[(px + m)(qx + n) = 0\], where \(p\), \(q\), \(m\), and \(n\) are constants.</p>
+                    <p>Once in factorised form, set each bracket equal to zero and solve for \(x\). This method is useful for finding the roots of the equation.</p>
+                    <p>Example:</p>
+                    <p><strong>Question:</strong> Factorise and solve \[x^2 + 5x + 6 = 0\]</p>
+                    <p><strong>Solution:</strong></p>
+                    <p>To factorise \[x^2 + 5x + 6\], find two numbers that multiply to \(6\) and add up to \(5\). These numbers are \(2\) and \(3\), so:</p>
+                    <p>\[x^2 + 5x + 6 = (x + 2)(x + 3)\]</p>
+                    <p>Setting each bracket to zero gives:</p>
+                    <p>\[x + 2 = 0 \implies x = -2\]</p>
+                    <p>\[x + 3 = 0 \implies x = -3\]</p>
+                    <p>The solutions are \(x = -2\) and \(x = -3\).</p>
+                    
+                    <p><strong>Another Example:</strong> Factorise and solve \[2x^2 + 7x + 3 = 0\]</p>
+                    <p>For equations where \(a \neq 1\), trial and error may help:</p>
+                    <p>Assume the factorised form is \[(2x + a)(x + b)\]. We need \(a \times b = 3\) and coefficients to match. Trying \(a = 1\) and \(b = 3\) or \(a = 3\) and \(b = 1\), we find:</p>
+                    <p>\[2x^2 + 7x + 3 = (2x + 1)(x + 3)\]</p>
+                    <p>Solving this gives:</p>
+                    <p>\[2x + 1 = 0 \implies x = -\frac{1}{2}\]</p>
+                    <p>\[x + 3 = 0 \implies x = -3\]</p>
+                    <p>The solutions are \(x = -\frac{1}{2}\) and \(x = -3\).</p>
 
-                    <p><strong>Question</strong></p>
-                   <p>Solve this equation by completing the square: \[2x^2+7x+3=0\]</p>
-                   <p><strong>Solution</strong></p>
+                    <h4>2. Completing the Square</h4>
+                    <p>Completing the square is a method used to solve quadratic equations and to find the vertex of a parabola. Here’s how you can complete the square using the method where you halve the coefficient of \(x\) and subtract its square:</p>
+                    
+                    <ol>
+                        <li><strong>Start with the standard form:</strong> Begin with the equation \(ax^2 + bx + c = 0\). If \(a \neq 1\), divide through by \(a\) to make the coefficient of \(x^2\) equal to 1.</li>
+                        <li><strong>Rearrange:</strong> Move the constant term \(c\) to the other side of the equation.</li>
+                        <li><strong>Halve the coefficient of \(x\):</strong> Take \(\frac{b}{2}\), square it, and add and subtract this value on the left-hand side of the equation.</li>
+                        <li><strong>Rewrite and solve:</strong> Rearrange and solve for \(x\).</li>
+                    </ol>
+                    
+                    <p><strong>Example 1:</strong> Solve \[x^2 + 6x + 5 = 0\] by completing the square.</p>
+                    
+                    <p><strong>Solution:</strong></p>
+                    <p>1. Start with the equation:</p>
+                    <p>\[x^2 + 6x + 5 = 0\]</p>
+                    
+                    <p>2. Move the constant term to the other side:</p>
+                    <p>\[x^2 + 6x = -5\]</p>
+                    
+                    <p>3. Halve the coefficient of \(x\), which is 6. Half of 6 is 3. This value goes into the bracket as \(x + 3\). Square this number to get 9. To complete the square, subtract this squared value (9) on the left-hand side of the equation and adjust the constant term on the right-hand side. This transforms the equation into the following form:</p>
+
+                    <p>\[(x + 3)^2 - 9 = -5\]</p>
+                    
+                   <p>What we've done is transform the equation into a form that is much easier to manipulate and solve. The trick of halving the coefficient of \(x\) and subtracting its square will work every time, provided the coefficient of \(x^2\) in the original equation is 1.</p>
+
+                    
+                    <p>4. Simplify the equation by moving -9 to the right side:</p>
+                    <p>\[(x + 3)^2 = 4\]</p>
+                    
+                    <p>5. Solve for \(x\) by taking the square root of both sides:</p>
+                    <p>\[x + 3 = \pm \sqrt{4}\]</p>
+                    <p>\[x + 3 = \pm 2\]</p>
+                    
+                    <p>6. Isolate \(x\) to find the solutions:</p>
+                    <p>\[x = -3 + 2 = -1\]</p>
+                    <p>\[x = -3 - 2 = -5\]</p>
+                    
+                    <p>The solutions are \(x = -1\) and \(x = -5\).</p>
+                    
+                    <p><strong>Example 2:</strong> Solve \[x^2 - 4x - 5 = 0\] by completing the square.</p>
+                    
+<p><strong>Solution:</strong></p>
+<p>1. Start with the equation:</p>
+<p>\[x^2 - 4x - 5 = 0\]</p>
+                    
+<p>2. Move the constant term to the other side:</p>
+<p>\[x^2 - 4x = 5\]</p>
+                    
+<p>3. Halve the coefficient of \(x\), which is -4. Half of -4 is -2. This value goes into the bracket as \(x - 2\). Square this number to get 4. To complete the square, subtract this squared value (4) on the left-hand side of the equation and adjust the constant term on the right-hand side. This transforms the equation into the following form:</p>
+
+<p>\[(x - 2)^2 - 4 = 5\]</p>
+                    
+<p>What we've done is transform the equation into a form that is much easier to manipulate and solve. The trick of halving the coefficient of \(x\) and subtracting its square will work every time, provided the coefficient of \(x^2\) in the original equation is 1.</p>
+                    
+<p>4. Simplify the equation by moving -4 to the right side:</p>
+<p>\[(x - 2)^2 = 9\]</p>
+                    
+<p>5. Solve for \(x\) by taking the square root of both sides:</p>
+<p>\[x - 2 = \pm \sqrt{9}\]</p>
+<p>\[x - 2 = \pm 3\]</p>
+                    
+<p>6. Isolate \(x\) to find the solutions:</p>
+<p>\[x = 2 + 3 = 5\]</p>
+<p>\[x = 2 - 3 = -1\]</p>
+                    
+<p>The solutions are \(x = 5\) and \(x = -1\).</p>
+<p><strong>Example 3:</strong> Solve \[2x^2 + 5x - 3 = 0\] by completing the square.</p>
+
+<p><strong>Solution:</strong></p>
+<p>1. Start with the equation:</p>
+<p>\[2x^2 + 5x - 3 = 0\]</p>
+
+<p>2. Divide the entire equation by 2 to make the coefficient of \(x^2\) equal to 1:</p>
+<p>\[x^2 + \frac{5}{2}x - \frac{3}{2} = 0\]</p>
+
+<p>3. Move the constant term to the other side:</p>
+<p>\[x^2 + \frac{5}{2}x = \frac{3}{2}\]</p>
+
+<p>4. Halve the coefficient of \(x\), which is \(\frac{5}{2}\). Half of \(\frac{5}{2}\) is \(\frac{5}{4}\). This value goes into the bracket as \(x + \frac{5}{4}\). Square this number to get \(\left(\frac{5}{4}\right)^2 = \frac{25}{16}\). To complete the square, subtract this squared value (\(\frac{25}{16}\)) on the left-hand side of the equation and adjust the constant term on the right-hand side. This transforms the equation into the following form:</p>
+
+<p>\[\left(x + \frac{5}{4}\right)^2 - \frac{25}{16} = \frac{3}{2}\]</p>
+
+<p>5. Simplify the equation by moving \(-\frac{25}{16}\) to the right side. Convert \(\frac{3}{2}\) to a fraction with the same denominator (\(\frac{24}{16}\)): </p>
+<p>\[\left(x + \frac{5}{4}\right)^2 = \frac{24}{16} + \frac{25}{16}\]</p>
+<p>\[\left(x + \frac{5}{4}\right)^2 = \frac{49}{16}\]</p>
+
+<p>6. Solve for \(x\) by taking the square root of both sides:</p>
+<p>\[x + \frac{5}{4} = \pm \sqrt{\frac{49}{16}}\]</p>
+<p>\[x + \frac{5}{4} = \pm \frac{7}{4}\]</p>
+
+<p>7. Isolate \(x\) to find the solutions:</p>
+<p>\[x = -\frac{5}{4} + \frac{7}{4} = \frac{2}{4} = \frac{1}{2}\]</p>
+<p>\[x = -\frac{5}{4} - \frac{7}{4} = -\frac{12}{4} = -3\]</p>
+
+<p>The solutions are \(x = \frac{1}{2}\) and \(x = -3\).</p>
 
 
 
+                    
+                    <h4>3. The Quadratic Formula</h4>
+                    <p>The quadratic formula is used to solve any quadratic equation and is given by:</p>
+                    <p>\[x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]</p>
+                    <p>Example:</p>
+                    <p><strong>Question:</strong> Solve \[2x^2 + 3x + 1 = 0\] using the quadratic formula.</p>
+                    <p><strong>Solution:</strong></p>
+                    <p>Here, \(a = 2\), \(b = 3\), and \(c = 1\). Plug these values into the formula:</p>
+                    <p>\[x = \frac{-3 \pm \sqrt{3^2 - 4 \cdot 2 \cdot 1}}{2 \cdot 2}\]</p>
+                    <p>\[x = \frac{-3 \pm \sqrt{9 - 8}}{4}\]</p>
+                    <p>\[x = \frac{-3 \pm 1}{4}\]</p>
+                    <p>The solutions are:</p>
+                    <p>\[x = \frac{-3 + 1}{4} = -\frac{1}{2}\]</p>
+                    <p>\[x = \frac{-3 - 1}{4} = -1\]</p>
 
-                </div>
-               
-
-            
+                    <h4>4. Using a Scientific Calculator</h4>
+                    <p>Scientific calculators often feature a built-in quadratic solver. This function allows you to input the values for \(a\), \(b\), and \(c\) from the quadratic equation \(ax^2 + bx + c = 0\) to quickly find the roots.</p>
+                    <p>While this method is fast and convenient, it may not provide much insight into the underlying techniques of solving quadratics. For a deeper understanding, it’s beneficial to practice solving equations manually using other methods.</p>
+                    <p>For detailed instructions on how to use the quadratic solver on your specific calculator model, refer to online guides or the user manual for your device.</p>
+                    
+                    <div class="exam_tip">
+                        <h4>Exam Tip</h4>
+                        <p>Before relying on your calculator, try to solve the quadratic equation manually using one of the other methods. This will help reinforce your understanding and ensure accuracy. If you’re short on time during an exam, using the calculator can be a valuable tool. Just be sure to double-check that you’ve entered the coefficients correctly to avoid any errors.</p>
+                    </div><br>
+                    <h2>Graphing Quadratics</h2><br><br>
                 
+                    <p>A quadratic equation represents a parabola when graphed. Understanding how to graph a quadratic equation involves identifying key features: the vertex, roots (x-intercepts), y-intercept, and the shape of the curve. Below, we'll walk through each of these features and use Desmos for visual demonstrations.</p>
+                    
+                    <h3>1. Vertex</h3>
+                    <h4>Finding the Vertex Using Completed Square Form</h4><br><br>
 
+                    <p>Once you have rewritten a quadratic function in the completed square form, identifying the vertex is straightforward. The completed square form is:</p>
+                    <p>\[ y = a(x - h)^2 + k \]</p>
+    
+                    <h4>Understanding the Vertex Form</h4>
+                    <p>In the completed square form:</p>
+                    <ul>
+                        <li> \( (h, k) \) represents the vertex of the quadratic function.</li>
+                        <li> \( h \) is the \( x \)-coordinate of the vertex, and it is found inside the parentheses. If the form is \( (x - h) \), then \( h \) is the opposite sign of what appears in the parentheses.</li>
+                        <li> \( k \) is the \( y \)-coordinate of the vertex and is the constant term outside the squared term.</li>
+                    </ul>
+    <br>
+                    <strong>Example</strong>
+                    <p>Consider the quadratic function:</p>
+                    <p>\[ y = 2(x + 3)^2 - 7 \]</p>
+    
+                    <p>This function is already in the completed square form:</p>
+                    <p>\[ y = a(x - h)^2 + k \]</p>
+    
+                    <p>Here, \( a = 2 \), \( h = -3 \), and \( k = -7 \). Thus:</p>
+                    <ul>
+                        <li>The vertex \( (h, k) \) is \( (-3, -7) \).</li>
+                    </ul>
+    
+                    <p>So, the vertex of the quadratic function \( y = 2(x + 3)^2 - 7 \) is \( (-3, -7) \).</p>
+                    <iframe src="https://www.desmos.com/calculator/fqhsn6wb7q?embed" width="600" height="400"  frameborder="0"></iframe>
+                    
+                    <h3>2. Roots (x-intercepts)</h3>
+                    <p>The roots of a quadratic equation are the values of \(x\) where the graph intersects the x-axis. These can be found by solving the quadratic equation using methods such as factorising, completing the square, or the quadratic formula.</p>
+                    <p>Here’s a graph showing the roots of a quadratic equation:</p>
+                    <iframe src="https://www.desmos.com/calculator/ug0ms6qj3j?embed" width="600" height="400"  frameborder="0"></iframe>
+                    
+                    <h3>3. Y-Intercept</h3>
+                    <p>The y-intercept is the point where the graph crosses the y-axis. It is found by setting \(x = 0\) in the equation \(ax^2 + bx + c\). The y-intercept is simply the constant term \(c\) in the equation.</p>
+                    <p>Here’s an example showing the y-intercept of a quadratic graph:</p>
+                    <iframe src="https://www.desmos.com/calculator/vx9zjrtjxl?embed" width="600" height="400"  frameborder="0"></iframe>
+                    
+                    <h3>4. Shape of the Curve</h3>
+                    <p>The shape of the parabola depends on the coefficient \(a\) in the quadratic equation \(ax^2 + bx + c\). If \(a > 0\), the parabola opens upwards; if \(a < 0\), it opens downwards. The magnitude of \(a\) affects how "steep" the parabola is.</p>
+                    <p>Visualize the effect of different values of \(a\) on the shape of the parabola:</p>
+                    <iframe src="https://www.desmos.com/calculator/kooyx5qotf?embed" width="600" height="400"  frameborder="0"></iframe>
+                    
+                    <h4>Example: Graphing a Quadratic</h4>
+                    <p>Let's graph the quadratic equation:</p>
+                    <p>\[ y = 2x^2 - 4x - 6 \]</p>
+                    <p>This quadratic has a vertex, roots, and y-intercept that we can identify:</p>
+                    <ol>
+                        <li>Vertex: Use the formula to find \(x\), then substitute to get the y-coordinate.</li>
+                        <li>Roots: Find where the parabola intersects the x-axis.</li>
+                        <li>Y-Intercept: Set \(x = 0\) and solve for \(y\).</li>
+                    </ol>
+                    <p>Here is the graph of this quadratic equation:</p>
+                    <iframe src="https://www.desmos.com/calculator/bmxm6y9otm?embed" width="600" height="400"  frameborder="0"></iframe>
+                    
+                    <!-- Navigation Buttons -->
+                    <div class="navigation-buttons">
+                        <a href="./surdsandindices-quiz.html" class="prev-button">Previous</a>
+                        <a href="./simultaneous.html" class="next-button">Next</a>
+                    </div>
+                    
 
-                <!-- Navigation Buttons -->
-                <div class="navigation-buttons">
-                    <a href="./surdsindices.html" class="prev-button">Previous</a>
-                    <a href="./simultaneous.html" class="next-button">Next</a>
+                   
                 </div>
-            </div>
+            </section>
+        </main>
 
-
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Fletch Maths. All rights reserved.</p>
-        <p>Graphs created using Desmos. <a href="https://www.desmos.com" target="_blank">Visit Desmos</a> for more tools and resources.</p>
-    </footer>
-</body>
+        <footer>
+            <p>&copy; 2024 Fletch Maths. All rights reserved.</p>
+            <p>Graphs created using Desmos. <a href="https://www.desmos.com" target="_blank">Visit Desmos</a> for more tools and resources.</p>
+        </footer>
+    </body>
 </html>
