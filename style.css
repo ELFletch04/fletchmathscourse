@@ -195,65 +195,70 @@ nav {
     padding: 20px;
 }
 
-/* Sidebar Styling */
-/* Sidebar Styles */
 .sidebar {
-    width: 250px;
+    width: 750px; /* Adjusted width to accommodate sections side by side */
     height: 100vh;
     background-color: #f4f4f4;
     position: fixed;
-    left: 0;
+    left: -750px; /* Start hidden off the screen */
     top: 0;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    transition: left 0.3s ease; /* Smooth slide effect */
     z-index: 999; /* Ensure sidebar is above other content */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    display: flex; /* Use flexbox to align sections side by side */
 }
 
 /* Sidebar Open State */
 .sidebar.open {
-    transform: translateX(0);
+    left: 0; /* Slide into view */
 }
 
-/* Toggle Button Styles */
+/* Tab Button Styles */
 .toggle-btn {
-    display: none; /* Hide toggle button by default */
-}
-
-.sidebar .toggle-btn {
-    display: block; /* Ensure the button is always visible within the sidebar */
-    position: absolute;
-    top: 20px;
-    right: -50px; /* Position the button outside of the sidebar */
-    background-color: #333;
-    color: #fff;
+    position: absolute; /* Position relative to the sidebar */
+    left: 100%; /* Align to the right edge of the sidebar */
+    top: 50%; /* Center vertically within the sidebar */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    background-color: #fff; /* White background for the tab */
+    color: #333; /* Dark text color */
     border: none;
-    padding: 10px;
+    padding: 10px 15px; /* Adjust padding for the tab size */
     cursor: pointer;
-    border-radius: 5px;
-    z-index: 1000; /* Ensure button is above sidebar */
-    font-size: 18px; /* Make button text larger */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
+    z-index: 1000; /* Ensure button is above other elements */
+    font-size: 18px; /* Larger text for the button */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    display: flex; /* Flexbox for centering the icon */
+    align-items: center; /* Center the icon vertically */
 }
 
-/* Display the toggle button on smaller screens */
+/* Ensure the button is visible on all screen sizes */
 @media (max-width: 768px) {
     .toggle-btn {
-        display: block; /* Show toggle button on smaller screens */
+        display: block; /* Ensure the button is visible on smaller screens */
     }
+}
 
-    .sidebar {
-        width: 100%;
-        transform: translateX(-100%);
-    }
-
-    .sidebar.open {
-        transform: translateX(0);
-    }
+/* Icon Styles */
+.toggle-btn .icon {
+    transition: transform 0.3s ease; /* Smooth transition for icon */
+    font-size: 20px; /* Adjust icon size */
 }
 
 /* Sidebar Content Styles */
+.sidebar-content {
+    display: flex; /* Align sections side by side */
+    width: 100%; /* Full width for sidebar content */
+}
+
+.sidebar .section {
+    flex: 1; /* Each section takes equal space */
+    padding: 20px; /* Padding around the content */
+}
+
 .sidebar h3 {
     color: #2479f0;
-    margin: 20px;
+    margin: 20px 0;
 }
 
 .sidebar ul {
@@ -279,6 +284,8 @@ nav {
 .sidebar a:hover {
     background-color: #e3e9f4;
 }
+
+
 
 /* Content Area Styling */
 .module-content {

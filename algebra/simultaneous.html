@@ -27,29 +27,54 @@
     <!-- Main Content Area -->
     <main class="module-page">
         <!-- Sidebar -->
-        <aside class="sidebar">
-            <h3>Course Modules</h3>
-            <ul>
-                <li><a href="algebra.html" class="sidebar-item">Algebra and Functions</a></li>
-                <li><a href="coordinate-geometry.html" class="sidebar-item">Coordinate Geometry</a></li>
-                <li><a href="sequences-series.html" class="sidebar-item">Sequences and Series</a></li>
-                <li><a href="trigonometry.html" class="sidebar-item">Trigonometry</a></li>
-                <li><a href="exponentials-logarithms.html" class="sidebar-item">Exponentials and Logarithms</a></li>
-                <li><a href="differentiation.html" class="sidebar-item">Differentiation</a></li>
-                <li><a href="integration.html" class="sidebar-item">Integration</a></li>
-                <li><a href="vectors.html" class="sidebar-item">Vectors</a></li>
-                <li><a href="numerical-methods.html" class="sidebar-item">Numerical Methods</a></li>
-                <li><a href="proof.html" class="sidebar-item">Proof</a></li>
-                <li><a href="sampling.html" class="sidebar-item">Sampling</a></li>
-                <li><a href="data-presentation.html" class="sidebar-item">Data Presentation and Interpretation</a></li>
-                <li><a href="probability.html" class="sidebar-item">Probability</a></li>
-                <li><a href="statistical-distribution.html" class="sidebar-item">Statistical Distribution</a></li>
-                <li><a href="hypothesis-testing.html" class="sidebar-item">Hypothesis Testing</a></li>
-                <li><a href="quantities-mechanics.html" class="sidebar-item">Quantities and Units in Mechanics</a></li>
-                <li><a href="kinematics.html" class="sidebar-item">Kinematics</a></li>
-                <li><a href="forces-newtons-laws.html" class="sidebar-item">Forces and Newton's Laws</a></li>
-                <li><a href="moments.html" class="sidebar-item">Moments</a></li>
-            </ul>
+        <aside class="sidebar" id="sidebar">
+            <button class="toggle-btn" id="toggle-btn">
+                <span class="icon">▶</span>
+            </button>
+            <div class="sidebar-content">
+                <div class="section">
+                    <h3>Pure Mathematics</h3>
+                    <ul>
+                        <li><a href="algebra.html" class="sidebar-item">Algebra and Functions</a></li>
+                        <li><a href="coordinate-geometry.html" class="sidebar-item">Coordinate Geometry</a></li>
+                        <li><a href="sequences-series.html" class="sidebar-item">Sequences and Series</a></li>
+                        <li><a href="trigonometry.html" class="sidebar-item">Trigonometry</a></li>
+                        <li><a href="exponentials-logarithms.html" class="sidebar-item">Exponentials and Logarithms</a></li>
+                        <li><a href="differentiation.html" class="sidebar-item">Differentiation</a></li>
+                        <li><a href="integration.html" class="sidebar-item">Integration</a></li>
+                        <li><a href="vectors.html" class="sidebar-item">Vectors</a></li>
+                        <li><a href="proof.html" class="sidebar-item">Proof</a></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>Statistics</h3>
+                    <ul>
+                        <li><a href="numerical-methods.html" class="sidebar-item">Numerical Methods</a></li>
+                        <li><a href="sampling.html" class="sidebar-item">Sampling</a></li>
+                        <li><a href="data-presentation.html" class="sidebar-item">Data Presentation and Interpretation</a></li>
+                        <li><a href="probability.html" class="sidebar-item">Probability</a></li>
+                        <li><a href="statistical-distribution.html" class="sidebar-item">Statistical Distribution</a></li>
+                        <li><a href="hypothesis-testing.html" class="sidebar-item">Hypothesis Testing</a></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>Mechanics</h3>
+                    <ul>
+                        <li><a href="quantities-mechanics.html" class="sidebar-item">Quantities and Units in Mechanics</a></li>
+                        <li><a href="kinematics.html" class="sidebar-item">Kinematics</a></li>
+                        <li><a href="forces-newtons-laws.html" class="sidebar-item">Forces and Newton's Laws</a></li>
+                        <li><a href="moments.html" class="sidebar-item">Moments</a></li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+                document.getElementById('toggle-btn').addEventListener('click', function() {
+                    var sidebar = document.getElementById('sidebar');
+                    sidebar.classList.toggle('open');
+                    var icon = document.querySelector('.toggle-btn .icon');
+                    icon.textContent = sidebar.classList.contains('open') ? '◁' : '▶';
+                });
+            </script>
         </aside>
 
         <!-- Content Area -->
@@ -94,6 +119,39 @@
                         \]</p>
                         <li>**Solution:** \(x = 3\), \(y = 2\)</li>
                     </ol>
+                    <p>Try this example:</p>
+                    <div class="question-box" data-question="12">
+                        <p><strong>Solve the following system of equations using the substitution method:</strong></p>
+                        <p>\[
+                        \begin{align*}
+                        x + 2y &= 7 \\
+                        3x - y &= 5
+                        \end{align*}
+                        \]</p>
+                        <div class="answer-box" data-option="A" onclick="checkAnswer(12, 'A')">A. \((x, y) = (-\frac{17}{7},\frac{16}{7} )\) </div>
+                        <div class="answer-box" data-option="B" onclick="checkAnswer(12, 'B')">B. \((x, y) = (-\frac{17}{7},-\frac{16}{7} )\) </div>
+                        <div class="answer-box" data-option="C" onclick="checkAnswer(12, 'C')">C. \((x, y) = (\frac{17}{7},\frac{16}{7} )\) </div>
+                        <div class="answer-box" data-option="D" onclick="checkAnswer(12, 'D')">D. \((x, y) = (3, 4)\) </div>
+                        <div id="feedback12" class="feedback"></div>
+                        <button class="toggle-solution" onclick="toggleSolution(12)">Show Solution</button>
+                        <div id="solution12" class="solution-box" style="display: none;">
+                            <p>**Solution:**</p>
+                            <ol>
+                                <li>Rearrange the first equation to express \(x\) in terms of \(y\):</li>
+                                <p>\[
+                                x = 7 - 2y
+                                \]</p>
+                                <li>Substitute \(x = 7 - 2y\) into the second equation:</li>
+                                <p>\[
+                                3(7 - 2y) - y = 5 \implies 21 - 6y - y = 5 \implies -7y = 5 - 21 \implies -7y = -16 \implies y = \frac{16}{7}
+                                \]</p>
+                                <li>Substitute \(y = \frac{16}{7}\) back into \(x = 7 - 2y\):</li>
+                                <p>\[
+                                x = 7 - 2 \left(\frac{16}{7}\right) \implies x = 7 - \frac{32}{7} \implies x = \frac{49 - 32}{7} = \frac{17}{7}
+                                \]</p>
+                                <li>**Solution:** \(x = \frac{17}{7}\), \(y = \frac{16}{7}\)</li>
+                            </ol>
+                        </div>
                     
                     <h4>Elimination Method:</h4>
                     <p>This method involves adding or subtracting equations to eliminate one of the variables, making it easier to solve for the remaining variable.</p>
@@ -126,6 +184,43 @@
                         \]</p>
                         <li>**Solution:** \(x = \frac{11}{7}\), \(y = \frac{9}{7}\)</li>
                     </ol>
+                </div>
+                <div class="question-box" data-question="13">
+                    <p><strong>Solve the following system of equations using the elimination method:</strong></p>
+                    <p>\[
+                    \begin{align*}
+                    4x - 2y &= 8 \\
+                    2x + 3y &= 7
+                    \end{align*}
+                    \]</p>
+                    <div class="answer-box" data-option="A" onclick="checkAnswer(13, 'A')">A. \( (x,y) = (-\frac{3}{4},\frac{19}{8} ) \)</div>
+                    <div class="answer-box" data-option="B" onclick="checkAnswer(13, 'B')">B. \( (x,y) = (-\frac{3}{4},\frac{18}{9} ) \)</div>
+                    <div class="answer-box" data-option="C" onclick="checkAnswer(13, 'C')">C. \( (x,y) = (-\frac{19}{8},\frac{4}{3} ) \)</div>
+                    <div class="answer-box" data-option="D" onclick="checkAnswer(13, 'D')">D. \( (x,y) = (-\frac{19}{8},\frac{3}{4} ) \)</div>
+                    <div id="feedback13" class="feedback"></div>
+                    <div id="feedback-13" class="feedback"></div>
+                    <button class="toggle-solution" onclick="toggleSolution(13)">Show Solution</button>
+                    <div id="solution13" class="solution-box" style="display: none;">
+                        <p>**Solution:**</p>
+                        <ol>
+                            <li>Multiply the second equation by 2 to align the coefficients of \(x\):</li>
+                            <p>\[
+                            \begin{align*}
+                            4x - 2y &= 8 \\
+                            4x + 6y &= 14
+                            \end{align*}
+                            \]</p>
+                            <li>Subtract the first equation from the second equation:</li>
+                            <p>\[
+                            (4x + 6y) - (4x - 2y) = 14 - 8 \implies 8y = 6 \implies y = \frac{6}{8} = \frac{3}{4}
+                            \]</p>
+                            <li>Substitute \(y = \frac{3}{4}\) into the first equation:</li>
+                            <p>\[
+                            4x - 2 \left(\frac{3}{4}\right) = 8 \implies 4x - \frac{3}{2} = 8 \implies 4x = 8 + \frac{3}{2} \implies 4x = \frac{16 + 3}{2} = \frac{19}{2} \implies x = \frac{19}{8}
+                            \]</p>
+                            <li>**Solution:** \(x = \frac{19}{8}\), \(y = \frac{3}{4}\)</li>
+                        </ol>
+                    </div>
                 </div>
 
                 <div>
@@ -171,7 +266,67 @@
                         <li>**Solutions:** \((x, y) = (3, 2)\) or \((2, 3)\)</li>
                     </ol>
                 </div>
+                <div class="question-box" data-question="14">
+                    <p><strong>Solve the following system of quadratic equations:</strong></p>
+                    <p>\[
+                    \begin{align*}
+                    x^2 + y^2 &= 25 \\
+                    x - y &= 1
+                    \end{align*}
+                    \]</p>
+                    <div class="answer-box" data-option="A" onclick="checkAnswer(14, 'A')">A. \((x, y) = (3, 4)\) or \((4, 3)\)</div>
+                    <div class="answer-box" data-option="B" onclick="checkAnswer(14, 'B')">B. \((x, y) = (5, 0)\) or \((0, 5)\)</div>
+                    <div class="answer-box" data-option="C" onclick="checkAnswer(14, 'C')">C. \((x, y) = (4, 2)\) or \((2, 4)\)</div>
+                    <div class="answer-box" data-option="D" onclick="checkAnswer(14, 'D')">D. \((x, y) = (4, 3)\) or \((-3, -4)\)</div>
+                    <div id="feedback14" class="feedback"></div>
+                    <div id="feedback-14" class="feedback"></div>
+                    <button class="toggle-solution" onclick="toggleSolution(14)">Show Solution</button>
+                    <div id="solution14" class="solution-box" style="display: none;">
+                        <p>**Solution:**</p>
+                        <ol>
+                            <li>Rearrange the second equation to express \(x\) in terms of \(y\):</li>
+                            <p>\[
+                            x = y + 1
+                            \]</p>
+                            <li>Substitute \(x = y + 1\) into the first equation:</li>
+                            <p>\[
+                            (y + 1)^2 + y^2 = 25
+                            \]</p>
+                            <li>Expand and simplify:</li>
+                            <p>\[
+                            (y^2 + 2y + 1) + y^2 = 25 \implies 2y^2 + 2y + 1 = 25 \implies 2y^2 + 2y - 24 = 0 \implies y^2 + y - 12 = 0
+                            \]</p>
+                            <li>Factorise to find \(y\):</li>
+                            <p>\[
+                            (y - 3)(y + 4) = 0 \implies y = 3 \text{ or } y = -4
+                            \]</p>
+                            <li>Substitute \(y\) values back into \(x = y + 1\):</li>
+                            <ul>
+                                <li>If \(y = 3\), then \(x = 3 + 1 = 4\)</li>
+                                <li>If \(y = -4\), then \(x = -4 + 1 = -3\)</li>
+                            </ul>
+                            <li>**Solutions:** \((x, y) = (4, 3)\) or \((-3, -4)\)</li>
+                        </ol>
+                    </div>
+                </div>
             </div>
+            
+            <div class="review-box">
+                <h3>Topic Review: Simultaneous Equations</h3>
+                <p>In this topic, you have learned the following key concepts:</p>
+                <ul>
+                    <li><strong>Definition of Simultaneous Equations:</strong> Simultaneous equations are a set of equations with multiple variables that are solved together. The solutions must satisfy all given equations simultaneously.</li>
+                    <li><strong>Linear Simultaneous Equations:</strong> These equations are of the form \(ax + by = c\). Common methods for solving them include:
+                        <ul>
+                            <li><strong>Substitution Method:</strong> Solve one equation for one variable and substitute that expression into the other equation.</li>
+                            <li><strong>Elimination Method:</strong> Add or subtract equations to eliminate one variable and solve for the remaining variable.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Quadratic Simultaneous Equations:</strong> Involve at least one quadratic equation, such as \(ax^2 + by^2 + cxy = d\). Solve these by rearranging the linear equation to express one variable in terms of the other and substituting it into the quadratic equation.</li>
+                    <li><strong>Graphical Interpretation:</strong> The solution to simultaneous equations can also be interpreted graphically as the point(s) where the graphs of the equations intersect.</li>
+                </ul>
+            </div>
+            
             <div class="navigation-buttons">
                 <a href="./quadratics.html" class="prev-button">Previous</a>
                 <a href="./polynomials.html" class="next-button">Next</a>

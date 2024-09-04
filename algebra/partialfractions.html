@@ -25,29 +25,54 @@
     <!-- Main Content Area -->
     <main class="module-page">
         <!-- Sidebar -->
-        <aside class="sidebar">
-            <h3>Course Modules</h3>
-            <ul>
-                <li><a href="algebra.html" class="sidebar-item">Algebra and Functions</a></li>
-                <li><a href="coordinate-geometry.html" class="sidebar-item">Coordinate Geometry</a></li>
-                <li><a href="sequences-series.html" class="sidebar-item">Sequences and Series</a></li>
-                <li><a href="trigonometry.html" class="sidebar-item">Trigonometry</a></li>
-                <li><a href="exponentials-logarithms.html" class="sidebar-item">Exponentials and Logarithms</a></li>
-                <li><a href="differentiation.html" class="sidebar-item">Differentiation</a></li>
-                <li><a href="integration.html" class="sidebar-item">Integration</a></li>
-                <li><a href="vectors.html" class="sidebar-item">Vectors</a></li>
-                <li><a href="numerical-methods.html" class="sidebar-item">Numerical Methods</a></li>
-                <li><a href="proof.html" class="sidebar-item">Proof</a></li>
-                <li><a href="sampling.html" class="sidebar-item">Sampling</a></li>
-                <li><a href="data-presentation.html" class="sidebar-item">Data Presentation and Interpretation</a></li>
-                <li><a href="probability.html" class="sidebar-item">Probability</a></li>
-                <li><a href="statistical-distribution.html" class="sidebar-item">Statistical Distribution</a></li>
-                <li><a href="hypothesis-testing.html" class="sidebar-item">Hypothesis Testing</a></li>
-                <li><a href="quantities-mechanics.html" class="sidebar-item">Quantities and Units in Mechanics</a></li>
-                <li><a href="kinematics.html" class="sidebar-item">Kinematics</a></li>
-                <li><a href="forces-newtons-laws.html" class="sidebar-item">Forces and Newton's Laws</a></li>
-                <li><a href="moments.html" class="sidebar-item">Moments</a></li>
-            </ul>
+        <aside class="sidebar" id="sidebar">
+            <button class="toggle-btn" id="toggle-btn">
+                <span class="icon">▶</span>
+            </button>
+            <div class="sidebar-content">
+                <div class="section">
+                    <h3>Pure Mathematics</h3>
+                    <ul>
+                        <li><a href="algebra.html" class="sidebar-item">Algebra and Functions</a></li>
+                        <li><a href="coordinate-geometry.html" class="sidebar-item">Coordinate Geometry</a></li>
+                        <li><a href="sequences-series.html" class="sidebar-item">Sequences and Series</a></li>
+                        <li><a href="trigonometry.html" class="sidebar-item">Trigonometry</a></li>
+                        <li><a href="exponentials-logarithms.html" class="sidebar-item">Exponentials and Logarithms</a></li>
+                        <li><a href="differentiation.html" class="sidebar-item">Differentiation</a></li>
+                        <li><a href="integration.html" class="sidebar-item">Integration</a></li>
+                        <li><a href="vectors.html" class="sidebar-item">Vectors</a></li>
+                        <li><a href="proof.html" class="sidebar-item">Proof</a></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>Statistics</h3>
+                    <ul>
+                        <li><a href="numerical-methods.html" class="sidebar-item">Numerical Methods</a></li>
+                        <li><a href="sampling.html" class="sidebar-item">Sampling</a></li>
+                        <li><a href="data-presentation.html" class="sidebar-item">Data Presentation and Interpretation</a></li>
+                        <li><a href="probability.html" class="sidebar-item">Probability</a></li>
+                        <li><a href="statistical-distribution.html" class="sidebar-item">Statistical Distribution</a></li>
+                        <li><a href="hypothesis-testing.html" class="sidebar-item">Hypothesis Testing</a></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>Mechanics</h3>
+                    <ul>
+                        <li><a href="quantities-mechanics.html" class="sidebar-item">Quantities and Units in Mechanics</a></li>
+                        <li><a href="kinematics.html" class="sidebar-item">Kinematics</a></li>
+                        <li><a href="forces-newtons-laws.html" class="sidebar-item">Forces and Newton's Laws</a></li>
+                        <li><a href="moments.html" class="sidebar-item">Moments</a></li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+                document.getElementById('toggle-btn').addEventListener('click', function() {
+                    var sidebar = document.getElementById('sidebar');
+                    sidebar.classList.toggle('open');
+                    var icon = document.querySelector('.toggle-btn .icon');
+                    icon.textContent = sidebar.classList.contains('open') ? '◁' : '▶';
+                });
+            </script>
         </aside>
 
         <!-- Content Area -->

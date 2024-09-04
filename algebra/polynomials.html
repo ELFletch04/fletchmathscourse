@@ -28,37 +28,56 @@
     <main class="module-page">
         <!-- Sidebar -->
         <aside class="sidebar" id="sidebar">
-            <button class="toggle-btn" id="toggle-btn">☰</button>
-            <h3>Course Modules</h3>
-            <ul>
-                <li><a href="algebra.html" class="sidebar-item">Algebra and Functions</a></li>
-                <li><a href="coordinate-geometry.html" class="sidebar-item">Coordinate Geometry</a></li>
-                <li><a href="sequences-series.html" class="sidebar-item">Sequences and Series</a></li>
-                <li><a href="trigonometry.html" class="sidebar-item">Trigonometry</a></li>
-                <li><a href="exponentials-logarithms.html" class="sidebar-item">Exponentials and Logarithms</a></li>
-                <li><a href="differentiation.html" class="sidebar-item">Differentiation</a></li>
-                <li><a href="integration.html" class="sidebar-item">Integration</a></li>
-                <li><a href="vectors.html" class="sidebar-item">Vectors</a></li>
-                <li><a href="numerical-methods.html" class="sidebar-item">Numerical Methods</a></li>
-                <li><a href="proof.html" class="sidebar-item">Proof</a></li>
-                <li><a href="sampling.html" class="sidebar-item">Sampling</a></li>
-                <li><a href="data-presentation.html" class="sidebar-item">Data Presentation and Interpretation</a></li>
-                <li><a href="probability.html" class="sidebar-item">Probability</a></li>
-                <li><a href="statistical-distribution.html" class="sidebar-item">Statistical Distribution</a></li>
-                <li><a href="hypothesis-testing.html" class="sidebar-item">Hypothesis Testing</a></li>
-                <li><a href="quantities-mechanics.html" class="sidebar-item">Quantities and Units in Mechanics</a></li>
-                <li><a href="kinematics.html" class="sidebar-item">Kinematics</a></li>
-                <li><a href="forces-newtons-laws.html" class="sidebar-item">Forces and Newton's Laws</a></li>
-                <li><a href="moments.html" class="sidebar-item">Moments</a></li>
-            </ul>
+            <button class="toggle-btn" id="toggle-btn">
+                <span class="icon">▶</span>
+            </button>
+            <div class="sidebar-content">
+                <div class="section">
+                    <h3>Pure Mathematics</h3>
+                    <ul>
+                        <li><a href="algebra.html" class="sidebar-item">Algebra and Functions</a></li>
+                        <li><a href="coordinate-geometry.html" class="sidebar-item">Coordinate Geometry</a></li>
+                        <li><a href="sequences-series.html" class="sidebar-item">Sequences and Series</a></li>
+                        <li><a href="trigonometry.html" class="sidebar-item">Trigonometry</a></li>
+                        <li><a href="exponentials-logarithms.html" class="sidebar-item">Exponentials and Logarithms</a></li>
+                        <li><a href="differentiation.html" class="sidebar-item">Differentiation</a></li>
+                        <li><a href="integration.html" class="sidebar-item">Integration</a></li>
+                        <li><a href="vectors.html" class="sidebar-item">Vectors</a></li>
+                        <li><a href="proof.html" class="sidebar-item">Proof</a></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>Statistics</h3>
+                    <ul>
+                        <li><a href="numerical-methods.html" class="sidebar-item">Numerical Methods</a></li>
+                        <li><a href="sampling.html" class="sidebar-item">Sampling</a></li>
+                        <li><a href="data-presentation.html" class="sidebar-item">Data Presentation and Interpretation</a></li>
+                        <li><a href="probability.html" class="sidebar-item">Probability</a></li>
+                        <li><a href="statistical-distribution.html" class="sidebar-item">Statistical Distribution</a></li>
+                        <li><a href="hypothesis-testing.html" class="sidebar-item">Hypothesis Testing</a></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>Mechanics</h3>
+                    <ul>
+                        <li><a href="quantities-mechanics.html" class="sidebar-item">Quantities and Units in Mechanics</a></li>
+                        <li><a href="kinematics.html" class="sidebar-item">Kinematics</a></li>
+                        <li><a href="forces-newtons-laws.html" class="sidebar-item">Forces and Newton's Laws</a></li>
+                        <li><a href="moments.html" class="sidebar-item">Moments</a></li>
+                    </ul>
+                </div>
+            </div>
             <script>
-                // JavaScript to handle the toggle functionality
                 document.getElementById('toggle-btn').addEventListener('click', function() {
                     var sidebar = document.getElementById('sidebar');
                     sidebar.classList.toggle('open');
+                    var icon = document.querySelector('.toggle-btn .icon');
+                    icon.textContent = sidebar.classList.contains('open') ? '◁' : '▶';
                 });
             </script>
         </aside>
+
+
 
         <!-- Content Area -->
         <section class="module-content textbox">
@@ -98,7 +117,6 @@
                         <div class="video-container">
                             <video width="560" height="315" controls>
                                 <source src="../media/long-division.mp4" type="video/mp4">
-                                <track src="../media/subtitles_ld.vtt" kind="subtitles" srclang="en" label="English">
                             </video>
                         </div>
                         
@@ -133,18 +151,18 @@
                             </ol>
                         </div>
             
-                        <div class="question-box" data-question="12">
+                        <div class="question-box" data-question="15">
                             <p>Have a go at the following question, using this method:</p>
                             <p><strong>Simplify the following expression using long division:</strong></p>
                             <p>\[\frac{x^3 - 3x^2 + 4x - 2}{x - 1}\]</p>
-                            <div class="answer-box" data-option="A" onclick="checkAnswer(12, 'A')">A. \(x^2 - 2x + 2\)</div>
-                            <div class="answer-box" data-option="B" onclick="checkAnswer(12, 'B')">B. \(x^2 - 2x - 1\)</div>
-                            <div class="answer-box" data-option="C" onclick="checkAnswer(12, 'C')">C. \(x^2 - 2x + 1\)</div>
-                            <div class="answer-box" data-option="D" onclick="checkAnswer(12, 'D')">D. \(x^2 - x + 2\)</div>
-                            <div id="feedback12" class="feedback"></div>
-                            <div id="feedback-12" class="feedback"></div>
-                            <button class="toggle-solution" onclick="toggleSolution(12)">Show Solution</button>
-                            <div id="solution12" class="solution-box" style="display: none;">
+                            <div class="answer-box" data-option="A" onclick="checkAnswer(15, 'A')">A. \(x^2 - 2x + 2\)</div>
+                            <div class="answer-box" data-option="B" onclick="checkAnswer(15, 'B')">B. \(x^2 - 2x - 1\)</div>
+                            <div class="answer-box" data-option="C" onclick="checkAnswer(15, 'C')">C. \(x^2 - 2x + 1\)</div>
+                            <div class="answer-box" data-option="D" onclick="checkAnswer(15, 'D')">D. \(x^2 - x + 2\)</div>
+                            <div id="feedback15" class="feedback"></div>
+                            <div id="feedback-15" class="feedback"></div>
+                            <button class="toggle-solution" onclick="toggleSolution(15)">Show Solution</button>
+                            <div id="solution15" class="solution-box" style="display: none;">
                                 <p><strong>Solution:</strong></p>
                                 <ol>
                                     <li>Divide the leading term \(x^3\) by \(x\) to get \(x^2\).</li>
@@ -180,20 +198,20 @@
                             \]</p>
                             <p>The \((x+2)\) on the numerator and denominator cancel out, leaving us with simply: \[x + 3\]</p>
                         </div>
-                        <div class="question-box" data-question="13">
+                        <div class="question-box" data-question="16">
                             <p>Have a go at the following question, using this method:</p>
                             <p><strong>Simplify the following expression:</strong></p>
                             <p>\[
                             \frac{x^2 - x - 6}{x - 3}
                             \]</p>
-                            <div class="answer-box" data-option="A" onclick="checkAnswer(13, 'A')">A. \(x + 2\)</div>
-                            <div class="answer-box" data-option="B" onclick="checkAnswer(13, 'B')">B. \(x - 2\)</div>
-                            <div class="answer-box" data-option="C" onclick="checkAnswer(13, 'C')">C. \(x + 3\)</div>
-                            <div class="answer-box" data-option="D" onclick="checkAnswer(13, 'D')">D. \(x - 6\)</div>
-                            <div id="feedback13" class="feedback"></div>
-                            <div id="feedback-13" class="feedback"></div>
-                            <button class="toggle-solution" onclick="toggleSolution(13)">Show Solution</button>
-                            <div id="solution13" class="solution-box" style="display: none;">
+                            <div class="answer-box" data-option="A" onclick="checkAnswer(16, 'A')">A. \(x + 2\)</div>
+                            <div class="answer-box" data-option="B" onclick="checkAnswer(16, 'B')">B. \(x - 2\)</div>
+                            <div class="answer-box" data-option="C" onclick="checkAnswer(16, 'C')">C. \(x + 3\)</div>
+                            <div class="answer-box" data-option="D" onclick="checkAnswer(16, 'D')">D. \(x - 6\)</div>
+                            <div id="feedback-16" class="feedback"></div>
+                            <div id="feedback-16" class="feedback"></div>
+                            <button class="toggle-solution" onclick="toggleSolution(16)">Show Solution</button>
+                            <div id="solution16" class="solution-box" style="display: none;">
                                 <p><strong>Solution:</strong></p>
                                 <ol>
                                     <li>Factorise the numerator \(x^2 - x - 6\) as \((x - 3)(x + 2)\).</li>
@@ -221,19 +239,19 @@
                     
                    
                     
-                    <div class="question-box" data-question="14">
+                    <div class="question-box" data-question="17">
                         <p><strong>Simplify the following fraction:</strong></p>
                         <p>\[
                         \frac{x^2 - 4}{x^2 - x - 6}
                         \]</p>
-                        <div class="answer-box" data-option="A" onclick="checkAnswer(14, 'A')">A. \(\frac{(x - 2)}{(x + 2)}\)</div>
-                        <div class="answer-box" data-option="B" onclick="checkAnswer(14, 'B')">B. \(\frac{(x - 2)}{(x - 3)}\)</div>
-                        <div class="answer-box" data-option="C" onclick="checkAnswer(14, 'C')">C. \(\frac{(x + 2)}{(x - 3)}\)</div>
-                        <div class="answer-box" data-option="D" onclick="checkAnswer(14, 'D')">D. \(\frac{(x + 2)}{(x + 3)}\)</div>
-                        <div id="feedback14" class="feedback"></div>
-                        <div id="feedback-14" class="feedback"></div>
-                        <button class="toggle-solution" onclick="toggleSolution(14)">Show Solution</button>
-                        <div id="solution14" class="solution-box" style="display: none;">
+                        <div class="answer-box" data-option="A" onclick="checkAnswer(17, 'A')">A. \(\frac{(x - 2)}{(x + 2)}\)</div>
+                        <div class="answer-box" data-option="B" onclick="checkAnswer(17, 'B')">B. \(\frac{(x - 2)}{(x - 3)}\)</div>
+                        <div class="answer-box" data-option="C" onclick="checkAnswer(17, 'C')">C. \(\frac{(x + 2)}{(x - 3)}\)</div>
+                        <div class="answer-box" data-option="D" onclick="checkAnswer(17, 'D')">D. \(\frac{(x + 2)}{(x + 3)}\)</div>
+                        <div id="feedback17" class="feedback"></div>
+                        <div id="feedback-17" class="feedback"></div>
+                        <button class="toggle-solution" onclick="toggleSolution(17)">Show Solution</button>
+                        <div id="solution16" class="solution-box" style="display: none;">
                             <p><strong>Solution:</strong></p>
                             <ol>
                                 <li>Factorise the numerator \(x^2 - 4\). Notice that it can be written as \((x - 2)(x + 2)\) using the difference of squares.</li>
@@ -263,7 +281,7 @@
                  <!-- Navigation Buttons -->
                  <div class="navigation-buttons">
                     <a href="./simultaneous.html" class="prev-button">Previous</a>
-                    <a href="./sketching.html" class="next-button">Next</a>
+                    <a href="./inequalities.html" class="next-button">Next</a>
                   </div>
                 
         </section>

@@ -80,10 +80,22 @@ function checkAnswer(questionNumber, option) {
             feedbackMessage = 'Correct!';
             break;
         case 13:
-                correctOption = 'A'; 
+                correctOption = 'D'; 
                 feedbackMessage = 'Correct!';
                 break;
         case 14:
+            correctOption = 'D'; 
+            feedbackMessage = 'Correct!';
+            break;
+        case 15:
+            correctOption = 'C'; 
+            feedbackMessage = 'Correct!';
+            break;
+        case 16:
+                correctOption = 'A'; 
+                feedbackMessage = 'Correct!';
+                break;
+        case 17:
             correctOption = 'B'; 
             feedbackMessage = 'Correct!';
             break;

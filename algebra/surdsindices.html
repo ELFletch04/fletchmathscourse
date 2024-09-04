@@ -28,29 +28,54 @@
     <main class="module-page">
         <!-- Sidebar --><audio id="ding-sound" src="../ding.mp3" preload="auto"></audio>
 
-        <aside class="sidebar">
-            <p>Course Modules</p>
-            <ul>
-                <li><a href="algebra.html" class="sidebar-item">Algebra and Functions</a></li>
-                <li><a href="coordinate-geometry.html" class="sidebar-item">Coordinate Geometry</a></li>
-                <li><a href="sequences-series.html" class="sidebar-item">Sequences and Series</a></li>
-                <li><a href="trigonometry.html" class="sidebar-item">Trigonometry</a></li>
-                <li><a href="exponentials-logarithms.html" class="sidebar-item">Exponentials and Logarithms</a></li>
-                <li><a href="differentiation.html" class="sidebar-item">Differentiation</a></li>
-                <li><a href="integration.html" class="sidebar-item">Integration</a></li>
-                <li><a href="vectors.html" class="sidebar-item">Vectors</a></li>
-                <li><a href="numerical-methods.html" class="sidebar-item">Numerical Methods</a></li>
-                <li><a href="proof.html" class="sidebar-item">Proof</a></li>
-                <li><a href="sampling.html" class="sidebar-item">Sampling</a></li>
-                <li><a href="data-presentation.html" class="sidebar-item">Data Presentation and Interpretation</a></li>
-                <li><a href="probability.html" class="sidebar-item">Probability</a></li>
-                <li><a href="statistical-distribution.html" class="sidebar-item">Statistical Distribution</a></li>
-                <li><a href="hypothesis-testing.html" class="sidebar-item">Hypothesis Testing</a></li>
-                <li><a href="quantities-mechanics.html" class="sidebar-item">Quantities and Units in Mechanics</a></li>
-                <li><a href="kinematics.html" class="sidebar-item">Kinematics</a></li>
-                <li><a href="forces-newtons-laws.html" class="sidebar-item">Forces and Newton's Laws</a></li>
-                <li><a href="moments.html" class="sidebar-item">Moments</a></li>
-            </ul>
+        <aside class="sidebar" id="sidebar">
+            <button class="toggle-btn" id="toggle-btn">
+                <span class="icon">▶</span>
+            </button>
+            <div class="sidebar-content">
+                <div class="section">
+                    <h3>Pure Mathematics</h3>
+                    <ul>
+                        <li><a href="algebra.html" class="sidebar-item">Algebra and Functions</a></li>
+                        <li><a href="coordinate-geometry.html" class="sidebar-item">Coordinate Geometry</a></li>
+                        <li><a href="sequences-series.html" class="sidebar-item">Sequences and Series</a></li>
+                        <li><a href="trigonometry.html" class="sidebar-item">Trigonometry</a></li>
+                        <li><a href="exponentials-logarithms.html" class="sidebar-item">Exponentials and Logarithms</a></li>
+                        <li><a href="differentiation.html" class="sidebar-item">Differentiation</a></li>
+                        <li><a href="integration.html" class="sidebar-item">Integration</a></li>
+                        <li><a href="vectors.html" class="sidebar-item">Vectors</a></li>
+                        <li><a href="proof.html" class="sidebar-item">Proof</a></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>Statistics</h3>
+                    <ul>
+                        <li><a href="numerical-methods.html" class="sidebar-item">Numerical Methods</a></li>
+                        <li><a href="sampling.html" class="sidebar-item">Sampling</a></li>
+                        <li><a href="data-presentation.html" class="sidebar-item">Data Presentation and Interpretation</a></li>
+                        <li><a href="probability.html" class="sidebar-item">Probability</a></li>
+                        <li><a href="statistical-distribution.html" class="sidebar-item">Statistical Distribution</a></li>
+                        <li><a href="hypothesis-testing.html" class="sidebar-item">Hypothesis Testing</a></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>Mechanics</h3>
+                    <ul>
+                        <li><a href="quantities-mechanics.html" class="sidebar-item">Quantities and Units in Mechanics</a></li>
+                        <li><a href="kinematics.html" class="sidebar-item">Kinematics</a></li>
+                        <li><a href="forces-newtons-laws.html" class="sidebar-item">Forces and Newton's Laws</a></li>
+                        <li><a href="moments.html" class="sidebar-item">Moments</a></li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+                document.getElementById('toggle-btn').addEventListener('click', function() {
+                    var sidebar = document.getElementById('sidebar');
+                    sidebar.classList.toggle('open');
+                    var icon = document.querySelector('.toggle-btn .icon');
+                    icon.textContent = sidebar.classList.contains('open') ? '◁' : '▶';
+                });
+            </script>
         </aside>
 
         <!-- Content Area -->
@@ -60,10 +85,55 @@
                <div id="surdsandindices"><h2>Surds and Indices</h2>
                 <a  class="reveal-method-btn skip" href="#indices_section" style="margin-left: 70%;" onclick="smoothScroll(event)">Skip to indices</a></div>
                 
-                <p>A <strong>surd</strong> is a type of irrational number in the form <span style="color: green;">\( \sqrt{a} \)</span> where <span style="color: green;">\( a \)</span> is <strong>not</strong> a square number.</p>
-                <p>For example: <span style="color: green;">\( \sqrt{6} \)</span> is a surd because 6 is not a square number.</p>
-                <p>On the other hand,<span style="color: rgb(128, 0, 0);">\( \sqrt{4} \)</span> is not a surd, as 4 is a square number.<span style="color: rgb(128, 0, 0);">\( \sqrt{4} \)</span> would just be equivalent to 2.</p>
-<br>
+                <div class="surd-info">
+                    <h3>Understanding Surds</h3>
+                    <div class="surd-example">
+                        <div class="example-item">
+                            <span class="tick">&#10003;</span>
+                            <p><strong>Surd:</strong> A surd is an irrational number in the form <span style="color: green;">\( \sqrt{a} \)</span> where <span style="color: green;">\( a \)</span> is <strong>not</strong> a square number.</p>
+                            <p>Example: <span style="color: green;">\( \sqrt{6} \)</span> is a surd because 6 is not a square number.</p>
+                        </div>
+                        <div class="example-item">
+                            <span class="cross">&#10007;</span>
+                            <p><strong>Not a Surd:</strong> If the number under the root is a square number, the expression is not considered a surd.</p>
+                            <p>Example: <span style="color: rgb(128, 0, 0);">\( \sqrt{4} \)</span> is not a surd, as 4 is a square number. <span style="color: rgb(128, 0, 0);">\( \sqrt{4} \)</span> simplifies to 2.</p>
+                        </div>
+                        <style>
+                            .surd-info {
+                                border: 1px solid #ccc;
+                                padding: 1em;
+                                border-radius: 5px;
+                                background-color: #f9f9f9;
+                            }
+                            .surd-info h3 {
+                                margin-top: 0;
+                                color: #333;
+                            }
+                            .surd-example {
+                                display: flex;
+                                flex-direction: column;
+                            }
+                            .example-item {
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 1em;
+                            }
+                            .tick {
+                                color: green;
+                                font-size: 1.5em;
+                                margin-right: 0.5em;
+                            }
+                            .cross {
+                                color: red;
+                                font-size: 1.5em;
+                                margin-right: 0.5em;
+                            }
+                            .example-item p {
+                                margin: 0;
+                            }
+                        </style>
+                    </div>
+                </div>
                 <!-- First Question -->
                 <div class="question-box" data-question="1">
                     <p><strong><p>Which of the following is not a surd?</p></strong></p>
@@ -542,19 +612,17 @@
 
                         <div class="review-box">
                             <h3>Topic Review: Surds and Indices</h3>
-                            <p>This section reviewed important concepts and techniques related to surds and indices. Here's a summary of the key points you should remember:</p>
+                            <p>In this topic, you have learned the following key concepts:</p>
                             <ul>
-                                <li><strong>The definition of a surd:</strong> An irrational number that can be expressed as a root of a rational number.</li>
-                                <li><strong>Arithmetic functions of surds:</strong> Adding, subtracting, multiplying, and dividing surds.</li>
-                                <li><strong>Simplifying surds:</strong> Reducing surds to their simplest form.</li>
-                                <li><strong>Expanding brackets with surds:</strong> Applying the distributive property to expressions involving surds.</li>
-                                <li><strong>Rationalising the denominator:</strong> Making the denominator of a fraction rational by multiplying by a suitable expression.</li>
-                                <li><strong>Identifying the base and power of an expression involving indices:</strong> Understanding how to simplify expressions using the laws of indices.</li>
-                                <li><strong>Laws of indices:</strong> Applying rules like the power of a product, power of a quotient, zero indices, negative indices, and fractional indices.</li>
-                                <li><strong>Solving equations involving indices:</strong> Using the rules of indices to solve equations and find unknown values.</li>
-                                <li><strong>Combining surds and indices:</strong> Simplifying complex expressions that involve both surds and indices.</li>
+                                <li><strong>Definition of a Surd:</strong> A surd is an irrational number that can be expressed as a root of a rational number. Common examples include \(\sqrt{2}\) and \(\sqrt[3]{5}\).</li>
+                                <li><strong>Arithmetic Functions of Surds:</strong> Includes addition, subtraction, multiplication, and division of surds. For example, \(\sqrt{2} + \sqrt{2} = 2\sqrt{2}\) and \(\sqrt{3} \times \sqrt{5} = \sqrt{15}\).</li>
+                                <li><strong>Simplifying Surds:</strong> Reducing surds to their simplest form. For instance, \(\sqrt{50}\) simplifies to \(5\sqrt{2}\).</li>
+                                <li><strong>Expanding Brackets with Surds:</strong> Applying the distributive property to expressions involving surds. For example, \((\sqrt{2} + 3)(\sqrt{2} - 1)\) simplifies to \(2 - \sqrt{2} + 3\sqrt{2} - 3 = -1 + 2\sqrt{2}\).</li>
+                                <li><strong>Rationalising the Denominator:</strong> Making the denominator of a fraction rational by multiplying by a suitable expression. For instance, \(\frac{1}{\sqrt{2}}\) is rationalised to \(\frac{\sqrt{2}}{2}\).</li>
+                                <li><strong>Laws of Indices:</strong> Rules for manipulating expressions with indices, such as \((a^m \times a^n = a^{m+n})\), \(\left(a^m\right)^n = a^{mn}\), and \(\frac{a^m}{a^n} = a^{m-n}\).</li>
+                                <li><strong>Solving Equations Involving Indices:</strong> Applying the laws of indices to solve equations. For example, solving \(2^x = 32\) involves recognizing that \(32 = 2^5\), so \(x = 5\).</li>
+                                <li><strong>Combining Surds and Indices:</strong> Simplifying complex expressions that involve both surds and indices, such as \(\sqrt{2^4} = \sqrt{16} = 4\).</li>
                             </ul>
-                            <p>Ensure you revisit these concepts and practice problems to solidify your understanding and improve problem-solving skills.</p>
                         </div>
                         
                 <!-- Navigation Buttons -->
