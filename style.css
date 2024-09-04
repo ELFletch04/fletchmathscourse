@@ -702,7 +702,7 @@ body {
 }
 
 .course-section, .revision-section {
-    width: 48%; /* Both sections take up equal width */
+    width: 49%; /* Both sections take up equal width */
 }
 
 .revision-section {
