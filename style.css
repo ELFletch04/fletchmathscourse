@@ -196,18 +196,70 @@ nav {
 }
 
 /* Sidebar Styling */
+/* Sidebar Styles */
 .sidebar {
-   position:sticky;
-   
+    width: 250px;
+    height: 100vh;
+    background-color: #f4f4f4;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999; /* Ensure sidebar is above other content */
 }
 
+/* Sidebar Open State */
+.sidebar.open {
+    transform: translateX(0);
+}
+
+/* Toggle Button Styles */
+.toggle-btn {
+    display: none; /* Hide toggle button by default */
+}
+
+.sidebar .toggle-btn {
+    display: block; /* Ensure the button is always visible within the sidebar */
+    position: absolute;
+    top: 20px;
+    right: -50px; /* Position the button outside of the sidebar */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000; /* Ensure button is above sidebar */
+    font-size: 18px; /* Make button text larger */
+}
+
+/* Display the toggle button on smaller screens */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: block; /* Show toggle button on smaller screens */
+    }
+
+    .sidebar {
+        width: 100%;
+        transform: translateX(-100%);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+}
+
+/* Sidebar Content Styles */
 .sidebar h3 {
     color: #2479f0;
-    margin-bottom: 15px;
+    margin: 20px;
 }
 
 .sidebar ul {
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .sidebar li {
@@ -588,4 +640,119 @@ body {
     border-radius: 4px;
     text-align: center;
     font-size: 18px;
+}
+.desmos-iframe {
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);}
+    .graph-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    
+    .graph-left {
+        width: 45%; /* First graph is aligned with text */
+    }
+    .graph-right {
+        width: 45%; /* Second graph is shifted slightly to the right */
+        margin-left: 20px; /* Adjust this value to control the offset */
+    }
+    .solution-box {
+        margin-top: 10px;
+        padding: 10px;
+        border: 2px solid #007bff; /* Blue outline */
+        background-color: #f9f9f9;
+        display: none; /* Hidden by default */
+    }
+    
+
+    
+    .toggle-solution:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+    .hidden {
+        display: none;
+    }
+    
+    .solution {
+        border: 2px solid blue;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #f0f8ff;
+    }
+    
+    .toggle-solution {
+        background-color: blue;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    .toggle-solution:hover {
+        background-color: darkblue;
+    }
+    /* Main content area split */
+.split-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.course-section, .revision-section {
+    width: 48%; /* Both sections take up equal width */
+}
+
+.revision-section {
+    background-color: #f0f4f8;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.revision-section h2 {
+    color: #2479f0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.revision-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.revision-list li {
+    margin-bottom: 15px;
+}
+
+.revision-list a {
+    color: #2479f0;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.revision-list a:hover {
+    background-color: #e3e9f4;
+}
+.video-container {
+    text-align: center; /* Center the video */
+    margin: 20px 0; /* Space around the video */
+}
+
+/* Video styling */
+.video-container video {
+    max-width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #ddd; /* Light border for better visibility */
+    border-radius: 8px; /* Rounded corners */
+}
+.steps {
+    display: none; /* Initially hide the steps */
 }

@@ -1,8 +1,23 @@
+// Function to toggle the visibility of the solution box
+function toggleSolution(questionNumber) {
+    var solutionBox = document.getElementById('solution' + questionNumber);
+    var toggleButton = document.querySelector(`.question-box[data-question="${questionNumber}"] .toggle-solution`);
+    
+    if (solutionBox.style.display === 'none' || solutionBox.style.display === '') {
+        solutionBox.style.display = 'block';
+        toggleButton.innerText = 'Hide Solution';
+    } else {
+        solutionBox.style.display = 'none';
+        toggleButton.innerText = 'Show Solution';
+    }
+}
 
-
+// Function to check the answer and provide feedback
 function checkAnswer(questionNumber, option) {
-    // Get the feedback element for the specific question
+    // Get the feedback and solution elements for the specific question
     var feedback = document.getElementById('feedback' + questionNumber);
+    var solutionBox = document.getElementById('solution' + questionNumber);
+    var toggleButton = document.querySelector(`.question-box[data-question="${questionNumber}"] .toggle-solution`);
     
     // Determine the correct option and feedback message based on the question number
     var correctOption;
@@ -40,6 +55,38 @@ function checkAnswer(questionNumber, option) {
             correctOption = 'A'; 
             feedbackMessage = 'Correct!';
             break;
+        case 7:
+            correctOption = 'C'; 
+            feedbackMessage = 'Correct! This is because \\(5^2-4(1)(6)=1\\), and \\(1>0\\).';
+            break;
+        case 8:
+            correctOption = 'A'; 
+            feedbackMessage = 'Correct! This is done by factorising the quadratic equation into \\((2x+1)(x+3)\\), and setting each bracket equal to \\(0\\), to solve for \\(x\\).';
+            break;
+        case 9:
+            correctOption = 'D'; 
+            feedbackMessage = 'Correct!';
+            break;
+        case 10:
+            correctOption = 'A'; 
+            feedbackMessage = 'Correct!';
+            break;
+        case 11:
+            correctOption = 'B'; 
+            feedbackMessage = 'Correct!';
+            break;
+        case 12:
+            correctOption = 'C'; 
+            feedbackMessage = 'Correct!';
+            break;
+        case 13:
+                correctOption = 'A'; 
+                feedbackMessage = 'Correct!';
+                break;
+        case 14:
+            correctOption = 'B'; 
+            feedbackMessage = 'Correct!';
+            break;
         default:
             correctOption = '';
             feedbackMessage = 'Incorrect. Try again.';
@@ -49,30 +96,51 @@ function checkAnswer(questionNumber, option) {
     // Find the selected answer box
     var selectedBox = Array.from(answerBoxes).find(box => box.textContent.trim().startsWith(option));
     
+    // Get the audio element for the ding sound
+    var dingSound = document.getElementById('ding-sound');
+
     // Provide feedback based on the user’s answer
     if (option === correctOption) {
-        feedback.textContent = feedbackMessage;
         feedback.className = 'feedback correct';
+        feedback.innerHTML = feedbackMessage;
         if (selectedBox) {
             selectedBox.classList.add('correct');
         }
+        // Show the solution box and update button text
+        if (solutionBox) {
+            solutionBox.style.display = 'block';
+        }
+        if (toggleButton) {
+            toggleButton.innerText = 'Hide Solution';
+        }
+        // Play the ding sound if the audio element exists
+        if (dingSound) {
+            dingSound.play();
+        }
+        // Ensure MathJax renders the contents
+        if (typeof MathJax !== 'undefined') {
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub, feedback]);
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub, solutionBox]);
+        }
     } else {
-                if (questionNumber === 4) {
-            feedback.textContent = 'Incorrect. Remember to simplify the first term before adding it.';
-             } 
-                else {
-            feedback.textContent = 'Incorrect. Try again.';
-             }
-
-
+        feedback.innerHTML = questionNumber === 4
+            ? 'Incorrect. Remember to simplify the first term before adding it.'
+            : 'Incorrect. Try again.';
         feedback.className = 'feedback incorrect';
         if (selectedBox) {
             selectedBox.classList.add('incorrect');
         }
+        // Hide the solution box and update button text
+        if (solutionBox) {
+            solutionBox.style.display = 'none';
+        }
+        if (toggleButton) {
+            toggleButton.innerText = 'Show Solution';
+        }
     }
 }
 
-
+// Function to handle smooth scrolling
 function smoothScroll(event) {
     event.preventDefault();
     const targetId = event.currentTarget.getAttribute("href").substring(1);
@@ -104,51 +172,53 @@ function smoothScroll(event) {
     }
 }
 
-
+// Counter for reveal method button clicks
 let revealCallCount = 0;
+
+// Function to reveal method details
 function revealMethod(id) {
     // Get the HTML element by its ID
     const methodDiv = document.getElementById(id);
-    var revealButton = document.getElementById('reveal-method-btn')
+    var revealButton = document.getElementById('reveal-method-btn');
     revealCallCount++;
 
     // Set the inner HTML of the element to the LaTeX method string
-switch(id){
-        case 'surdsmethod':
-        methodDiv.innerHTML = 'Here is the detailed method: \\( \\frac{3}{2 + \\sqrt{3}} \\times \\frac{2 - \\sqrt{3}}{2 - \\sqrt{3}} = \\frac{3(2 - \\sqrt{3})}{(2 + \\sqrt{3})(2 - \\sqrt{3})} = \\frac{3(2 - \\sqrt{3})}{4 - 3} = 3(2 - \\sqrt{3}) = 6 - 3\\sqrt{3} = 3(2-\\sqrt{3}) \\)';
-        break;
-}
+    if (revealCallCount % 2 === 1) {
+        switch(id) {
+            case 'surdsmethod':
+                methodDiv.innerHTML = 'Here is the detailed method: \\( \\frac{3}{2 + \\sqrt{3}} \\times \\frac{2 - \\sqrt{3}}{2 - \\sqrt{3}} = \\frac{3(2 - \\sqrt{3})}{(2 + \\sqrt{3})(2 - \\sqrt{3})} = \\frac{3(2 - \\sqrt{3})}{4 - 3} = 3(2 - \\sqrt{3}) = 6 - 3\\sqrt{3} = 3(2-\\sqrt{3}) \\)';
+                break;
+        }
+        revealButton.innerText = 'Hide Answer';
+        methodDiv.style.display = 'block';
 
-    revealButton.innerText = 'Hide Answer'
-    
-
-
-    // Display the element by setting its display style to 'block'
-    methodDiv.style.display = 'block';
-
-    // Call MathJax to typeset the new content
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub, methodDiv]);
-
-    
-
-    if (revealCallCount % 2===1) {
-        // Perform action for the second call
-        MathJax.Hub.Queue(["Typeset", MathJax.Hub, methodDiv]);
-        methodDiv.innerHTML = 'Here is the detailed method: \\( \\frac{3}{2 + \\sqrt{3}} \\times \\frac{2 - \\sqrt{3}}{2 - \\sqrt{3}} = \\frac{3(2 - \\sqrt{3})}{(2 + \\sqrt{3})(2 - \\sqrt{3})} = \\frac{3(2 - \\sqrt{3})}{4 - 3} = 3(2 - \\sqrt{3}) = 6 - 3\\sqrt{3} = 3(2-\\sqrt{3}) \\)';
-
+        // Ensure MathJax renders the new content
+        if (typeof MathJax !== 'undefined') {
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub, methodDiv]);
+        }
     } else {
         methodDiv.innerHTML = '';
-        revealButton.innerText = 'Reveal Answer'
-        
+        revealButton.innerText = 'Reveal Answer';
     }
-
 }
+document.addEventListener('DOMContentLoaded', () => {
+    // Get all buttons with the class 'toggle-steps-btn'
+    const buttons = document.querySelectorAll('.toggle-steps-btn');
 
-    
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Get the target element ID from the button's data attribute
+            const targetId = button.getAttribute('data-target');
+            const targetDiv = document.getElementById(targetId);
 
-
-// script.js
-
-
-
-
+            // Toggle the visibility of the target steps div
+            if (targetDiv.style.display === 'none' || targetDiv.style.display === '') {
+                targetDiv.style.display = 'block';
+                button.textContent = 'Hide Steps';
+            } else {
+                targetDiv.style.display = 'none';
+                button.textContent = 'Show Steps';
+            }
+        });
+    });
+});

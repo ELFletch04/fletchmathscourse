@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <title>topic - surds</title>
+    <title>Simultaneous Equations - Fletch Maths</title>
+    <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="../script.js"></script>
 </head>
 <body>
     <!-- Header Navigation -->
@@ -17,7 +19,7 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../modules.html">Modules</a></li>
                 <li><a href="../about.html">About</a></li>
-                <li class="contact"><a href="../about.html">Contact</a></li>
+                <li class="contact"><a href="../contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -51,20 +53,136 @@
         </aside>
 
         <!-- Content Area -->
-        <section class="module-content">
+        <section class="module-content textbox">
             <div class="content-box">
-                <h2>Simultaneous Equations</h2>
+                <h2>Simultaneous Equations</h2><br>
+
                 <div>
+                    <h3>Introduction to Simultaneous Equations</h3>
+                    <p>Simultaneous equations consist of a set of equations involving multiple variables which are solved together. The solutions must satisfy all the given equations simultaneously. This topic serves as a refresher from GCSE Maths, revisiting the fundamental concepts and methods used to solve such systems.</p>
                 </div>
-                   
-                
-                <!-- Navigation Buttons -->
-                <div class="navigation-buttons">
-                    <a href="./quadratics.html" class="prev-button">Previous</a>
-                    <a href="./polynomials.html" class="next-button">Next</a>
+
+                <div>
+                    <h3>Linear Simultaneous Equations</h3>
+                    <p>Linear simultaneous equations are those where each equation is of the form \(ax + by = c\). Common methods for solving these include substitution and elimination.</p>
+                    
+                    <h4>Substitution Method:</h4>
+                    <p>In this method, you solve one of the equations for one variable and then substitute that expression into the other equation.</p>
+                    
+                    <h4>Example: Substitution</h4>
+                    <p>Solve the following system of equations:</p>
+                    <p>\[
+                    \begin{align*}
+                    x + y &= 5 \\
+                    x - y &= 1
+                    \end{align*}
+                    \]</p>
+                    
+                    <p>**Solution:**</p>
+                    <ol>
+                        <li>Rearrange the first equation to express \(x\) in terms of \(y\):</li>
+                        <p>\[
+                        x = 5 - y
+                        \]</p>
+                        <li>Substitute \(x = 5 - y\) into the second equation:</li>
+                        <p>\[
+                        (5 - y) - y = 1 \implies 5 - 2y = 1 \implies -2y = 1 - 5 \implies -2y = -4 \implies y = 2
+                        \]</p>
+                        <li>Substitute \(y = 2\) back into the first equation:</li>
+                        <p>\[
+                        x + 2 = 5 \implies x = 5 - 2 \implies x = 3
+                        \]</p>
+                        <li>**Solution:** \(x = 3\), \(y = 2\)</li>
+                    </ol>
+                    
+                    <h4>Elimination Method:</h4>
+                    <p>This method involves adding or subtracting equations to eliminate one of the variables, making it easier to solve for the remaining variable.</p>
+                    
+                    <h4>Example: Elimination</h4>
+                    <p>Solve the following system of equations:</p>
+                    <p>\[
+                    \begin{align*}
+                    2x + 3y &= 7 \\
+                    4x - y &= 5
+                    \end{align*}
+                    \]</p>
+                    
+                    <p>**Solution:**</p>
+                    <ol>
+                        <li>Multiply the second equation by 3 to align the coefficients of \(y\):</li>
+                        <p>\[
+                        \begin{align*}
+                        2x + 3y &= 7 \\
+                        12x - 3y &= 15
+                        \end{align*}
+                        \]</p>
+                        <li>Add the equations to eliminate \(y\):</li>
+                        <p>\[
+                        (2x + 3y) + (12x - 3y) = 7 + 15 \implies 14x = 22 \implies x = \frac{22}{14} = \frac{11}{7}
+                        \]</p>
+                        <li>Substitute \(x = \frac{11}{7}\) into the first equation:</li>
+                        <p>\[
+                        2\left(\frac{11}{7}\right) + 3y = 7 \implies \frac{22}{7} + 3y = 7 \implies 3y = 7 - \frac{22}{7} = \frac{49 - 22}{7} = \frac{27}{7} \implies y = \frac{27}{21} = \frac{9}{7}
+                        \]</p>
+                        <li>**Solution:** \(x = \frac{11}{7}\), \(y = \frac{9}{7}\)</li>
+                    </ol>
+                </div>
+
+                <div>
+                    <h3>Quadratic Simultaneous Equations</h3>
+                    <p>Quadratic simultaneous equations involve at least one quadratic equation, such as \(ax^2 + by^2 + cxy = d\). A common approach to solve these is to rearrange the linear equation to express one variable in terms of the other and then substitute this into the quadratic equation.</p>
+                    
+                    <h4>Example: Quadratic Equations</h4>
+                    <p>Solve the following system:</p>
+                    <p>\[
+                    \begin{align*}
+                    x + y &= 5 \\
+                    x^2 + y^2 &= 13
+                    \end{align*}
+                    \]</p>
+                    
+                    <p>**Solution:**</p>
+                    <ol>
+                        <li>Rearrange the first equation to express \(x\) in terms of \(y\):</li>
+                        <p>\[
+                        x = 5 - y
+                        \]</p>
+                        <li>Substitute \(x = 5 - y\) into the second equation:</li>
+                        <p>\[
+                        (5 - y)^2 + y^2 = 13
+                        \]</p>
+                        <li>Expand and simplify:</li>
+                        <p>\[
+                        (5 - y)^2 + y^2 = 13 \implies 25 - 10y + y^2 + y^2 = 13 \implies 25 - 10y + 2y^2 = 13 \implies 2y^2 - 10y + 12 = 0
+                        \]</p>
+                        <li>Divide through by 2:</li>
+                        <p>\[
+                        y^2 - 5y + 6 = 0
+                        \]</p>
+                        <li>Factorise to find \(y\):</li>
+                        <p>\[
+                        (y - 2)(y - 3) = 0 \implies y = 2 \text{ or } y = 3
+                        \]</p>
+                        <li>Substitute \(y\) values back into \(x = 5 - y\):</li>
+                        <ul>
+                            <li>If \(y = 2\), then \(x = 5 - 2 = 3\)</li>
+                            <li>If \(y = 3\), then \(x = 5 - 3 = 2\)</li>
+                        </ul>
+                        <li>**Solutions:** \((x, y) = (3, 2)\) or \((2, 3)\)</li>
+                    </ol>
                 </div>
             </div>
+            <div class="navigation-buttons">
+                <a href="./quadratics.html" class="prev-button">Previous</a>
+                <a href="./polynomials.html" class="next-button">Next</a>
+            </div>
         </section>
+        
+        
     </main>
+    <footer>
+        <p>&copy; 2024 Fletch Maths. All rights reserved.</p>
+        <p>Graphs created using Desmos. <a href="https://www.desmos.com" target="_blank">Visit Desmos</a> for more tools and resources.</p>
+    </footer>
 </body>
 </html>

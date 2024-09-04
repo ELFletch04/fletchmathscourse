@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <title>topic - surds</title>
+    <title>Polynomials - Fletch Maths</title>
+    <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="../script.js"></script>
 </head>
 <body>
     <!-- Header Navigation -->
@@ -17,7 +19,7 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../modules.html">Modules</a></li>
                 <li><a href="../about.html">About</a></li>
-                <li class="contact"><a href="../about.html">Contact</a></li>
+                <li class="contact"><a href="../contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -25,7 +27,8 @@
     <!-- Main Content Area -->
     <main class="module-page">
         <!-- Sidebar -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
+            <button class="toggle-btn" id="toggle-btn">☰</button>
             <h3>Course Modules</h3>
             <ul>
                 <li><a href="algebra.html" class="sidebar-item">Algebra and Functions</a></li>
@@ -48,23 +51,227 @@
                 <li><a href="forces-newtons-laws.html" class="sidebar-item">Forces and Newton's Laws</a></li>
                 <li><a href="moments.html" class="sidebar-item">Moments</a></li>
             </ul>
+            <script>
+                // JavaScript to handle the toggle functionality
+                document.getElementById('toggle-btn').addEventListener('click', function() {
+                    var sidebar = document.getElementById('sidebar');
+                    sidebar.classList.toggle('open');
+                });
+            </script>
         </aside>
 
         <!-- Content Area -->
-        <section class="module-content">
+        <section class="module-content textbox">
             <div class="content-box">
-                <h2>Polynomials</h2>
+                <h2>Polynomials</h2><br>
+            
                 <div>
+                    <h3>Introduction to Polynomials</h3>
+                    <p>Polynomials are algebraic expressions consisting of variables, coefficients, and exponents. They are combined using addition, subtraction, and multiplication. The general form of a polynomial in one variable \(x\) is:</p>
+                    <p>\[ P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \]</p>
+                    <p>where \(a_n, a_{n-1}, \ldots, a_0\) are constants and \(a_n \neq 0\). The degree of the polynomial is the highest power of \(x\) in the polynomial.</p>
+                    <p>\(P(x)\) is basically just a way of representing a polynomial function in terms of \(x\).</p>
+            
+                    <p>An example of a polynomial would be something like this:</p>
+                    <p>\[ P(x) = 2x^4 + 3x^3 + x^2 + 4x + 5 \]</p>
                 </div>
+            
+                <div>
+                    <h3>Factor Theorem</h3>
+                    <p>The Factor Theorem is a simple way to check if something is a factor of a polynomial. It says that if you plug a number \(a\) into the polynomial \(P(x)\) and the result is zero, then \((x - a)\) is a factor.</p>
+                    <p>In other words, if \(P(a) = 0\), then \((x - a)\) must be a factor of \(P(x)\).</p>
+                    <p>For example, let's see if \(x - 2\) is a factor of \(P(x) = x^3 - 4x + 1\). We just substitute \(2\) for \(x\) in the polynomial:</p>
+                    <p>\[ P(2) = 2^3 - 4 \cdot 2 + 1 = 8 - 8 + 1 = 1 \]</p>
+                    <p>Since \(P(2)\) gives us 1 (which isn't zero), \(x - 2\) is not a factor of \(P(x)\).</p>
+                </div>
+            
+                <div>
+                    <h3>Simplifying Expressions Involving Polynomials</h3>
+                    <div>
+                        <h4>1. Polynomial Long Division</h4>
+                        <p>Polynomial long division is used to divide a polynomial by another polynomial of lower degree. The process is similar to long division with numbers.</p>
+                        <p>To understand this concept better, watch the following video demonstration where we go through an example of polynomial long division step by step:</p>
+                        <p>We will go through the following example in the video:</p>
+                        <p>\[\frac{x^3 + 6x^2 + 11x + 6}{x + 1}\]</p>
+                        
+                        <!-- Video Demonstration -->
+                        <div class="video-container">
+                            <video width="560" height="315" controls>
+                                <source src="../media/long-division.mp4" type="video/mp4">
+                                <track src="../media/subtitles_ld.vtt" kind="subtitles" srclang="en" label="English">
+                            </video>
+                        </div>
+                        
+                        <button class="toggle-steps-btn" data-target="long_division_steps">Show Steps</button>
+                        <div id="long_division_steps" class="steps" style="display: none;">
+                            <ol>
+                                <li><strong>Set Up the Division:</strong> Write the polynomial division in a long division format.</li>
+                                <li><strong>Divide the Leading Terms:</strong> Divide \(x^3\) by \(x\) to get \(x^2\). Write \(x^2\) above the division line.</li>
+                                <li><strong>Multiply and Subtract:</strong>
+                                    <ul>
+                                        <li>Multiply \(x^2\) by \(x + 1\) to get \(x^3 + x^2\).</li>
+                                        <li>Subtract \(x^3 + x^2\) from \(x^3 + 6x^2 + 11x + 6\) to get \(5x^2 + 11x + 6\).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Bring Down the Next Term:</strong> The new polynomial is \(5x^2 + 11x + 6\).</li>
+                                <li><strong>Divide Again:</strong> Divide \(5x^2\) by \(x\) to get \(5x\). Write \(5x\) above the division line next to \(x^2\).</li>
+                                <li><strong>Multiply and Subtract:</strong>
+                                    <ul>
+                                        <li>Multiply \(5x\) by \(x + 1\) to get \(5x^2 + 5x\).</li>
+                                        <li>Subtract \(5x^2 + 5x\) from \(5x^2 + 11x + 6\) to get \(6x + 6\).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Bring Down the Next Term:</strong> The new polynomial is \(6x + 6\).</li>
+                                <li><strong>Divide Once More:</strong> Divide \(6x\) by \(x\) to get \(6\). Write \(6\) above the division line next to \(x^2 + 5x\).</li>
+                                <li><strong>Multiply and Subtract:</strong>
+                                    <ul>
+                                        <li>Multiply \(6\) by \(x + 1\) to get \(6x + 6\).</li>
+                                        <li>Subtract \(6x + 6\) from \(6x + 6\) to get a remainder of \(0\).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Conclusion:</strong> The result of the division is \(x^2 + 5x + 6\) with a remainder of \(0\).</li>
+                            </ol>
+                        </div>
+            
+                        <div class="question-box" data-question="12">
+                            <p>Have a go at the following question, using this method:</p>
+                            <p><strong>Simplify the following expression using long division:</strong></p>
+                            <p>\[\frac{x^3 - 3x^2 + 4x - 2}{x - 1}\]</p>
+                            <div class="answer-box" data-option="A" onclick="checkAnswer(12, 'A')">A. \(x^2 - 2x + 2\)</div>
+                            <div class="answer-box" data-option="B" onclick="checkAnswer(12, 'B')">B. \(x^2 - 2x - 1\)</div>
+                            <div class="answer-box" data-option="C" onclick="checkAnswer(12, 'C')">C. \(x^2 - 2x + 1\)</div>
+                            <div class="answer-box" data-option="D" onclick="checkAnswer(12, 'D')">D. \(x^2 - x + 2\)</div>
+                            <div id="feedback12" class="feedback"></div>
+                            <div id="feedback-12" class="feedback"></div>
+                            <button class="toggle-solution" onclick="toggleSolution(12)">Show Solution</button>
+                            <div id="solution12" class="solution-box" style="display: none;">
+                                <p><strong>Solution:</strong></p>
+                                <ol>
+                                    <li>Divide the leading term \(x^3\) by \(x\) to get \(x^2\).</li>
+                                    <li>Multiply \(x^2\) by \(x - 1\) to get \(x^3 - x^2\). Subtract this from the original polynomial to get \(-2x^2 + 4x - 2\).</li>
+                                    <li>Divide \(-2x^2\) by \(x\) to get \(-2x\).</li>
+                                    <li>Multiply \(-2x\) by \(x - 1\) to get \(-2x^2 + 2x\). Subtract this from \(-2x^2 + 4x - 2\) to get \(2x - 2\).</li>
+                                    <li>Divide \(2x\) by \(x\) to get \(2\).</li>
+                                    <li>Multiply \(2\) by \(x - 1\) to get \(2x - 2\). Subtract this from \(2x - 2\) to get a remainder of \(0\).</li>
+                                    <li>The quotient is \(x^2 - 2x + 1\).</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Factorisation of Polynomials</h3>
+                        <p>Factorisation is the process of writing a polynomial as a product of its factors. This is useful for simplifying expressions and solving polynomial equations. Let’s start by revisiting factorising simple quadratics, which is a recap from the quadratics topic but will be useful here as quadratics are a type of polynomial.</p>
+                        
+                        <div>
+                            <h4>Example 1: Factorising a Simple Quadratic</h4>
+                            <p>Factorise the quadratic polynomial \(x^2 - 5x + 6\).</p>
+                            <p>The factors of \(x^2 - 5x + 6\) are \((x - 2)(x - 3)\).</p>
+                        </div>
+                        
+                        <div>
+                            <h4>Example 2: Simplifying a Fraction with a Quadratic Numerator</h4>
+                            <p>Simplify the following fraction:</p>
+                            <p>\[
+                            \frac{x^2 + 5x + 6}{x + 2}
+                            \]</p>
+                            <p>Factorise the numerator \(x^2 + 5x + 6\) as \((x + 2)(x + 3)\). The fraction becomes:</p>
+                            <p>\[
+                            \frac{(x + 2)(x + 3)}{x + 2}
+                            \]</p>
+                            <p>The \((x+2)\) on the numerator and denominator cancel out, leaving us with simply: \[x + 3\]</p>
+                        </div>
+                        <div class="question-box" data-question="13">
+                            <p>Have a go at the following question, using this method:</p>
+                            <p><strong>Simplify the following expression:</strong></p>
+                            <p>\[
+                            \frac{x^2 - x - 6}{x - 3}
+                            \]</p>
+                            <div class="answer-box" data-option="A" onclick="checkAnswer(13, 'A')">A. \(x + 2\)</div>
+                            <div class="answer-box" data-option="B" onclick="checkAnswer(13, 'B')">B. \(x - 2\)</div>
+                            <div class="answer-box" data-option="C" onclick="checkAnswer(13, 'C')">C. \(x + 3\)</div>
+                            <div class="answer-box" data-option="D" onclick="checkAnswer(13, 'D')">D. \(x - 6\)</div>
+                            <div id="feedback13" class="feedback"></div>
+                            <div id="feedback-13" class="feedback"></div>
+                            <button class="toggle-solution" onclick="toggleSolution(13)">Show Solution</button>
+                            <div id="solution13" class="solution-box" style="display: none;">
+                                <p><strong>Solution:</strong></p>
+                                <ol>
+                                    <li>Factorise the numerator \(x^2 - x - 6\) as \((x - 3)(x + 2)\).</li>
+                                    <li>The fraction becomes \(\frac{(x - 3)(x + 2)}{x - 3}\).</li>
+                                    <li>Cancel out \((x - 3)\) in the numerator and the denominator to get \(x + 2\).</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4>Example 3: Simplifying a Fraction with Two Quadratics</h4>
+                            <p>Simplify the following fraction:</p>
+                            <p>\[
+                            \frac{x^2 - 6x + 8}{x^2 - 4}
+                            \]</p>
+                            <p>Factorise the numerator \(x^2 - 6x + 8\) as \((x - 2)(x - 4)\) <p>and the denominator \(x^2 - 4\) as \((x - 2)(x + 2)\), using the <strong>difference of two squares</strong>.</p> The fraction becomes:</p>
+                            <p>\[
+                            \frac{(x - 2)(x - 4)}{(x - 2)(x + 2)}
+                            \]</p>
+                            <p>The \((x-2)\) term appears on both the numerator and denominator, meaning we can cancel it out, leaving us with \[\frac{x-4}{x+2}\]</p>
+                        </div><br>
+                    
+                       
+                    </div>
+                    
                    
+                    
+                    <div class="question-box" data-question="14">
+                        <p><strong>Simplify the following fraction:</strong></p>
+                        <p>\[
+                        \frac{x^2 - 4}{x^2 - x - 6}
+                        \]</p>
+                        <div class="answer-box" data-option="A" onclick="checkAnswer(14, 'A')">A. \(\frac{(x - 2)}{(x + 2)}\)</div>
+                        <div class="answer-box" data-option="B" onclick="checkAnswer(14, 'B')">B. \(\frac{(x - 2)}{(x - 3)}\)</div>
+                        <div class="answer-box" data-option="C" onclick="checkAnswer(14, 'C')">C. \(\frac{(x + 2)}{(x - 3)}\)</div>
+                        <div class="answer-box" data-option="D" onclick="checkAnswer(14, 'D')">D. \(\frac{(x + 2)}{(x + 3)}\)</div>
+                        <div id="feedback14" class="feedback"></div>
+                        <div id="feedback-14" class="feedback"></div>
+                        <button class="toggle-solution" onclick="toggleSolution(14)">Show Solution</button>
+                        <div id="solution14" class="solution-box" style="display: none;">
+                            <p><strong>Solution:</strong></p>
+                            <ol>
+                                <li>Factorise the numerator \(x^2 - 4\). Notice that it can be written as \((x - 2)(x + 2)\) using the difference of squares.</li>
+                                <li>Factorise the denominator \(x^2 - x - 6\). Notice that it can be written as \((x - 3)(x + 2)\).</li>
+                                <li>The fraction becomes:</li>
+                                <p>\[
+                                \frac{(x - 2)(x + 2)}{(x - 3)(x + 2)}
+                                \]</p>
+                                <li>Cancel the common factor \(x + 2\):</li>
+                                <p>\[
+                                \frac{x - 2}{x - 3}
+                                \]</p>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+             </div>
+           
+            
                 
-                <!-- Navigation Buttons -->
-                <div class="navigation-buttons">
+
+               
+              
+               
+                
+                  
+                 <!-- Navigation Buttons -->
+                 <div class="navigation-buttons">
                     <a href="./simultaneous.html" class="prev-button">Previous</a>
                     <a href="./sketching.html" class="next-button">Next</a>
-                </div>
-            </div>
+                  </div>
+                
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Fletch Maths. All rights reserved.</p>
+        <p>Graphs created using Desmos. <a href="https://www.desmos.com" target="_blank">Visit Desmos</a> for more tools and resources.</p>
+    </footer>
 </body>
 </html>

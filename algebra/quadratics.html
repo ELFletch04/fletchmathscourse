@@ -61,14 +61,14 @@
                     <p>A quadratic equation is a polynomial equation of the second degree, having the general form:</p>
                     <p>\[ax^2 + bx + c = 0\] where \(a\), \(b\), and \(c\) are constants, and \(a \neq 0\).</p>
                     <p>Graphically, a quadratic equation produces a parabola. Here is an example:</p>
-                    <iframe src="https://www.desmos.com/calculator/io7a89qaa1?embed" width="200" height="200" frameborder="0"></iframe>
+                    <iframe  src="https://www.desmos.com/calculator/io7a89qaa1?embed" width="200" height="200" frameborder="0"></iframe>
                     <p>For instance, the quadratic equation \[2x^2 + 3x + 1 = 0\] can be graphed as shown.</p>
                 </div>
 
                 <div>
                     <h3>Solving Quadratic Equations</h3>
                     <p>There are four main methods for solving quadratic equations:</p>
-                    <ul style="list-style-type:disc;">
+                    <ul style="list-style-type:disc; margin-left: 30px;margin-bottom: 20px;">
                         <li>Factorising</li>
                         <li>Completing the square</li>
                         <li>The quadratic formula</li>
@@ -84,6 +84,17 @@
     <li><strong>One Repeated Real Root:</strong> If \( b^2 - 4ac = 0 \), the quadratic equation has one repeated real root.</li>
     <li><strong>No Real Roots (Complex Roots):</strong> If \( b^2 - 4ac < 0 \), the quadratic equation has no real roots.</li>
 </ul>
+<br>
+<p>Let's quickly test your understanding of the discrimintant.</p>
+<p>Example:</p>
+<div class="question-box" data-question="7">
+    <p>How many solutions does the following equation have?: \[x^2+5x+6\]</p>
+    <div class="answer-box" data-option="A" onclick="checkAnswer(7, 'A')">A. \( 0 \)</div>
+    <div class="answer-box" data-option="B" onclick="checkAnswer(7, 'B')">B. \( 1 \)</div>
+    <div class="answer-box" data-option="C" onclick="checkAnswer(7, 'C')">C. \( 2 \)</div>
+    <div class="answer-box" data-option="D" onclick="checkAnswer(7, 'D')">D. Not enough information</div>
+    <div id="feedback7" class="feedback"></div>
+</div>
 
                     <h4>1. Factorising</h4>
                     <p>Factorising involves rewriting the quadratic equation from the form \[ax^2 + bx + c = 0\] into \[(px + m)(qx + n) = 0\], where \(p\), \(q\), \(m\), and \(n\) are constants.</p>
@@ -106,6 +117,16 @@
                     <p>\[2x + 1 = 0 \implies x = -\frac{1}{2}\]</p>
                     <p>\[x + 3 = 0 \implies x = -3\]</p>
                     <p>The solutions are \(x = -\frac{1}{2}\) and \(x = -3\).</p>
+                    <p>Try this example:</p>
+
+                    <div class="question-box" data-question="8">
+                        <p>Factorise and solve:\[2x^2+7x+3\]</p>
+                        <div class="answer-box" data-option="A" onclick="checkAnswer(8, 'A')">A. \( x=-1/2 \) , \(x=-3\)</div>
+                        <div class="answer-box" data-option="B" onclick="checkAnswer(8, 'B')">B. \( x=-2 \) , \(x=-1\)</div>
+                        <div class="answer-box" data-option="C" onclick="checkAnswer(8, 'C')">C. \( x=1/2 \) , \(x=3\)</div>
+                        <div class="answer-box" data-option="D" onclick="checkAnswer(8, 'D')">D. \( x=1/2 \) , \(x=-3\)</div>
+                        <div id="feedback8" class="feedback"></div>
+                    </div>            
 
                     <h4>2. Completing the Square</h4>
                     <p>Completing the square is a method used to solve quadratic equations and to find the vertex of a parabola. Here’s how you can complete the square using the method where you halve the coefficient of \(x\) and subtract its square:</p>
@@ -171,8 +192,59 @@
 <p>6. Isolate \(x\) to find the solutions:</p>
 <p>\[x = 2 + 3 = 5\]</p>
 <p>\[x = 2 - 3 = -1\]</p>
-                    
 <p>The solutions are \(x = 5\) and \(x = -1\).</p>
+<p>Have a go at this one:</p>
+<div class="question-box" data-question="9">
+    <p><strong>Solve by completing the square:\[x^2+8x+7=0\]</strong></p>
+    <div class="answer-box" data-option="A" onclick="checkAnswer(9, 'A')">A. \( x=-1 \) , \(x=7\)</div>
+    <div class="answer-box" data-option="B" onclick="checkAnswer(9, 'B')">B. \( x=-1/7 \) , \(x=1\)</div>
+    <div class="answer-box" data-option="C" onclick="checkAnswer(9, 'C')">C. \( x=1 \) , \(x=7\)</div>
+    <div class="answer-box" data-option="D" onclick="checkAnswer(9, 'D')">D. \( x=-1\) , \(x=-7\)</div>
+    <div id="feedback9" class="feedback"></div>
+    <button class="toggle-solution" onclick="toggleSolution(9)">Show Solution</button>
+    <div id="solution9" class="solution-box" style="display: none;">
+        <div id="solution9">
+            <p>Correct! To solve the quadratic equation \( x^2 + 8x + 7 = 0 \) by completing the square, follow these steps:</p>
+        
+        <p>1. Start with the original equation:</p>
+        <p>
+            \[
+            x^2 + 8x + 7 = 0
+            \]
+        </p>
+
+        <p>2. Complete the square on the left-hand side. To do this, we need to subtract the square of half the coefficient of \( x \). The coefficient of \( x \) is 8, so half of this value is 4, and squaring it gives 16.</p>
+       
+
+    
+        <p>  \[   (x + 4)^2 - 16 + 7 = 0 \] \[ (x + 4)^2 - 9 = 0 \]
+        </p>
+
+        <p>3. Take the constant term to the other side.</p>
+        <p>
+            \[(x + 4)^2 = 9 \]
+        </p>
+
+        <p>4. Take the square root of both sides:</p>
+        <p>
+            \[x + 4 = \pm \sqrt{9} \]
+            \[x + 4 = \pm 3\]
+        </p>
+
+        <p>5. Solve for \( x \) by isolating it:</p>
+        <p>\[x = -4 \pm 3\]
+        </p>
+        <p>This gives two solutions:</p>
+        <p>
+            \[ x = -1 \quad \text{and} \quad x = -7\]
+        </p>
+        <p>Thus, the solutions to the equation are \( x = -1 \) and \( x = -7 \).</p>
+          </div>
+          
+    </div> 
+</div>            
+
+
 <p><strong>Example 3:</strong> Solve \[2x^2 + 5x - 3 = 0\] by completing the square.</p>
 
 <p><strong>Solution:</strong></p>
@@ -202,10 +274,98 @@
 <p>\[x = -\frac{5}{4} - \frac{7}{4} = -\frac{12}{4} = -3\]</p>
 
 <p>The solutions are \(x = \frac{1}{2}\) and \(x = -3\).</p>
+<br>
+<p>Try this more difficult example:</p>
+<div class="question-box" data-question="10">
+    <p><strong>Solve by completing the square:\[x^2+8x+7=0\]</strong></p>
+    <div class="answer-box" data-option="A" onclick="checkAnswer(10, 'A')">A. \( x = \frac{-3 + \sqrt{41}}{8} \) , \( x = \frac{-3 - \sqrt{41}}{8} \)</div>
+    <div class="answer-box" data-option="B" onclick="checkAnswer(10, 'B')">B. \( x = \frac{-1 + \sqrt{5}}{4} \) , \( x = \frac{-1 - \sqrt{5}}{4} \)</div>
+    <div class="answer-box" data-option="C" onclick="checkAnswer(10, 'C')">C. \( x = \frac{-2 + \sqrt{10}}{5} \) , \( x = \frac{-2 - \sqrt{10}}{5} \)</div>
+    <div class="answer-box" data-option="D" onclick="checkAnswer(10, 'D')">D. \( x = \frac{-3 + \sqrt{41}}{8} \) , \( x = \frac{-1 - \sqrt{41}}{8} \)</div>
+    <div id="feedback10" class="feedback"></div>
+    <button class="toggle-solution" onclick="toggleSolution(10)">Show Solution</button>
+    <div id="solution10" class="solution-box" style="display: none;">
+        <div id="solution10">
+           <p>1. Start with the original equation:</p>
+<p>
+    \[
+    4x^2 + 3x - 2 = 0
+    \]
+</p>
+
+<p>2. Factor out 4 from the first two terms:</p>
+<p>
+    \[
+    4 \left(x^2 + \frac{3}{4}x\right) - 2 = 0
+    \]
+</p>
+
+<p>3. Complete the square inside the brackets. Subtract the square of half the coefficient of \(x\). The coefficient of \(x\) inside the brackets is \(\frac{3}{4}\). Half of this value is \(\frac{3}{8}\), and squaring it gives \(\frac{9}{64}\):</p>
+<p>
+
+    \[
+    4 \left[\left(x + \frac{3}{8}\right)^2 - \frac{9}{64}\right] - 2 = 0
+    \]
+</p>
+
+<p>4. Expand the bracket by multiplying both terms by 4:</p>
+<p>
+    \[
+    4 \left(x + \frac{3}{8}\right)^2 - 4 \cdot \frac{9}{64} - 2 = 0
+    \]
+</p>
 
 
+<p>5. Simplifying this gives:</p>
+<p>
+    \[
+    4 \left(x + \frac{3}{8}\right)^2 - \frac{41}{16} = 0
+    \]
+</p>
 
-                    
+<p>6. Add \(\frac{41}{16}\) to both sides:</p>
+<p>
+    \[
+    4 \left(x + \frac{3}{8}\right)^2 = \frac{41}{16}
+    \]
+</p>
+
+<p>7. Divide both sides by 4 to simplify:</p>
+<p>
+    \[
+    \left(x + \frac{3}{8}\right)^2 = \frac{41}{64}
+    \]
+</p>
+
+<p>8. Solve for \(x\) by taking the square root of both sides:</p>
+<p>
+    \[
+    x + \frac{3}{8} = \pm \frac{\sqrt{41}}{8}
+    \]
+</p>
+
+<p>9. Isolate \(x\) to find the solutions:</p>
+<p>
+    \[
+    x = -\frac{3}{8} \pm \frac{\sqrt{41}}{8}
+    \]
+    \[
+    x = \frac{-3 \pm \sqrt{41}}{8}
+    \]
+</p>
+
+<p>Hence, the solutions to the equation are:</p>
+<p>
+    \[
+    x = \frac{-3 + \sqrt{41}}{8} \quad \text{and} \quad x = \frac{-3 - \sqrt{41}}{8}
+    \]
+</p>
+
+            
+          </div>
+          
+    </div> 
+</div>            
                     <h4>3. The Quadratic Formula</h4>
                     <p>The quadratic formula is used to solve any quadratic equation and is given by:</p>
                     <p>\[x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]</p>
@@ -219,7 +379,59 @@
                     <p>The solutions are:</p>
                     <p>\[x = \frac{-3 + 1}{4} = -\frac{1}{2}\]</p>
                     <p>\[x = \frac{-3 - 1}{4} = -1\]</p>
-
+                    <br>
+                    <div class="question-box" data-question="11">
+                        <p><strong>Solve by using the quadratic formula:\[ 4x^2 + 2x - 1 = 0 \]</strong></p>
+                        <div class="answer-box" data-option="A" onclick="checkAnswer(11, 'A')">A. \( x = \frac{-2 + \sqrt{13}}{6} \) , \( x = \frac{-2 - \sqrt{13}}{6} \)</div>
+                        <div class="answer-box" data-option="B" onclick="checkAnswer(11, 'B')">B. \( x = \frac{-1 + \sqrt{5}}{4} \) , \( x = \frac{-1 - \sqrt{5}}{4} \)</div>
+                        <div class="answer-box" data-option="C" onclick="checkAnswer(11, 'C')">C. \( x = \frac{-3 + \sqrt{17}}{6} \) , \( x = \frac{-3 - \sqrt{17}}{6} \)</div>
+                        <div class="answer-box" data-option="D" onclick="checkAnswer(11, 'D')">D. \( x = \frac{-4 + \sqrt{21}}{5} \) , \( x = \frac{-4 - \sqrt{21}}{5} \)</div>
+                        <div id="feedback11" class="feedback"></div>
+                        <button class="toggle-solution" onclick="toggleSolution(11)">Show Solution</button>
+                        <div id="solution11" class="solution-box" style="display: none;">
+                            <div id="solution11">
+                                To solve the quadratic equation \( 4x^2 + 2x - 1 = 0 \) using the quadratic formula, follow these steps:
+                                <ol>
+                                    <li>Identify the coefficients \( a \), \( b \), and \( c \) from the equation \( ax^2 + bx + c = 0 \). For our equation \( 4x^2 + 2x - 1 = 0 \), we have:
+                                        <ul>
+                                            <li> \( a = 4 \)</li>
+                                            <li> \( b = 2 \)</li>
+                                            <li> \( c = -1 \)</li>
+                                        </ul>
+                                    </li>
+                                    <li>Use the quadratic formula:
+                                        \[
+                                        x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+                                        \]
+                                    </li>
+                                    <li>Plug in the values of \( a \), \( b \), and \( c \):
+                                        \[
+                                        x = \frac{-2 \pm \sqrt{2^2 - 4 \cdot 4 \cdot (-1)}}{2 \cdot 4}
+                                        \]
+                                    </li>
+                                    <li>Calculate the discriminant:
+                                        \[
+                                        \sqrt{2^2 - 4 \cdot 4 \cdot (-1)} = \sqrt{4 + 16} = \sqrt{20} = 2\sqrt{5}
+                                        \]
+                                    </li>
+                                    <li>Substitute the discriminant back into the formula:
+                                        \[
+                                        x = \frac{-2 \pm 2\sqrt{5}}{8}
+                                        \]
+                                    </li>
+                                    <li>Simplify the expression:
+                                        \[
+                                        x = \frac{-2 + 2\sqrt{5}}{8} = \frac{-1 + \sqrt{5}}{4} \quad \text{and} \quad x = \frac{-2 - 2\sqrt{5}}{8} = \frac{-1 - \sqrt{5}}{4}
+                                        \]
+                                    </li>
+                                </ol>
+                                Thus, the correct answers are:
+                                \[
+                                x = \frac{-1 + \sqrt{5}}{4} \quad \text{and} \quad x = \frac{-1 - \sqrt{5}}{4}
+                                \]
+                            </div>
+                        </div>
+                    </div>
                     <h4>4. Using a Scientific Calculator</h4>
                     <p>Scientific calculators often feature a built-in quadratic solver. This function allows you to input the values for \(a\), \(b\), and \(c\) from the quadratic equation \(ax^2 + bx + c = 0\) to quickly find the roots.</p>
                     <p>While this method is fast and convenient, it may not provide much insight into the underlying techniques of solving quadratics. For a deeper understanding, it’s beneficial to practice solving equations manually using other methods.</p>
@@ -243,7 +455,7 @@
                     <p>In the completed square form:</p>
                     <ul>
                         <li> \( (h, k) \) represents the vertex of the quadratic function.</li>
-                        <li> \( h \) is the \( x \)-coordinate of the vertex, and it is found inside the parentheses. If the form is \( (x - h) \), then \( h \) is the opposite sign of what appears in the parentheses.</li>
+                        <li> \( h \) is the \( x \)-coordinate of the vertex, and it is found inside the brackets. If the form is \( (x - h) \), then \( h \) is the opposite sign of what appears in the brackets.</li>
                         <li> \( k \) is the \( y \)-coordinate of the vertex and is the constant term outside the squared term.</li>
                     </ul>
     <br>
@@ -260,44 +472,135 @@
                     </ul>
     
                     <p>So, the vertex of the quadratic function \( y = 2(x + 3)^2 - 7 \) is \( (-3, -7) \).</p>
-                    <iframe src="https://www.desmos.com/calculator/fqhsn6wb7q?embed" width="600" height="400"  frameborder="0"></iframe>
+                    <iframe  src="https://www.desmos.com/calculator/kqlmxcaj69?embed" width="600" height="400"  frameborder="0"></iframe>
                     
+                  
                     <h3>2. Roots (x-intercepts)</h3>
-                    <p>The roots of a quadratic equation are the values of \(x\) where the graph intersects the x-axis. These can be found by solving the quadratic equation using methods such as factorising, completing the square, or the quadratic formula.</p>
-                    <p>Here’s a graph showing the roots of a quadratic equation:</p>
-                    <iframe src="https://www.desmos.com/calculator/ug0ms6qj3j?embed" width="600" height="400"  frameborder="0"></iframe>
+                    <p>The roots of a quadratic equation are the x-values where the graph crosses the x-axis:</p>
+                    <p>You can find them by solving the equation for \(x\), which you have just learned how to do.</p>
+                    <p>Here are the three possible cases showing how the number of roots affects where the graph crosses the x-axis:</p>
+                    
+                    <div style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;">
+                        <div style="flex: 1; margin: 10px;">
+                            <strong>Two Distinct Roots:</strong>
+                            <p>The graph intersects the x-axis at two points.</p>
+                            <iframe src="https://www.desmos.com/calculator/gxw1j2ein8?embed" width="90%" height="250" frameborder="0"></iframe>
+                        </div>
+                        
+                        <div style="flex: 1; margin: 10px;">
+                            <strong>Repeated Root:</strong>
+                            <p>The graph touches the x-axis at one point.</p>
+                            <iframe src="https://www.desmos.com/calculator/g6om6xwlnl?embed" width="90%" height="250" frameborder="0"></iframe>
+                        </div>
+                        
+                        <div style="flex: 1; margin: 10px;">
+                            <strong>No Real Roots:</strong>
+                            <p>The graph does not intersect the x-axis.</p>
+                            <iframe src="https://www.desmos.com/calculator/sxwxzi5f7f?embed" width="90%" height="250" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    
+                    <p>For example, consider the quadratic equation \( y = x^2 - 4x + 4 \). We can solve it by factorising:</p>
+                    <p>\( x^2 - 4x + 4 = (x - 2)(x - 2) = 0 \)</p>
+                    <p>This means we have a repeated root, where \(x=2\)</p>
+                    <p>Hence, the graph only touches the x-axis at \(x=2\).</p>
+                    <iframe src="https://www.desmos.com/calculator/52nnnof0se?embed" width="600" height="300" frameborder="0"></iframe>
+                    
+                    
+                    
                     
                     <h3>3. Y-Intercept</h3>
-                    <p>The y-intercept is the point where the graph crosses the y-axis. It is found by setting \(x = 0\) in the equation \(ax^2 + bx + c\). The y-intercept is simply the constant term \(c\) in the equation.</p>
-                    <p>Here’s an example showing the y-intercept of a quadratic graph:</p>
-                    <iframe src="https://www.desmos.com/calculator/vx9zjrtjxl?embed" width="600" height="400"  frameborder="0"></iframe>
+                    <p>The y-intercept is the point where the graph crosses the y-axis. It is found by setting \(x = 0\) in the equation \(ax^2 + bx +\) <span style="color:blue;">\(c\)</span>. The y-intercept is simply the constant term <span style="color:blue;">\(c\)</span> in the equation.</p>
+                    <p>For example, consider the quadratic equation \(y = x^2 - 4x + 3\). When \(x = 0\), the value of \(y\) is:</p>
+                    <p>\(y = (0)^2 - 4(0) + 3 = 3\)</p>
+                    <p>So, the y-intercept is at \(y = 3\), which is the constant term \(c\) in the equation.</p>
+                    <iframe src="https://www.desmos.com/calculator/oflnllp0fh?embed" width="600" height="400" frameborder="0"></iframe>
+                
+                    
                     
                     <h3>4. Shape of the Curve</h3>
-                    <p>The shape of the parabola depends on the coefficient \(a\) in the quadratic equation \(ax^2 + bx + c\). If \(a > 0\), the parabola opens upwards; if \(a < 0\), it opens downwards. The magnitude of \(a\) affects how "steep" the parabola is.</p>
-                    <p>Visualize the effect of different values of \(a\) on the shape of the parabola:</p>
-                    <iframe src="https://www.desmos.com/calculator/kooyx5qotf?embed" width="600" height="400"  frameborder="0"></iframe>
-                    
-                    <h4>Example: Graphing a Quadratic</h4>
-                    <p>Let's graph the quadratic equation:</p>
-                    <p>\[ y = 2x^2 - 4x - 6 \]</p>
-                    <p>This quadratic has a vertex, roots, and y-intercept that we can identify:</p>
-                    <ol>
-                        <li>Vertex: Use the formula to find \(x\), then substitute to get the y-coordinate.</li>
-                        <li>Roots: Find where the parabola intersects the x-axis.</li>
-                        <li>Y-Intercept: Set \(x = 0\) and solve for \(y\).</li>
-                    </ol>
-                    <p>Here is the graph of this quadratic equation:</p>
-                    <iframe src="https://www.desmos.com/calculator/bmxm6y9otm?embed" width="600" height="400"  frameborder="0"></iframe>
-                    
-                    <!-- Navigation Buttons -->
-                    <div class="navigation-buttons">
-                        <a href="./surdsandindices-quiz.html" class="prev-button">Previous</a>
-                        <a href="./simultaneous.html" class="next-button">Next</a>
+                    <p>The shape of the parabola depends on the coefficient \(a\) in the quadratic equation \(ax^2 + bx + c\). If \(a\) is <strong>positive</strong>, the parabola is a "U" shape, like it's going up; if \(a\) is <strong>negative</strong>, it is more sort of an "n" shape, like it's going down. The magnitude of \(a\) affects how "steep" the curve is.</p>
+                    <p>Visualize the effect of different values of \(a\) on the shape of the curve:</p>
+                
+                    <div class="graph-container">
+                        <!-- Positive Parabola -->
+                        <div class="graph-item">
+                            <p><strong>Positive x:</strong></p>
+                            <p>\(y = x^2 - 2x + 1\)</p>
+                            <iframe src="https://www.desmos.com/calculator/uj29ou0kva?embed" width="600" height="400" frameborder="0"></iframe>
+                        </div>
+                        
+                        <!-- Negative Parabola -->
+                        <div class="graph-item">
+                            <p><strong>Negative x:</strong></p>
+                            <p>\(y = -x^2 + 2x - 1\)</p>
+                            <iframe src="https://www.desmos.com/calculator/ibkgaq6vwx?embed" width="600" height="400" frameborder="0"></iframe>
+                        </div>
                     </div>
+                
+                    
+                    
+                    <h3>Example: Graphing a Quadratic Equation</h3>
+    <p>Let's graph the quadratic equation:</p>
+    <p>\[ y = 2x^2 - 4x - 6 \]</p>
+    <p>This quadratic has a vertex, roots, and y-intercept that we can identify:</p>
+    <ol>
+        <li>
+            <strong>Vertex:</strong> To find the vertex, complete the square:
+            <ul>
+                <li>Start with the equation: \( y = 2x^2 - 4x - 6 \)</li>
+                <li>Factor out the 2 from the \(x\)-terms (to make the coefficient of \(x= 1\)):<p> \( y = 2(x^2 - 2x) - 6 \)</p></li>
+                <li>Complete the square inside the brackets:
+                    \[
+                    y = 2 \left((x - 1)^2 - 1 \right) - 6
+                    \]
+                </li>
+                <li>Expand and simplify:
+                    \[
+                    y = 2(x - 1)^2 - 8
+                    \]
+                </li>
+                <li>The vertex is at \( (1, -8) \).</li>
+            </ul>
+        </li>
+        <li><strong>Roots:</strong> Find where the parabola intersects the x-axis by solving \(2x^2 - 4x - 6 = 0\). This requires using the quadratic formula or factoring.</li>
+        <li><strong>Y-Intercept:</strong> We can see that the constant term in this equation is \(-6\), hence the y-intercept is \((0,-6)\).
+        </li>
+    </ol>
+    
+                    <iframe src="https://www.desmos.com/calculator/r5rgoi8ayx?embed" width="600" height="400"  frameborder="0"></iframe>
+                    
+                    
                     
 
                    
                 </div>
+                <div class="review-box">
+                    <h3>Topic Review: Quadratics</h3>
+                    <p>In this topic, you have learned the following key concepts:</p>
+                    <ul>
+                        <li><strong>Definition of a Quadratic Equation:</strong> A quadratic equation is any equation that can be written in the form \(ax^2 + bx + c = 0\), where \(a\), \(b\), and \(c\) are constants and \(a \ne 0\). The graph of a quadratic equation is a parabola.</li>
+                        <li><strong>Factorising Quadratics:</strong> To solve quadratic equations, you can often factorize them into the form \((x - p)(x - q) = 0\) where \(p\) and \(q\) are the roots of the equation. This involves finding two numbers that multiply to \(ac\) (the product of \(a\) and \(c\)) and add to \(b\).</li>
+                        <li><strong>Completing the Square:</strong> This method involves rewriting the quadratic equation in the form \((x - h)^2 = k\), where \((h, k)\) represents the vertex of the parabola. This can be useful for solving quadratic equations and for graphing them.</li>
+                        <li><strong>Quadratic Formula:</strong> The roots of a quadratic equation \(ax^2 + bx + c = 0\) can be found using the quadratic formula: \[
+                        x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+                        \] This formula provides the solutions directly and can be used when factorizing is difficult.</li>
+                        <li><strong>Discriminant:</strong> The discriminant of a quadratic equation is given by \(\Delta = b^2 - 4ac\). It determines the nature of the roots:
+                            <ul>
+                                <li>If \(\Delta > 0\), there are two distinct real roots.</li>
+                                <li>If \(\Delta = 0\), there is exactly one real root (a repeated root).</li>
+                                <li>If \(\Delta < 0\), there are no real roots (the roots are complex).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Graphing Quadratic Functions:</strong> The graph of a quadratic function \(y = ax^2 + bx + c\) is a parabola. The vertex form \((x - h)^2 = k\) helps in identifying the vertex of the parabola, and the axis of symmetry is given by \(x = -\frac{b}{2a}\).</li>
+                        
+                    </ul>
+                </div>
+                <!-- Navigation Buttons -->
+<div class="navigation-buttons">
+    <a href="./surdsindices.html" class="prev-button">Previous</a>
+    <a href="./simultaneous.html" class="next-button">Next</a>
+</div>
             </section>
         </main>
 

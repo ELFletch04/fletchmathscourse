@@ -26,7 +26,8 @@
 
     <!-- Main Content Area -->
     <main class="module-page">
-        <!-- Sidebar -->
+        <!-- Sidebar --><audio id="ding-sound" src="../ding.mp3" preload="auto"></audio>
+
         <aside class="sidebar">
             <p>Course Modules</p>
             <ul>
@@ -288,6 +289,29 @@
                     <div class="answer-box" data-option="C" onclick="checkAnswer(5, 'C')">C. \(2\sqrt{3} \over{3} \)</div>
                     <div class="answer-box" data-option="D" onclick="checkAnswer(5, 'D')">D. \( 6\sqrt{2} \)</div>
                     <div id="feedback5" class="feedback"></div>
+                    <button class="toggle-solution" onclick="toggleSolution(5)">Show Solution</button>
+                    <div id="solution5" class="solution-box" style="display: none;"> <p>
+                        Given the expression: 
+                        $$\frac{2}{\sqrt{3}}$$
+                    </p>
+                    <p>
+                        To rationalise the denominator, multiply the numerator and the denominator by \(\sqrt{3}\):
+                    </p>
+                    <p>
+                        $$\frac{2}{\sqrt{3}} \times \frac{\sqrt{3}}{\sqrt{3}}$$
+                    </p>
+                    <p>
+                        The denominator becomes: 
+                        $$\sqrt{3} \cdot \sqrt{3} = 3$$
+                    </p>
+                    <p>
+                        The numerator becomes: 
+                        $$2 \cdot \sqrt{3} = 2\sqrt{3}$$
+                    </p>
+                    <p>
+                        Thus, the rationalised expression is:
+                        $$\frac{2\sqrt{3}}{3}$$
+                    </p></div>
                 </div>
                 <div class="question-box" data-question="6">
                     <p><strong>Rationalise and simplify the following: $${3\over{2+\sqrt{3}}}$$</strong></p>
@@ -296,13 +320,38 @@
                     <div class="answer-box" data-option="C" onclick="checkAnswer(6, 'C')">C. \(2\sqrt{3} + 3 \)</div>
                     <div class="answer-box" data-option="D" onclick="checkAnswer(6, 'D')">D. \( 3\sqrt{2} \)</div>
                     <div id="feedback6" class="feedback"></div>
+                    <div id="feedback-6" class="feedback"></div>
+                    <button class="toggle-solution" onclick="toggleSolution(6)">Show Solution</button>
+                    <div id="solution6" class="solution-box" style="display: none;">
+
+                        <p>
+                            <p>
+            Given the expression: 
+            $$\frac{3}{2 + \sqrt{3}}$$
+        </p>
+        <p>
+            To rationalise the denominator, multiply the numerator and the denominator by the conjugate of the denominator:
+        </p>
+        <p>
+            $$\frac{3}{2 + \sqrt{3}} \times \frac{2 - \sqrt{3}}{2 - \sqrt{3}}$$
+        </p>
+        <p>
+            The denominator becomes: 
+            $$(2 + \sqrt{3})(2 - \sqrt{3}) = 2^2 - (\sqrt{3})^2 = 4 - 3 = 1$$
+        </p>
+        <p>
+            The numerator becomes: 
+            $$3 \cdot (2 - \sqrt{3}) = 6 - 3\sqrt{3}$$
+        </p>
+        <p>
+            Thus, the simplified expression is:
+            $$3(2 - \sqrt{3})$$
+        </p>
+                        </p>
+                    </div>
                 </div>
                 
-    <div id="feedback-6" class="feedback"></div>
-
-                <button class="reveal-method-btn" id="reveal-method-btn" onclick="revealMethod('surdsmethod')">Reveal Answer</button>
-                <div id="surdsmethod" style="display:none;"></div>
-                <script type="text/javascript">
+    
 
     </script>
                     <br>
@@ -491,28 +540,27 @@
 
                         </div>  
 
-                <div class="review-box">
-                                            <h3>Topic Review: Surds and Indices</h3>
-                                            <p>In this topic, you have learned the following key concepts:</p>
-                                            <ul>
-                                                <li>The definition of a surd</li>
-                                                <li>Arithmetic functions of surds</li>
-                                                <li>Simplying surds</li>
-                                                <li>Expanding brackets with surds</li>
-                                                <li>Rationalising the denominator</li>
-                                                <li>Identifying the base and power of an expression involving indices</li>
-                                                <li>Laws of indices</li>
-                                                <li>Rationalizing the denominator</li>
-                                                <li>Solving equations involving indices</li>
-                                                <li>Combining Surds and Indices</li>
-                                               
-                                            </ul>
-                                         
-                                        </div>
+                        <div class="review-box">
+                            <h3>Topic Review: Surds and Indices</h3>
+                            <p>This section reviewed important concepts and techniques related to surds and indices. Here's a summary of the key points you should remember:</p>
+                            <ul>
+                                <li><strong>The definition of a surd:</strong> An irrational number that can be expressed as a root of a rational number.</li>
+                                <li><strong>Arithmetic functions of surds:</strong> Adding, subtracting, multiplying, and dividing surds.</li>
+                                <li><strong>Simplifying surds:</strong> Reducing surds to their simplest form.</li>
+                                <li><strong>Expanding brackets with surds:</strong> Applying the distributive property to expressions involving surds.</li>
+                                <li><strong>Rationalising the denominator:</strong> Making the denominator of a fraction rational by multiplying by a suitable expression.</li>
+                                <li><strong>Identifying the base and power of an expression involving indices:</strong> Understanding how to simplify expressions using the laws of indices.</li>
+                                <li><strong>Laws of indices:</strong> Applying rules like the power of a product, power of a quotient, zero indices, negative indices, and fractional indices.</li>
+                                <li><strong>Solving equations involving indices:</strong> Using the rules of indices to solve equations and find unknown values.</li>
+                                <li><strong>Combining surds and indices:</strong> Simplifying complex expressions that involve both surds and indices.</li>
+                            </ul>
+                            <p>Ensure you revisit these concepts and practice problems to solidify your understanding and improve problem-solving skills.</p>
+                        </div>
+                        
                 <!-- Navigation Buttons -->
                 <div class="navigation-buttons">
                     <a href="./algebra.html" class="prev-button">Previous</a>
-                    <a href="./surdsandindices-quiz.html" class="next-button">Next</a>
+                    <a href="./quadratics.html" class="next-button">Next</a>
                 </div>
             </div>
 
