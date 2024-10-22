@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <title>topic - surds</title>
+    <title>Inequalities - Fletch Maths</title>
+    <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="../script.js"></script>
+    <audio id="ding-sound" src="../ding.mp3" preload="auto"></audio>
 </head>
 <body>
     <!-- Header Navigation -->
@@ -17,7 +20,7 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../modules.html">Modules</a></li>
                 <li><a href="../about.html">About</a></li>
-                <li class="contact"><a href="../about.html">Contact</a></li>
+                <li class="contact"><a href="../contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -75,21 +78,178 @@
             </script>
         </aside>
 
+
         <!-- Content Area -->
-        <section class="module-content">
+        <section class="module-content textbox">
             <div class="content-box">
-                <h2>Sketching Graphs</h2>
+                <h2>Inequalities</h2><br>
+
+                <!-- Linear Inequalities -->
                 <div>
+                    <h3>Solving Linear Inequalities</h3>
+                    <p>Linear inequalities are similar to linear equations but involve an inequality sign instead of an equal sign. To solve a linear inequality, follow these steps:</p>
+                    <ul>
+                        <li>Isolate the variable on one side of the inequality.</li>
+                        <li>Perform the same operations on both sides, just as you would with equations.</li>
+                        <li>Remember to reverse the inequality sign if you multiply or divide both sides by a negative number.</li>
+                    </ul>
+
+                    <p><strong>Example:</strong> Solve the inequality:</p>
+                    <p>\[ -3x + 4 < 1 \]</p>
+                    <p>Subtract 4 from both sides:</p>
+                    <p>\[ -3x < -3 \]</p>
+                    <p>Divide both sides by -3 (note the sign flip):</p>
+                    <p>\[ x > 1 \]</p>
+                    <p><strong>Important Point:</strong> When dividing or multiplying by a negative number, flip the direction of the inequality sign.</p>
+                    <p>To represent the inequality \( x > 1 \) graphically, draw a vertical dotted line at \( x = 1 \). The line is dotted because the inequality does not include an equal sign (i.e., \( x \neq 1 \)). 
+                        This indicates that values strictly less than 1 are solutions, but 1 itself is not included. The shaded region is the region \(x>1\).</p>
+                    <iframe src="https://www.desmos.com/calculator/auckvx5tuf?embed" width="600" height="400"  frameborder="0"></iframe>
                 </div>
-                   
+                <div class="question-box" data-question="18">
+                    <p><strong>Solve the inequality:</strong></p>
+                    <p>\[
+                    3x - 5 \leq 7
+                    \]</p>
+                    <div class="answer-box" data-option="A" onclick="checkAnswer(18, 'A')">A. \( x \leq 4 \)</div>
+                    <div class="answer-box" data-option="B" onclick="checkAnswer(18, 'B')">B. \( x \geq 4 \)</div>
+                    <div class="answer-box" data-option="C" onclick="checkAnswer(18, 'C')">C. \( x \leq 6 \)</div>
+                    <div class="answer-box" data-option="D" onclick="checkAnswer(18, 'D')">D. \( x \geq 6 \)</div>
+                    <div id="feedback18" class="feedback"></div>
+                    <div id="feedback-18" class="feedback"></div>
+                    <button class="toggle-solution" onclick="toggleSolution(18)">Show Solution</button>
+                    <div id="solution18" class="solution-box" style="display: none;">
+                        <p><strong>Solution:</strong></p>
+                        <ol>
+                            <li>Add 5 to both sides: \( 3x - 5 + 5 \leq 7 + 5 \) which simplifies to \( 3x \leq 12 \).</li>
+                            <li>Divide both sides by 3: \( \frac{3x}{3} \leq \frac{12}{3} \) which simplifies to \( x \leq 4 \).</li>
+                            <li>Therefore, the correct answer is \( x \leq 4 \).</li>
+                        </ol>
+                    </div>
+                </div>
                 
-                <!-- Navigation Buttons -->
-                <div class="navigation-buttons">
-                    <a href="./polynomials.html" class="prev-button">Previous</a>
-                    <a href="./functions.html" class="next-button">Next</a>
+
+                <!-- Quadratic Inequalities -->
+                <div>
+                    <h3>Solving Quadratic Inequalities</h3>
+                    <p>Quadratic inequalities involve expressions of the form \( ax^2 + bx + c \), where \( a \), \( b \), and \( c \) are constants. To solve these using graphical methods:</p>
+                    <ul>
+                        <li><strong>Graph the Quadratic Function:</strong> Plot the function \( f(x) = ax^2 + bx + c \) to visualise the shape of the curve and identify the roots.</li>
+                        <li><strong>Find the Roots:</strong> Solve the quadratic equation \( ax^2 + bx + c = 0 \) to find the x-values where the graph intersects the x-axis. These points are crucial as they divide the x-axis into intervals.</li>
+                        <li><strong>Analyse the Curve:</strong> Based on the shape of the curve (whether it is U-shaped or N-shaped) and the points where it intersects the x-axis, determine where the inequality holds true.</li>
+                    </ul>
+                
+                    <p><strong>Critical Values:</strong> These are the x-values where the quadratic expression equals zero. They are used to divide the number line into intervals to test the inequality.</p>
+                
+                    <p><strong>Example 1:</strong> Solve the inequality:</p>
+                    <p>\[ x^2 - 4x - 5 < 0 \]</p>
+                    <p>First, solve the quadratic equation:</p>
+                    <p>\[ x^2 - 4x - 5 = 0 \]</p>
+                    <p>Factorising gives:</p>
+                    <p>\[ (x - 5)(x + 1) = 0 \]</p>
+                    <p>The roots are \( x = 5 \) and \( x = -1 \).</p>
+                    <p>Graph the quadratic function \( f(x) = x^2 - 4x - 5 \). The graph will intersect the x-axis at \( x = 5 \) and \( x = -1 \). The curve is U-shaped (since the coefficient of \( x^2 \) is positive).</p>
+                    <p>To find where \( f(x) < 0 \), observe the shape of the curve and the intervals created by the roots:</p>
+                    <iframe src="https://www.desmos.com/calculator/z8r7yzp829?embed" width="600" height="400"  frameborder="0"></iframe>
+                    <p>In the graph of \( x^2 - 4x - 5 = 0 \), we focus on the parts of the curve where the function is less than zero, as required by the inequality (in the question). This means we are interested in the portions of the curve that lie below the x-axis. For this particular function, these regions occur between the roots, so the solution to the inequality \( x^2 - 4x - 5 < 0 \) is \[ -1 < x < 5 \].</p>
+
+                    <p><strong>Example 2:</strong> Solve the inequality:</p>
+                    <p>\[ x^2 - 4x + 3 \geq 0 \]</p>
+                    <p>First, solve the quadratic equation:</p>
+                    <p>\[ x^2 - 4x + 3 = 0 \]</p>
+                    <p>Factorising gives:</p>
+                    <p>\[ (x - 3)(x - 1) = 0 \]</p>
+                    <p>The roots are \( x = 3 \) and \( x = 1 \).</p>
+                    <p>Graph the quadratic function \( f(x) = x^2 - 4x + 3 \). The graph will intersect the x-axis at \( x = 3 \) and \( x = 1 \). The curve is U-shaped (since the coefficient of \( x^2 \) is positive).</p>
+                    <p>To find where \( f(x) \geq 0 \), observe the shape of the curve and the intervals created by the roots:</p>
+                    <iframe src="https://www.desmos.com/calculator/lbclcjaqhe?embed" width="600" height="400" frameborder="0"></iframe>
+                    <p>In the graph of \( x^2 - 4x + 3 = 0 \), we focus on the parts of the curve where the function is greater than or equal to zero, as required by the inequality. This means we are interested in the portions of the curve that lie above or on the x-axis. For this particular function, these regions occur outside the interval between the roots, so the solution to the inequality \( x^2 - 4x + 3 \geq 0 \) is </p><p>\( x \leq 1 \) or \( x \geq 3 \).</p>
+                    
+                    
+                
+                    <p><strong>Using Desmos to Graph Quadratic Inequalities:</strong></p>
+                    <ul>
+                        <li>Enter the quadratic function into Desmos.</li>
+                        <li>Identify the roots where the graph intersects the x-axis.</li>
+                        <li>Observe the regions above or below the x-axis to determine where the inequality is satisfied.</li>
+                    </ul>
+                    
+
+                </div><br>
+                <div>
+                    <h3>Set Notation</h3>
+                    <p>In A-Level mathematics, set notation is used to describe the solution sets of inequalities. The notation includes the following symbols:</p>
+                    <ul>
+                        <li><strong>Union (\( \cup \)):</strong> Represents the union of two sets, combining all elements from both sets. For example, if \( A \) and \( B \) are sets, then \( A \cup B \) is the set of elements that are in \( A \), in \( B \), or in both.</li>
+                        <li><strong>Intersection (\( \cap \)):</strong> Represents the intersection of two sets, including only the elements that are in both sets. For example, \( A \cap B \) is the set of elements that are in both \( A \) and \( B \).</li>
+                        <li><strong>Set Builder Notation:</strong> Used to describe sets by a property that its members must satisfy. For instance, the set of all \( x \) such that \( x \) is greater than 3 can be written as \( \{ x : x > 3 \} \).</li>
+                        <li><strong>Example:</strong> For the solution to the inequality \( x^2 - 4x + 3 \geq 0 \), we use set notation to describe the solution set as \( x \leq 1 \) or \( x \geq 3 \). This can be written in set builder notation as:</li>
+                    </ul>
+                    <p>\[\{ x : x \leq 1 \} \cup \{ x : x \geq 3 \}\]</p>
+                
+                    <p><strong>Additional Example:</strong> For the solution to the inequality \( x^2 - 2x - 3 < 0 \), we use set notation to describe the solution set as \( -1 < x < 3 \). This can be written in set notation as:</p>
+                    <p>\[\{ x : -1 < x < 3 \}\]</p>
                 </div>
-            </div>
+
+                <div>
+<p>Let's try a question that relates both the quadratic inequality stuff you learnt and the set notation stuff</p>
+<div class="question-box" data-question="19">
+    <p><strong>Solve the inequality:</strong></p>
+    <p>\[ x^2 - 2x - 3 < 0 \]</p>
+    <div class="answer-box" data-option="A" onclick="checkAnswer(19, 'A')">A. \( \{ x : x < -1 \} \cup \{ x : x > 3 \} \)</div>
+    <div class="answer-box" data-option="B" onclick="checkAnswer(19, 'B')">B. \( \{ x : -1 < x < 3 \} \)</div>
+    <div class="answer-box" data-option="C" onclick="checkAnswer(19, 'C')">C. \( \{ x : x \leq -1 \} \cup \{ x \geq 3 \} \)</div>
+    <div class="answer-box" data-option="D" onclick="checkAnswer(19, 'D')">D. \( \{ x : x \leq 3 \} \cup \{ x \geq -1 \} \)</div>
+    <div id="feedback19" class="feedback"></div>
+    <button class="toggle-solution" onclick="toggleSolution(19)">Show Solution</button>
+    <div id="solution19" class="solution-box" style="display: none;">
+        <p><strong>Solution:</strong></p>
+        <ol>
+            <li>Solve the quadratic equation \( x^2 - 2x - 3 = 0 \). Factoring gives \( (x - 3)(x + 1) = 0 \), with roots \( x = 3 \) and \( x = -1 \).</li>
+            <li>Graph the quadratic function \( f(x) = x^2 - 2x - 3 \). The graph intersects the x-axis at \( x = 3 \) and \( x = -1 \). The curve is U-shaped (since the coefficient of \( x^2 \) is positive).</li>
+            <li>To find where \( f(x) < 0 \), observe the regions between the roots where the curve is below the x-axis.</li>
+            <li>The solution to the inequality \( x^2 - 2x - 3 < 0 \) is the interval between the roots, so it can be written in set notation as \( \{ x : -1 < x < 3 \} \).</li>
+        </ol>
+    </div>
+</div>
+
+
+
+                </div class="">
+                <div class="review-box">
+                    <h3>Topic Review: Inequalities</h3>
+                    <p>In this topic, you have learned the following key concepts:</p>
+                    <ul>
+                        <li><strong>Linear Inequalities:</strong> Linear inequalities involve expressions of the form \( ax + b \), where \( a \) and \( b \) are constants. To solve a linear inequality, isolate the variable and perform the same operations on both sides, remembering to reverse the inequality sign if you multiply or divide by a negative number.</li>
+                        <li><strong>Quadratic Inequalities:</strong> Quadratic inequalities involve expressions of the form \( ax^2 + bx + c \), where \( a \), \( b \), and \( c \) are constants. To solve these, graph the quadratic function to determine where it is above or below the x-axis, or use algebraic methods to find the intervals where the inequality holds true.</li>
+                        <li><strong>Graphical Solutions:</strong> For quadratic inequalities, graph the function and use the shape of the curve to determine the regions where the inequality is satisfied. Identify the roots and analyze the intervals created by these critical values.</li>
+                        <li><strong>Critical Values:</strong> These are the x-values where the expression equals zero. They divide the number line into intervals which can be tested to find where the inequality is satisfied.</li>
+                        <li><strong>Set Notation:</strong> Set notation is used to express the solution sets of inequalities. For example, \( x^2 - 4x + 3 \geq 0 \) can be written in set notation as \( \{ x : x \leq 1 \} \cup \{ x : x \geq 3 \} \).</li>
+                        <li><strong>Using Desmos:</strong> Desmos can be used to graph inequalities and visualize the solution sets. Enter the function, identify the roots, and observe the regions above or below the x-axis to solve the inequality.</li>
+                    </ul>
+                </div>
+                
+
+
+               <!-- Navigation Buttons -->
+         <div class="navigation-buttons">
+            <a href="./polynomials.html" class="prev-button">Previous</a>
+            <a href="./functions.html" class="next-button">Next</a>
+          </div>  
+                
         </section>
+        
+        
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Fletch Maths. All rights reserved.</p>
+            <ul>
+                <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="../terms-of-service.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="../style.css">
     <title>topic - surds</title>
     <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <audio id="ding-sound" src="../ding.mp3" preload="auto"></audio>
+    <script src="../script.js"></script>
 </head>
 <body>
     <!-- Header Navigation -->
@@ -89,9 +91,9 @@
                 </div>
                 
                 <div class="content-box">
-                    <h3>Basic Concepts</h3>
+                    <h2>Basic Concepts</h2>
 
-                    <h4>Function Notation</h4>
+                    <h3>Function Notation</h3>
                     <p>Functions are typically denoted by letters such as \( f \), \( g \), or \( h \). The notation \( f(x) \) represents a function named \( f \) with \( x \) as the input variable.</p>
                     <strong>\[ f(x) = 2x + 3 \]</strong>
                     <p>In this example, \( f(x) \) is a function where \( 2x + 3 \) represents the output for any input \( x \).</p>
@@ -99,76 +101,1048 @@
                     <p>For \( f(x) = 2x + 3 \), find \( f(4) \):</p>
                     <strong>\[ f(4) = 2(4) + 3 = 8 + 3 = 11 \]</strong>
                     <p>Therefore, \( f(4) = 11 \).</p>
-                    
-                    <h4>Domain and Range</h4>
-                    <p>The domain of a function is the set of all possible inputs (x-values) for which the function is defined. The range is the set of all possible outputs (y-values).</p>
-                    <p>Example:</p>
-                    <p>For \( f(x) = \sqrt{x} \), the domain is \( x \geq 0 \) and the range is \( y \geq 0 \).</p>
-                    <p>For \( g(x) = \frac{1}{x} \), the domain is \( x \neq 0 \) and the range is \( y \neq 0 \).</p>
-
-                    <h4>Composite Functions</h4>
-                    <p>A composite function is formed when one function is applied to the result of another function. If \( f \) and \( g \) are functions, the composite function \( f(g(x)) \) is defined as:</p>
-                    <strong>\[ (f \circ g)(x) = f(g(x)) \]</strong>
-                    <p>Example:</p>
-                    <p>If \( f(x) = 2x + 1 \) and \( g(x) = x^2 \), then \( (f \circ g)(x) = f(g(x)) = f(x^2) = 2x^2 + 1 \).</p>
-                    <p>Find \( (g \circ f)(x) \):</p>
-                    <strong>\[ (g \circ f)(x) = g(f(x)) = g(2x + 1) = (2x + 1)^2 = 4x^2 + 4x + 1 \]</strong>
-                    <p>Therefore, \( (g \circ f)(x) = 4x^2 + 4x + 1 \).</p>
-
-                    <h4>Inverse Functions</h4>
-                    <p>An inverse function reverses the operation of the original function. If \( f \) is a function, its inverse is denoted by \( f^{-1} \). For \( f \) and \( f^{-1} \):</p>
-                    <strong>\[ f(f^{-1}(x)) = x \text{ and } f^{-1}(f(x)) = x \]</strong>
-                    <p>Example:</p>
-                    <p>If \( f(x) = 3x - 4 \), then to find \( f^{-1}(x) \), solve \( y = 3x - 4 \) for \( x \):</p>
-                    <strong>\[ y = 3x - 4 \]</strong>
-                    <p>Solve for \( x \):</p>
-                    <strong>\[ x = \frac{y + 4}{3} \]</strong>
-                    <p>Therefore, the inverse function is:</p>
-                    <strong>\[ f^{-1}(x) = \frac{x + 4}{3} \]</strong>
-
-                    <h4>Transformations of Functions</h4>
-                    <p>Transformations change the position or size of the graph of a function. Common transformations include translations, reflections, stretches, and compressions.</p>
-                    <ul>
-                        <li><strong>Translations:</strong> \( f(x) + c \) (vertical) or \( f(x + c) \) (horizontal)</li>
-                        <li><strong>Reflections:</strong> \( -f(x) \) (in x-axis) or \( f(-x) \) (in y-axis)</li>
-                        <li><strong>Stretches:</strong> \( af(x) \) (vertical by factor \( a \)) or \( f(bx) \) (horizontal by factor \( \frac{1}{b} \))</li>
-                    </ul>
-                    <p>Example:</p>
-                    <p>Given \( f(x) = x^2 \):</p>
-                    <ul>
-                        <li>Translation: \( f(x) + 3 \) shifts the graph up by 3 units.</li>
-                        <li>Translation: \( f(x - 2) \) shifts the graph right by 2 units.</li>
-                        <li>Reflection: \( -f(x) = -x^2 \) reflects the graph in the x-axis.</li>
-                        <li>Reflection: \( f(-x) = (-x)^2 = x^2 \) reflects the graph in the y-axis (no change for this specific function).</li>
-                        <li>Stretch: \( 2f(x) = 2x^2 \) stretches the graph vertically by a factor of 2.</li>
-                        <li>Stretch: \( f(2x) = (2x)^2 = 4x^2 \) compresses the graph horizontally by a factor of \(\frac{1}{2}\).</li>
-                    </ul>
-
-                    <h4>Examples and Applications</h4>
-                    <p>Let's look at some specific examples and how to solve them:</p>
-                    <p>1. Find \( (f \circ g)(x) \) where \( f(x) = 2x + 3 \) and \( g(x) = x^2 \):</p>
-                    <strong>\[ (f \circ g)(x) = f(g(x)) = f(x^2) = 2x^2 + 3 \]</strong>
-                    <hr>
-
-                    <p>2. Find the inverse of \( f(x) = 2x + 3 \):</p>
-                    <strong>\[ y = 2x + 3 \]</strong>
-                    <p>Solve for \( x \):</p>
-                    <strong>\[ x = \frac{y - 3}{2} \]</strong>
-                    <p>Therefore, the inverse function is:</p>
-                    <strong>\[ f^{-1}(x) = \frac{x - 3}{2} \]</strong>
-                    <hr>
-
-                    <p>3. Apply a transformation to \( f(x) = x^2 \) for a vertical stretch by 3 and a horizontal translation by 2:</p>
-                    <strong>\[ g(x) = 3(x - 2)^2 \]</strong>
-                    <hr>
-
-                    <h4>Practice Questions</h4>
-                    <div class="example_question_box">
-                        <p><strong>Solve the following:</strong></p>
-                        <p>1. If \( f(x) = x^2 + 1 \) and \( g(x) = 3x - 2 \), find \( (f \circ g)(x) \).</p>
-                        <p>2. Determine the inverse of \( h(x) = \frac{x + 1}{x - 1} \).</p>
-                        <p>3. Apply the transformation \( f(x) = 2x + 3 \) for a reflection in the y-axis.</p>
+                    <p>Try this question:</p>
+                    <div class="question-box" data-question="20">
+                        <p><strong>Consider the function:</strong></p>
+                        <p>\[ f(x) = 2x + 3 \]</p>
+                        <p>What is the value of \( f(4) \)?</p>
+                        <div class="answer-box" data-option="A" onclick="checkAnswer(20, 'A')">A. \( 8 \)</div>
+                        <div class="answer-box" data-option="B" onclick="checkAnswer(20, 'B')">B. \( 9 \)</div>
+                        <div class="answer-box" data-option="C" onclick="checkAnswer(20, 'C')">C. \( 10 \)</div>
+                        <div class="answer-box" data-option="D" onclick="checkAnswer(20, 'D')">D. \( 11 \)</div>
+                        <div id="feedback20" class="feedback"></div>
+                        <button class="toggle-solution" onclick="toggleSolution(20)">Show Solution</button>
+                        <div id="solution20" class="solution-box" style="display: none;">
+                            <p><strong>Solution:</strong></p>
+                            <ol>
+                                <li>Substitute \( x = 4 \) into the function \( f(x) = 2x + 3 \):</li>
+                                <li>Calculate \( f(4) = 2(4) + 3 = 8 + 3 = 11 \).</li>
+                                <li>Therefore, \( f(4) = 11 \).</li>
+                            </ol>
+                        </div>
                     </div>
+                    
+                    <h3>Domain and Range</h3>
+                    <p>The <strong>domain</strong> of a function is the set of all possible inputs (x-values) for which the function is defined. In other words, it’s the collection of x-values that you can put into the function without causing any undefined mathematical operations, such as dividing by zero or taking the square root of a negative number.</p>
+                    
+                    <p>The <strong>range</strong> of a function is the set of all possible outputs (y-values). These are the values that come out of the function when you substitute x-values from the domain. The range can depend on the type of function and any restrictions placed by the operations within it.</p>
+                    
+                    <h4>Understanding Domain</h4>
+                    <p>To find the domain of a function, you need to identify any restrictions on the input values (x). Common restrictions include:</p>
+                    <ul>
+                        <li><strong>Division by zero:</strong> In functions where x appears in the denominator, such as \( g(x) = \frac{1}{x} \), the function is undefined at \( x = 0 \) because division by zero is not allowed.</li>
+                        <li><strong>Square roots of negative numbers:</strong> In functions involving square roots, such as \( f(x) = \sqrt{x} \), the function is only defined when \( x \geq 0 \), since the square root of a negative number is not a real number.</li>
+                    </ul>
+                    
+                    <h4>Understanding Range</h4>
+                    <p>To find the range of a function, you need to determine the set of y-values that result from plugging in all the x-values from the domain. Some key things to consider:</p>
+                    <ul>
+                        <li><strong>Constant functions:</strong> A function like \( f(x) = 3 \) has a domain of all real numbers (since no restrictions exist on x), but the range is just \( y = 3 \), because no matter the input, the output is always 3.</li>
+                        <li><strong>Quadratic functions:</strong> For a quadratic function like \( f(x) = x^2 \), the range is \( y \geq 0 \), because squaring any real number results in a non-negative output. The domain is all real numbers.</li>
+                        <li><strong>Linear functions:</strong> A linear function such as \( f(x) = 2x + 1 \) has a domain and range of all real numbers because there are no restrictions on x or y.</li>
+                    </ul>
+                    
+                    <h4>Examples of Domain and Range</h4>
+                    <p>Let’s look at some specific examples:</p>
+                    
+                    <ul>
+                        <li><strong>Example 1:</strong> For \( f(x) = \sqrt{x} \), the domain is \( x \geq 0 \), because square roots of negative numbers are undefined. The range is \( y \geq 0 \), since the square root always produces non-negative results.</li>
+                        
+                        <li><strong>Example 2:</strong> For \( g(x) = \frac{1}{x} \), the domain is \( x \neq 0 \), because the function is undefined at \( x = 0 \). The range is also \( y \neq 0 \), because the reciprocal of any non-zero number is never zero.</li>
+                        
+                        <li><strong>Example 3:</strong> For \( h(x) = x^2 \), the domain is all real numbers (\( x \in \mathbb{R} \)), but the range is \( y \geq 0 \), since squaring any number gives a non-negative result.</li>
+                    </ul>
+                    
+                    <h4>Writing Domain and Range in Set Notation</h4>
+                    <p>In set notation, the domain and range can be written to clearly specify the sets of values. Here’s how to express them:</p>
+                    <ul>
+                        <li><strong>Domain:</strong> The domain can be expressed as a set of x-values. For example, the domain of \( f(x) = \sqrt{x} \) is written as:
+                            <strong>\[ \{ x : x \geq 0 \} \]</strong>. This means "the set of all x such that x is greater than or equal to 0."</li>
+                        <li><strong>Range:</strong> Similarly, the range can be expressed as a set of y-values. For example, the range of \( f(x) = \sqrt{x} \) is written as:
+                            <strong>\[ \{ y : y \geq 0 \} \]</strong>. This means "the set of all y such that y is greater than or equal to 0."</li>
+                        <li><strong>Example:</strong> For the function \( g(x) = \frac{1}{x} \), the domain is written as:
+                            <strong>\[ \{ x : x \neq 0 \} \]</strong>, and the range is written as:
+                            <strong>\[ \{ y : y \neq 0 \} \]</strong>.</li>
+                    </ul>
+                    
+                    <h4>Summary</h4>
+                    <p>When determining the domain and range of a function, consider the mathematical operations within the function and any restrictions they impose. The domain tells you which x-values can be input into the function, and the range tells you the possible y-values that result from those inputs. Writing these sets in set notation provides a clear and precise way to describe the valid input and output values.</p>
+                    <div class="question-box" data-question="21">
+                        <p><strong>Consider the function:</strong></p>
+                        <p>\[ f(x) = \frac{2x + 1}{x - 3} \]</p>
+                        <p>Find the domain and range of the function and express them in set notation.</p>
+                        <div class="answer-box" data-option="A" onclick="checkAnswer(21, 'A')">A. Domain: \(\{ x : x \neq 3 \}\); Range: \(\{ y : y \neq 0 \}\)</div>
+                        <div class="answer-box" data-option="B" onclick="checkAnswer(21, 'B')">B. Domain: \(\{ x : x \geq 3 \}\); Range: \(\{ y : y \geq 0 \}\)</div>
+                        <div class="answer-box" data-option="C" onclick="checkAnswer(21, 'C')">C. Domain: \(\{ x : x \leq 3 \}\); Range: \(\{ y : y \geq 0 \}\)</div>
+                        <div class="answer-box" data-option="D" onclick="checkAnswer(21, 'D')">D. Domain: \(\{ x : x \neq 3 \}\); Range: \(\{ y : y \neq 0 \}\)</div>
+                        <div id="feedback21" class="feedback"></div>
+                        <button class="toggle-solution" onclick="toggleSolution(21)">Show Solution</button>
+                        <div id="solution21" class="solution-box" style="display: none;">
+                            <p><strong>Solution:</strong></p>
+                            <ol>
+                                <li>**Domain:** The function \( f(x) = \frac{2x + 1}{x - 3} \) is undefined when the denominator is zero. So, \( x \neq 3 \). Thus, the domain is:
+                                    \[
+                                    \{ x : x \neq 3 \}
+                                    \]
+                                </li>
+                                <li>**Range:** To find the range, observe that the function can approach all real values except for the value where the function’s output is zero, which happens when \( 2x + 1 = 0 \) or \( x = -\frac{1}{2} \). However, due to the asymptotic behavior, \( y \neq 0 \). Thus, the range is:
+                                    \[
+                                    \{ y : y \neq 0 \}
+                                    \]
+                                </li>
+                                <li>Therefore, the correct answer is A.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <h3>Composite Functions</h3>
+<p>A composite function is formed when one function is applied to the result of another function. If \( f \) and \( g \) are functions, the composite function \( f(g(x)) \) is defined as:</p>
+<strong>\[ f(g(x)) \]</strong>
+<p>Example:</p>
+<p>If \( f(x) = 2x + 1 \) and \( g(x) = x^2 \), then \( f(g(x)) = f(x^2) = 2x^2 + 1 \).</p>
+<p>To find \( g(f(x)) \), substitute \( f(x) \) into \( g(x) \). Wherever there is an \( x \) in \( g(x) \), replace it with \( f(x) \). Similarly, to find \( f(g(x)) \), substitute \( g(x) \) into \( f(x) \). Wherever there is an \( x \) in \( f(x) \), replace it with \( g(x) \). For example:</p>
+<strong>\[ g(f(x)) = g(2x + 1) = (2x + 1)^2 = 4x^2 + 4x + 1 \]</strong>
+<p>Therefore, \( g(f(x)) = 4x^2 + 4x + 1 \).</p>
+
+<div class="question-box" data-question="22">
+    <p><strong>Consider the functions:</strong></p>
+    <p>\[ f(x) = x + 3 \]</p>
+    <p>\[ g(x) = 2x - 1 \]</p>
+    <p>Find \( f(g(x)) \) and \( g(f(x)) \), and write the expressions in simplified form.</p>
+    <div class="answer-box" data-option="A" onclick="checkAnswer(22, 'A')">A. <p>\( f(g(x)) = 2x + 2 \);</p><p>\( g(f(x)) = 2x + 5 \)</p> </div>
+    <div class="answer-box" data-option="B" onclick="checkAnswer(22, 'B')">B. <p>\( f(g(x)) = 2x + 5 \);</p><p>\( g(f(x)) = 2x + 5 \)</p> </div>
+    <div class="answer-box" data-option="C" onclick="checkAnswer(22, 'C')">C. <p>\( f(g(x)) = 2x + 8 \);</p><p>\( g(f(x)) = 2x + 5 \)</p> </div>
+    <div class="answer-box" data-option="D" onclick="checkAnswer(22, 'D')">D. <p>\( f(g(x)) = 2x + 5 \);</p><p>\( g(f(x)) = 2x + 7 \)</p> </div>
+    <div id="feedback22" class="feedback"></div>
+    <button class="toggle-solution" onclick="toggleSolution(22)">Show Solution</button>
+    <div id="solution22" class="solution-box" style="display: none;">
+        <p><strong>Solution:</strong></p>
+        <ol>
+            <li>**Finding \( f(g(x)) \):** 
+                \[
+                f(g(x)) = f(2x - 1)
+                \]
+                Substitute \( g(x) \) into \( f(x) \):
+                \[
+                f(2x - 1) = (2x - 1) + 3 = 2x + 2
+                \]
+                So, \( f(g(x)) = 2x + 2 \).
+            </li>
+            <li>**Finding \( g(f(x)) \):**
+                \[
+                g(f(x)) = g(x + 3)
+                \]
+                Substitute \( f(x) \) into \( g(x) \):
+                \[
+                g(x + 3) = 2(x + 3) - 1 = 2x + 6 - 1 = 2x + 5
+                \]
+                So, \( g(f(x)) = 2x + 5 \).
+            </li>
+            <li>Therefore, the correct answer is A.</li>
+        </ol>
+    </div>
+</div>
+
+                    
+<h3>Inverse Functions</h3>
+<p>An inverse function reverses the operation of the original function. If \( f \) is a function, its inverse is denoted by \( f^{-1} \). For \( f \) and \( f^{-1} \):</p>
+<strong>\[ f(f^{-1}(x)) = x \text{ and } f^{-1}(f(x)) = x \]</strong>
+
+<p>To find the inverse of a function, you can follow these steps:</p>
+<ol>
+    <li>Replace \( f(x) \) with \( y \). This makes it easier to manipulate the equation. For example, if \( f(x) = 3x - 4 \), replace it with \( y = 3x - 4 \).</li>
+    <li>Swap \( x \) and \( y \). This step helps to find the inverse function. So, the equation becomes \( x = 3y - 4 \).</li>
+    <li>Make \( y \) the subject of the equation. Solve for \( y \) in terms of \( x \):</li>
+    <strong>\[ y = \frac{x + 4}{3} \]</strong>
+    <li>Change \( y \) back to \( f^{-1}(x) \). Therefore, the inverse function is:</li>
+    <strong>\[ f^{-1}(x) = \frac{x + 4}{3} \]</strong>
+</ol>
+
+<div class="question-box" data-question="23">
+    <p><strong>Consider the function:</strong></p>
+    <p>\[ f(x) = 2x + 5 \]</p>
+    <p>Find the inverse function \( f^{-1}(x) \) and write the expression in simplified form.</p>
+    <div class="answer-box" data-option="A" onclick="checkAnswer(23, 'A')">A. \( f^{-1}(x) = \frac{x - 2}{5} \)</div>
+    <div class="answer-box" data-option="B" onclick="checkAnswer(23, 'B')">B. \( f^{-1}(x) = \frac{x + 5}{2} \)</div>
+    <div class="answer-box" data-option="C" onclick="checkAnswer(23, 'C')">C. \( f^{-1}(x) = \frac{x - 5}{2} \)</div>
+    <div class="answer-box" data-option="D" onclick="checkAnswer(23, 'D')">D. \( f^{-1}(x) = \frac{x - 5}{2} \)</div>
+    <div id="feedback23" class="feedback"></div>
+    <button class="toggle-solution" onclick="toggleSolution(23)">Show Solution</button>
+    <div id="solution23" class="solution-box" style="display: none;">
+        <p><strong>Solution:</strong></p>
+        <ol>
+            <li>Replace \( f(x) \) with \( y \):</li>
+            <strong>\[ y = 2x + 5 \]</strong>
+            <li>Swap \( x \) and \( y \):</li>
+            <strong>\[ x = 2y + 5 \]</strong>
+            <li>Make \( y \) the subject:</li>
+            <strong>\[ y = \frac{x - 5}{2} \]</strong>
+            <li>Thus, the inverse function is:</li>
+            <strong>\[ f^{-1}(x) = \frac{x - 5}{2} \]</strong>
+            <li>Therefore, the correct answer is C.</li>
+        </ol>
+    </div>
+</div>
+
+
+
+                    <h3>Transformations of Functions</h3>
+                    <p>Transformations change the position or size of the graph of a function. Common transformations include translations, reflections, stretches, and compressions.</p>
+                    
+                    <ul style="margin-bottom: 20px;">
+                        <li><strong>Translations:</strong> These move the graph without changing its shape. There are two types of translations:
+                            <ul style="list-style-type:none; margin-top: 10px;">
+                                <li style="margin-bottom: 15px;">
+                                    <strong style="font-weight:normal; padding-left: 20px;">Vertical translation:</strong> This occurs when a constant \( c \) is added to or subtracted from the entire function, i.e., \( f(x) + c \). This shifts the graph up or down along the y-axis. A positive \( +c \) moves the graph upward by \( c \) units, while a negative \( -c \) moves it downward by \( c \) units.
+                                </li>
+                                <li style="margin-bottom: 15px;">
+                                    <strong style="font-weight:normal; padding-left: 20px;">Horizontal translation:</strong> This happens when \( c \) is added to or subtracted from the input \( x \) inside the function, i.e., \( f(x + c) \). This shifts the graph left or right along the x-axis. A positive \( +c \) actually moves the graph left by \( c \) units, while a negative \( -c \) moves it right by \( c \) units. This is the opposite of what you might expect because the change occurs inside the function.
+                                </li>
+                            </ul>
+                        </li>
+                    
+                        <li style="margin-top: 20px; margin-bottom: 20px;"><strong>Reflections:</strong> 
+                            <ul style="margin-top: 10px;">
+                                <li style="margin-bottom: 10px;">\( -f(x) \) reflects the graph across the x-axis, flipping it upside down.</li>
+                                <li>\( f(-x) \) reflects the graph across the y-axis, flipping it left to right.</li>
+                            </ul>
+                        </li>
+                    
+                        <li style="margin-top: 20px;"><strong>Stretches and Compressions:</strong> These change the size of the graph:
+                            <ul style="margin-top: 10px;">
+                                <li style="margin-bottom: 10px;">\( af(x) \) stretches or compresses the graph vertically by a factor of \( a \). If \( a > 1 \), the graph is stretched; if \( 0 < a < 1 \), the graph is compressed.</li>
+                                <li>\( f(bx) \) stretches or compresses the graph horizontally by a factor of \( \frac{1}{b} \). If \( b > 1 \), the graph is compressed (squeezed) horizontally; if \( 0 < b < 1 \), it is stretched.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <p style="margin-top: 30px;">Example:</p>
+                    <p>Given \( f(x) = x^2 \):</p>
+                    
+                    <ul style="margin-top: 10px;">
+                        <li style="margin-bottom: 10px;">Vertical translation: \( f(x) + 3 \) shifts the graph up by 3 units along the y-axis.</li>
+                        <li style="margin-bottom: 10px;">Horizontal translation: \( f(x - 2) \) shifts the graph right by 2 units along the x-axis.</li>
+                        <li style="margin-bottom: 10px;">Reflection in the x-axis: \( -f(x) = -x^2 \) flips the graph upside down.</li>
+                        <li style="margin-bottom: 10px;">Reflection in the y-axis: \( f(-x) = (-x)^2 = x^2 \) results in no change for this function, as it's symmetric about the y-axis.</li>
+                        <li style="margin-bottom: 10px;">Vertical stretch: \( 2f(x) = 2x^2 \) stretches the graph vertically by a factor of 2.</li>
+                        <li>Horizontal compression: \( f(2x) = (2x)^2 = 4x^2 \) compresses the graph horizontally by a factor of \( \frac{1}{2} \).</li>
+                    </ul><br><br>
+                    <h3>Expressing Translations in Vector Form</h3>
+                    <p>Translations of functions can be expressed using vectors. A translation moves a graph horizontally, vertically, or both without altering its shape. We can describe translations in vector form as:</p>
+                    
+                    <p>
+                        \[
+                        \begin{pmatrix}
+                        a \\
+                        b
+                        \end{pmatrix}
+                        \]
+                    </p>
+                    
+                    <p>In this vector, \( a \) represents the horizontal shift, and \( b \) represents the vertical shift:</p>
+                    
+                    <ul>
+                        <li>If \( a > 0 \), the graph shifts to the right by \( a \) units. If \( a < 0 \), the graph shifts to the left by \( a \) units.</li>
+                        <li>If \( b > 0 \), the graph shifts upward by \( b \) units. If \( b < 0 \), the graph shifts downward by \( b \) units.</li>
+                    </ul>
+                    
+                    <p>For example, the translation of the function \( f(x) = x^2 \) by 2 units to the left and 3 units up can be represented as:</p>
+                    
+                    <p>
+                        \[
+                        \begin{pmatrix}
+                        -2 \\
+                        3
+                        \end{pmatrix}
+                        \]
+                    </p>
+                    
+                    <p>This means the new function is \( f(x) = (x + 2)^2 + 3 \).</p>
+                    
+
+                    <h3>Examples of Function Transformations</h3>
+
+<!-- Example 1: Vertical Shift -->
+<title>Transformations in Functions</title>
+   
+</head>
+<body>
+
+    <div class="example-section">
+        <h4>Example: Horizontal Translation</h4>
+        <div class="graph-row">
+            <div class="graph-container">
+                <div class="graph-label">\(f(x) = x^2\)</div>
+                <iframe src="https://www.desmos.com/calculator/oqltvjbyid?embed" width="600" height="400" frameborder="0"></iframe>
+            </div>
+            <div class="graph-container">
+                <div class="graph-label">\(f(x) = (x+4)^2\)</div>
+                <iframe src="https://www.desmos.com/calculator/xc3jatpnt3?embed" width="600" height="400" frameborder="0"></iframe>
+            </div>
+        </div>
+        <p>In this example, the graph of \(f(x) = x^2\) has been translated horizontally to the left by 4 units to form \(f(x) = (x+4)^2\). This represents a horizontal translation by a vector
+            <p>
+                \[
+                \begin{pmatrix}
+                -4 \\ 
+                0
+                \end{pmatrix}
+                \]
+            </p>
+            where the vector indicates a shift of -4 in the x-direction and no change in the y-direction.</p>
+    </div>
+
+    <div class="example-section">
+        <h4>Example: Vertical Translation</h4>
+        <div class="graph-row">
+            <div class="graph-container">
+                <div class="graph-label">\(f(x) = x^2\)</div>
+                <iframe src="https://www.desmos.com/calculator/oqltvjbyid?embed" width="600" height="400" frameborder="0"></iframe>
+            </div>
+            <div class="graph-container">
+                <div class="graph-label">\(f(x) = x^2 + 3\)</div>
+                <iframe src="https://www.desmos.com/calculator/1cp8efufnf?embed" width="600" height="400" frameborder="0"></iframe>
+            </div>
+        </div>
+        <p>In this example, the graph of \(f(x) = x^2\) has been translated vertically upwards by 3 units to form \(f(x) = x^2 + 3\). This represents a vertical translation by a vector
+            <p>
+                \[
+                \begin{pmatrix}
+                0 \\ 
+                3
+                \end{pmatrix}
+                \]
+            </p>
+            where the vector indicates no change in the x-direction and a shift of +3 in the y-direction.</p>
+    </div>
+
+    <div class="example-section">
+        <h4>Example: Stretch in the x-axis</h4>
+        <div class="graph-row">
+            <div class="graph-container">
+                <div class="graph-label">\(f(x) = x^2\)</div>
+                <iframe src="https://www.desmos.com/calculator/oqltvjbyid?embed" width="600" height="400" frameborder="0"></iframe>
+            </div>
+            <div class="graph-container">
+                <div class="graph-label">\(f(x) = (2x)^2\)</div>
+                <iframe src="https://www.desmos.com/calculator/ty8z6hbmfk?embed" width="600" height="400" frameborder="0"></iframe>
+            </div>
+        </div>
+        <p>In this example, the graph of \(f(x) = x^2\) has been stretched horizontally by a scale factor of \(\frac{1}{2}\) to form \(f(x) = (2x)^2\). This means the x-coordinate for every point on the graph has been multiplied by this scale factor. You can observe this by comparing the graphs. This represents a horizontal stretch by a scale factor of \(\frac{1}{2}\).</p>
+    </div>
+
+    <div class="example-section">
+        <h4>Example: Stretch in the y-axis</h4>
+        <div class="graph-row">
+            <div class="graph-container">
+                <div class="graph-label">\(f(x) = x^2\)</div>
+                <iframe src="https://www.desmos.com/calculator/oqltvjbyid?embed" width="600" height="400" frameborder="0"></iframe>
+            </div>
+            <div class="graph-container">
+                <div class="graph-label">\(f(x) = 2x^2\)</div>
+                <iframe src="https://www.desmos.com/calculator/nqjuaoq3ex?embed" width="600" height="400" frameborder="0"></iframe>
+            </div>
+        </div>
+        <p>In this example, the graph of \(f(x) = x^2\) has been stretched vertically by a scale factor of 2 to form \(f(x) = 2x^2\). This means the y-coordinate for every point on the graph has been multiplied by this scale factor. You can observe this by comparing the graphs. This represents a vertical stretch by a scale factor of 2.</p>
+    </div>
+
+    <div class="example-section">
+        <h4>Example: Reflection in the x-axis</h4>
+        <div class="graph-row">
+            <div class="graph-container">
+                <div class="graph-label">\(f(x) = x^2\)</div>
+                <iframe src="https://www.desmos.com/calculator/oqltvjbyid?embed" width="600" height="400" frameborder="0"></iframe>
+            </div>
+            <div class="graph-container">
+                <div class="graph-label">\(f(x) = -x^2\)</div>
+                <iframe src="https://www.desmos.com/calculator/rqx0zzifi1?embed" width="600" height="400" frameborder="0"></iframe>
+            </div>
+        </div>
+        <p>In this example, the graph of \(f(x) = x^2\) has been reflected in the x-axis to form \(f(x) = -x^2\). This represents a reflection in the x-axis.</p>
+    </div>
+
+    <div class="example-section">
+        <h4>Example: Reflection in the y-axis</h4>
+        <div class="graph-row">
+            <div class="graph-container">
+                <div class="graph-label">\(f(x) = (x+4)^2\)</div>
+                <iframe src="https://www.desmos.com/calculator/760as28ueg?embed" width="600" height="400" frameborder="0"></iframe>
+            </div>
+            <div class="graph-container">
+                <div class="graph-label">\(f(x) = (-x+4)^2\)</div>
+                <iframe src="https://www.desmos.com/calculator/4ylv4byfgs?embed" width="600" height="400" frameborder="0"></iframe>
+            </div>
+        </div>
+        <p>In this example, the graph of \(f(x) (x+4)^2\) has been reflected in the y-axis to form \(f(x) = (-x+4)^2\). This represents a reflection in the y-axis.</p>
+    </div>
+
+<style>
+    .graph-row {
+        display: flex;
+        justify-content: space-between;
+    }
+    .graph-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+    .graph-label {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+</style>
+<br><br><div> <h2>Exam-Style Question</h2>
+    <p><strong>Question:</strong> Consider the graph of the function \( f(x) = x^2 \). The graph is transformed to \( g(x) = (x - 3)^2 \), \( h(x) = -x^2 \), and \( k(x) = \frac{1}{2}x^2 \).</p>
+
+    <p><strong>a) Describe the transformation from \( f(x) = x^2 \) to \( g(x) = (x - 3)^2 \).</strong> *(2 marks)*</p>
+    <p><strong>b) Describe the transformation from \( f(x) = x^2 \) to \( h(x) = -x^2 \).</strong> *(2 marks)*</p>
+    <p><strong>c) Describe the transformation from \( f(x) = x^2 \) to \( k(x) = \frac{1}{2}x^2 \).</strong> *(2 marks)*</p>
+
+    <h3>How to Write an Exam-Style Answer</h3>
+    <ul>
+        <li><strong>Type of Transformation:</strong> Clearly state whether the transformation is a translation, reflection, or stretch.</li>
+        <li><strong>Transformation Details:</strong>
+            <ul>
+                <li>For a translation, provide the vector indicating the direction and distance of the shift (e.g., \(\begin{pmatrix} -3 \\ 2 \end{pmatrix}\)).</li>
+                <li>For a reflection, state the axis of reflection (e.g., the x-axis or y-axis).</li>
+                <li>For a stretch, mention the scale factor and the axis of the stretch (e.g., a scale factor of 2 in the y-axis).</li>
+            </ul>
+        </li>
+    </ul><br>
+
+    <h3>Solutions</h3>
+
+    <p><strong>a) Transformation from \( f(x) = x^2 \) to \( g(x) = (x - 3)^2 \):</strong></p>
+    <ul>
+        <li><strong>Type of Transformation:</strong> Translation</li>
+        <li><strong>Transformation Details:</strong>
+            <ul>
+                <li><strong>Vector:</strong> \(\begin{pmatrix} 3 \\ 0 \end{pmatrix}\) (This means the graph is shifted 3 units to the right on the x-axis.)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <p><strong>b) Transformation from \( f(x) = x^2 \) to \( h(x) = -x^2 \):</strong></p>
+    <ul>
+        <li><strong>Type of Transformation:</strong> Reflection</li>
+        <li><strong>Transformation Details:</strong>
+            <ul>
+                <li><strong>Reflection:</strong> The graph is reflected in the x-axis.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <p><strong>c) Transformation from \( f(x) = x^2 \) to \( k(x) = \frac{1}{2}x^2 \):</strong></p>
+    <ul>
+        <li><strong>Type of Transformation:</strong> Stretch</li>
+        <li><strong>Transformation Details:</strong>
+            <ul>
+                <li><strong>Scale Factor:</strong> 1/2 (The graph is stretched vertically by a scale factor of 1/2.)</li>
+            </ul>
+        </li>
+    </ul></div><br><br>
+    <div class="question-box" data-question="24">
+        <p>Try this exam-style question for yourself!</p>
+        <p><strong>Describe the transformation of the function:</strong></p>
+        <p>\( f(x) = x^2 \) to \( f(x) = (x - 3)^2 + 2 \)</p>
+        <div class="answer-box" data-option="A" onclick="checkAnswer(24, 'A')">A. Translation in the x direction by -3 and in the y direction by +2</div>
+        <div class="answer-box" data-option="B" onclick="checkAnswer(24, 'B')">B. Translation in the x direction by +3 and in the y direction by +2</div>
+        <div class="answer-box" data-option="C" onclick="checkAnswer(24, 'C')">C. Translation in the x direction by -3 and in the y direction by -2</div>
+        <div class="answer-box" data-option="D" onclick="checkAnswer(24, 'D')">D. Translation in the x direction by +3 and in the y direction by -2</div>
+        <div id="feedback24" class="feedback"></div>
+        <button class="toggle-solution" onclick="toggleSolution(24)">Show Solution</button>
+        <div id="solution24" class="solution-box" style="display: none;">
+            <p><strong>Solution:</strong></p>
+            <ol>
+                <li>Identify the function \( f(x) = x^2 \) and the transformed function \( f(x) = (x - 3)^2 + 2 \).</li>
+                <li>The transformation involves a shift. To find the shift, compare the original function to the transformed one. The term \( (x - 3) \) indicates a shift in the x direction, and the \( +2 \) indicates a shift in the y direction.</li>
+                <li>Specifically, \( (x - 3) \) represents a shift 3 units to the right (positive x direction), and \( +2 \) represents a shift 2 units up (positive y direction).</li>
+                <li>Therefore, the transformation is a translation in the x direction by +3 and in the y direction by +2. The correct answer is B.</li>
+            </ol>
+        </div>
+
+        <div>
+            <br><h2>Partial Fractions</h2>
+            <p>Partial fraction decomposition is a method used to express a rational function as a sum of simpler fractions. This technique is particularly useful in simplifying algebraic expressions and making them more manageable.</p>
+        
+            <p><strong>For example:</strong> A rational function like \( f(x) = \frac{2x + 3}{(x-1)(x+2)} \) can be expressed as the sum of two simpler fractions, making it easier to manipulate algebraically.</p>
+            <p>In this case, it can be written as: 
+                \[ f(x) = \frac{A}{x - 1} + \frac{B}{x + 2} \]
+                where \( A \) and \( B \) are constants to be determined.
+            </p>
+        
+            <br><h3>Step-by-Step Guide to Decomposing Rational Functions</h3>
+            <p>Follow these steps to break down a rational function into partial fractions:</p>
+            
+            <ol>
+                <li>
+                    <strong>Factorise the denominator:</strong> Factorise the denominator into linear terms.
+                    <br>For example, for the rational function 
+                    \[ \frac{2x + 1}{x^2 - 3x + 2} \]
+                    factor the denominator 
+                    \[ x^2 - 3x + 2 \]
+                    into 
+                    \[ (x - 1)(x - 2) \]
+                </li>
+                
+                <li>
+                    <strong>Set up the partial fractions:</strong> For each factor in the denominator, write a fraction with an unknown numerator.
+                    <br>Example: For 
+                    \[ f(x) = \frac{2x + 1}{(x - 1)(x - 2)} \]
+                    we decompose it as:
+                    \[ f(x) = \frac{A}{x - 1} + \frac{B}{x - 2} \]
+                    where \( A \) and \( B \) are constants we need to solve for.
+                </li>
+                
+                <li>
+                    <strong>Multiply through by the denominator:</strong> To eliminate the fractions, multiply both sides of the equation by the common denominator. This allows you to work with simpler equations without fractions.
+                    <br>Start with the decomposed form:
+                    \[
+                    \frac{2x + 1}{(x - 1)(x - 2)} = \frac{A}{x - 1} + \frac{B}{x - 2}
+                    \]
+                    <br>Since all terms now have the common denominator \((x - 1)(x - 2)\), you can combine the fractions:
+                    \[
+                    \frac{A(x - 2) + B(x - 1)}{(x - 1)(x - 2)}
+                    \]
+                    <br>The equation with the common denominator is:
+                    \[
+                    \frac{2x + 1}{(x - 1)(x - 2)} = \frac{A(x - 2) + B(x - 1)}{(x - 1)(x - 2)}
+                    \]
+                    <br>Because the denominators on both sides of the equation are the same, you can ignore the denominators and focus only on the numerators:
+                    \[
+                    2x + 1 = A(x - 2) + B(x - 1)
+                    \]
+                </li>
+                
+                
+                
+                
+                
+                <li>
+                    <strong>Expand and group terms:</strong> Expand the right-hand side and group terms by powers of \( x \).
+                    <br>In this example, expand: 
+                    \[ A(x - 2) + B(x - 1) \]
+                    which becomes 
+                    \[ Ax - 2A + Bx - B \]
+                </li>
+                
+                <li>
+                    <strong>Set up equations for coefficients:</strong> Compare the coefficients of the corresponding powers of \( x \) from both sides of the equation to form simultaneous equations.
+                    <br>For example, if the left-hand side is 
+                    \[ (2x + 1) \]
+                    compare the coefficients of \( x \) and the constant terms from both sides:
+                    <br>For \( x \): 
+                    \[ A + B = 2 \]
+                    <br>For constants: 
+                    \[ -2A - B = 1 \]
+                </li>
+                
+                <li>
+                    <strong>Solve for constants:</strong> Solve the simultaneous equations to find the values of \( A \) and \( B \).
+                    <br>In this example, solving 
+                    \[ A + B = 2 \]
+                    and 
+                    \[ -2A - B = 1 \]
+                    gives 
+                    \[ A = 1 \]
+                    and 
+                    \[ B = 1 \]
+                </li>
+                
+                <li>
+                    <strong>Write the final decomposition:</strong> Substitute the constants back into the partial fractions.
+                    <br>So, 
+                    \[ \frac{2x + 1}{(x - 1)(x - 2)} = \frac{1}{x - 1} + \frac{1}{x - 2} \]
+                </li>
+            </ol>
+            <div class="question-box" data-question="25">
+                <p>Try this exam-style question for yourself!</p>
+                <p><strong>Decompose the following rational function into partial fractions:</strong></p>
+                <p>\( \frac{3x}{(x + 1)(x - 2)} \)</p>
+                <div class="answer-box" data-option="A" onclick="checkAnswer(25, 'A')">A. \( \frac{2}{x - 2} + \frac{1}{x + 1} \)</div>
+                <div class="answer-box" data-option="B" onclick="checkAnswer(25, 'B')">B. \( \frac{1}{x - 2} + \frac{2}{x + 1} \)</div>
+                <div class="answer-box" data-option="C" onclick="checkAnswer(25, 'C')">C. \( \frac{3}{x - 2} - \frac{3}{x + 1} \)</div>
+                <div class="answer-box" data-option="D" onclick="checkAnswer(25, 'D')">D. \( \frac{2}{x + 1} - \frac{1}{x - 2} \)</div>
+                <div id="feedback25" class="feedback"></div>
+                <button class="toggle-solution" onclick="toggleSolution(25)">Show Solution</button>
+                <div id="solution25" class="solution-box" style="display: none;">
+                    <p><strong>Solution:</strong></p>
+                    <ol>
+                        <li>Identify the function to decompose: \( \frac{3x}{(x + 1)(x - 2)} \).</li>
+                        <li>Set up the partial fractions: Decompose the function into:
+                            \[
+                            \frac{3x}{(x + 1)(x - 2)} = \frac{A}{x - 2} + \frac{B}{x + 1}
+                            \]
+                        </li>
+                        <li>Multiply through by the denominator \((x + 1)(x - 2)\) to eliminate the fractions:
+                            \[
+                            3x = A(x + 1) + B(x - 2)
+                            \]
+                        </li>
+                        <li>Expand and simplify:
+                            \[
+                            A(x + 1) + B(x - 2) = Ax + A + Bx - 2B
+                            \]
+                            Which simplifies to:
+                            \[
+                            (A + B)x + (A - 2B)
+                            \]
+                        </li>
+                        <li>Compare coefficients from both sides of the equation:
+                            \[
+                            3x = (A + B)x + (A - 2B)
+                            \]
+                            For the coefficients of \(x\):
+                            \[
+                            A + B = 3
+                            \]
+                            And for the constant terms:
+                            \[
+                            A - 2B = 0
+                            \]
+                        </li>
+                        <li>Solve the system of equations:
+                            \[
+                            A + B = 3
+                            \]
+                            \[
+                            A - 2B = 0
+                            \]
+                            Solving these equations gives \( A = 2 \) and \( B = 1 \).
+                        </li>
+                        <li>Write the final decomposition:
+                            \[
+                            \frac{3x}{(x + 1)(x - 2)} = \frac{2}{x - 2} + \frac{1}{x + 1}
+                            \]
+                            The correct answer is A.
+                        </li>
+                    </ol>
+                </div>
+           
+              
+
+
+            <p><strong>Another example:</strong> A rational function like \( f(x) = \frac{4x + 5}{(x - 1)^2(x + 2)} \) can be expressed as the sum of simpler fractions, making it easier to manipulate algebraically.</p>
+            <p>In this case, it can be written as:
+                \[ f(x) = \frac{A}{x - 1} + \frac{B}{(x - 1)^2} + \frac{C}{x + 2} \]
+                where \( A \), \( B \), and \( C \) are constants to be determined.
+            </p>
+        
+            <br><h3>Step-by-Step Guide to Decomposing Rational Functions with Repeated Linear Factors</h3>
+            <p>Follow these steps to break down a rational function into partial fractions when the denominator includes repeated linear factors:</p>
+        
+            <ol>
+                <li>
+                    <strong>Factorise the denominator:</strong> Factorise the denominator into linear terms, including any repeated factors.
+                    <br>For example, for the rational function
+                    \[ \frac{4x + 5}{(x - 1)^2(x + 2)} \]
+                    the denominator is already factored into
+                    \[ (x - 1)^2(x + 2) \]
+                </li>
+        
+                <li>
+                    <strong>Set up the partial fractions:</strong> For each factor, including repeated factors, write a fraction with an unknown numerator.
+                    <br>Example: For
+                    \[ f(x) = \frac{4x + 5}{(x - 1)^2(x + 2)} \]
+                    decompose it as:
+                    \[ f(x) = \frac{A}{x - 1} + \frac{B}{(x - 1)^2} + \frac{C}{x + 2} \]
+                    where \( A \), \( B \), and \( C \) are constants we need to solve for.
+                    <br><em>Note:</em> When you have a repeated factor like \( (x - 1)^2 \) in the denominator, you need to include separate terms for each power of that factor. So, for \( (x - 1)^2 \), you use \(\frac{A}{x - 1}\) and \(\frac{B}{(x - 1)^2}\) to account for both parts. This way, you capture the complete effect of the repeated factor in the decomposition.
+                </li>
+                
+                
+        
+                <li>
+                    <strong>Multiply through by the denominator:</strong> To eliminate the fractions, multiply both sides of the equation by the common denominator. This allows you to work with simpler equations without fractions.
+                    <br>
+                    Start with the decomposed form:
+                    \[
+                    \frac{4x + 5}{(x - 1)^2(x + 2)} = \frac{A}{x - 1} + \frac{B}{(x - 1)^2} + \frac{C}{x + 2}
+                    \]
+                    <br>
+                    By adding the fractions on the right side, you get:
+                    \[
+                    \frac{A(x - 1)^2(x + 2) + B(x-1)(x + 2) + C(x - 1)(x - 1)^2}{(x - 1)(x - 1)^2(x + 2)}
+                    \]
+                    <br>
+                    A factor of \((x-1)\) cancels out from every term on the right hand side, leaving you with:
+                    \[
+                    \frac{4x + 5}{(x - 1)^2(x + 2)} = \frac{A(x - 1)(x + 2) + B(x + 2) + C(x - 1)^2}{(x - 1)^2(x + 2)}
+                    \]
+                    <br>
+                    Since the denominators on both sides are the same, you can focus only on the numerators:
+                    \[
+                    4x + 5 = A(x - 1)(x + 2) + B(x + 2) + C(x - 1)^2
+                    \]
+                </li>
+        
+                <li>
+                    <strong>Expand and group terms:</strong> Expand the right-hand side and group terms by powers of \( x \).
+                    <br>In this example, expand:
+                    \[
+                    A(x - 1)(x + 2) + B(x + 2) + C(x - 1)^2
+                    \]
+                    which becomes
+                    \[
+                    A(x^2 + x - 2) + B(x + 2) + C(x^2 - 2x + 1)
+                    \]
+                    <br>This simplifies to
+                    \[
+                    (A + C)x^2 + (A - 2C + B)x + (-2A + 2B + C)
+                    \]
+                </li>
+        
+                <li>
+                    <strong>Set up equations for coefficients:</strong> Compare the coefficients of the corresponding powers of \( x \) from both sides of the equation to form simultaneous equations.
+                    <br>For example, if the left-hand side is
+                    \[
+                    4x + 5
+                    \]
+                    compare the coefficients of \( x^2 \), \( x \), and the constant terms from both sides:
+                    <br>For \( x^2 \):
+                    \[
+                    A + C = 0
+                    \]
+                    <br>For \( x \):
+                    \[
+                    A - 2C + B = 4
+                    \]
+                    <br>For constants:
+                    \[
+                    -2A + 2B + C = 5
+                    \]
+                </li>
+        
+                <li>
+                    <strong>Solve for constants:</strong> Solve the simultaneous equations to find the values of \( A \), \( B \), and \( C \).
+                    <br>In this example, solving
+                    \[
+                    A + C = 0
+                    \]
+                    \[
+                    A - 2C + B = 4
+                    \]
+                    and
+                    \[
+                    -2A + 2B + C = 5
+                    \]
+                    gives
+                    \[
+                    A = 1
+                    \]
+                    \[
+                    B = 5
+                    \]
+                    \[
+                    C = -1
+                    \]
+                </li>
+        
+                <li>
+                    <strong>Write the final decomposition:</strong> Substitute the constants back into the partial fractions.
+                    <br>So,
+                    \[
+                    \frac{4x + 5}{(x - 1)^2(x + 2)} = \frac{1}{x - 1} + \frac{5}{(x - 1)^2} - \frac{1}{x + 2}
+                    \]
+                </li>
+            </ol>
+            <div class="question-box" data-question="26">
+                <p>Try this exam-style question for yourself!</p>
+                <p><strong>Decompose the following rational function into partial fractions:</strong></p>
+                <p>
+                    \[
+                    \frac{4x + 13}{(x - 2)^2 (x + 1)}
+                    \]
+                </p>
+                <div class="answer-box" data-option="A" onclick="checkAnswer(26, 'A')">A. \(\frac{1}{x + 1} - \frac{1}{x - 2} + \frac{7}{(x - 2)^2}\)</div>
+                <div class="answer-box" data-option="B" onclick="checkAnswer(26, 'B')">B. \(\frac{2}{x + 1} - \frac{3}{x - 2} + \frac{4}{(x - 2)^2}\)</div>
+                <div class="answer-box" data-option="C" onclick="checkAnswer(26, 'C')">C. \(\frac{3}{x + 1} - \frac{5}{x - 2} + \frac{2}{(x - 2)^2}\)</div>
+                <div class="answer-box" data-option="D" onclick="checkAnswer(26, 'D')">D. \(\frac{4}{x + 1} - \frac{6}{x - 2} + \frac{5}{(x - 2)^2}\)</div>
+                <div id="feedback26" class="feedback"></div>
+                <button class="toggle-solution" onclick="toggleSolution(26)">Show Solution</button>
+                <div id="solution26" class="solution-box" style="display: none;">
+                    <p><strong>Solution:</strong></p>
+                    <ol>
+                        <li>Start with the partial fraction decomposition setup:</li>
+                        <p>
+                            \[
+                            \frac{4x + 13}{(x - 2)^2 (x + 1)} = \frac{A}{x - 2} + \frac{B}{(x - 2)^2} + \frac{C}{x + 1}
+                            \]
+                        </p>
+                        <li>Multiply through by the common denominator \((x - 2)^2 (x + 1)\) to clear the fractions:</li>
+                        <p>
+                            \[
+                            4x + 13 = A(x - 2)(x + 1) + B(x + 1) + C(x - 2)^2
+                            \]
+                        </p>
+                        <li>Expand and simplify:</li>
+                        <p>
+                            Expand \( A(x - 2)(x + 1) \):
+                            \[
+                            A(x^2 - x - 2)
+                            \]
+                            Expand \( C(x - 2)^2 \):
+                            \[
+                            C(x^2 - 4x + 4)
+                            \]
+                            Combine everything:
+                            \[
+                            4x + 13 = A(x^2 - x - 2) + B(x + 1) + C(x^2 - 4x + 4)
+                            \]
+                            \[
+                            = (A + C)x^2 + (-A - 4C + B)x + (-2A + B + 4C)
+                            \]
+                        </p>
+                        <li>Equate coefficients with \(4x + 13\):</li>
+                        <p>
+                            Comparing coefficients:
+                            \[
+                            A + C = 0
+                            \]
+                            \[
+                            -A - 4C + B = 4
+                            \]
+                            \[
+                            -2A + B + 4C = 13
+                            \]
+                        </p>
+                        <li>Solve the system of equations:</li>
+                        <p>
+                            From \(A + C = 0\), we have \(C = -A\).
+                            Substitute \(C = -A\) into the other equations:
+                            \[
+                            -A - 4(-A) + B = 4 \Rightarrow 3A + B = 4
+                            \]
+                            \[
+                            -2A + B + 4(-A) = 13 \Rightarrow -6A + B = 13
+                            \]
+                            Solving these gives:
+                            \[
+                            A = -1, \quad B = 7, \quad C = 1
+                            \]
+                        </p>
+                        <li>Write the final partial fractions decomposition:</li>
+                        <p>
+                            \[
+                            \frac{4x + 13}{(x - 2)^2 (x + 1)} = \frac{1}{x + 1} - \frac{1}{x - 2} + \frac{7}{(x - 2)^2}
+                            \]
+                        </p>
+                    </ol>
+                </div>
+                
+
+            </div>
+            
+            
+            
+            <div class="section">
+                <h2>Use of Functions in Modelling</h2>
+                <p>Functions are widely used in various fields to create models that represent real-world situations. These models can help predict outcomes, understand relationships between variables, and make informed decisions. Below are examples of different types of models:</p>
+            
+                <h3>1. Linear Models</h3>
+                <p>Linear models describe a relationship between two variables where the change in one variable is proportional to the change in another. These models are often used to predict values based on a linear relationship.</p>
+                <p><strong>Example:</strong> Suppose the cost of hiring a car is £30 per day plus a one-time fee of £50. The total cost \( C \) for \( d \) days can be represented by the linear function:</p>
+                <p>\[
+                C(d) = 30d + 50
+                \]</p>
+                <p><strong>Exam-Style Question:</strong></p>
+                <p><strong>Part (a):</strong> Create a linear model for the total cost of hiring a car if the cost per day is £25 and the one-time fee is £40.</p>
+                <p><strong>Part (b):</strong> Calculate the total cost for 5 days using the model you created.</p>
+                <p><strong>Part (c):</strong> Discuss a limitation of this model in a real-world context.</p>
+                <div class="solution">
+                    <p><strong>Solution:</strong></p>
+                    <ol>
+                        <li><strong>Part (a):</strong> To create the linear model, use the formula for total cost \( C \) where \( d \) is the number of days:
+                            <p>\[
+                            C(d) = \text{(Cost per day)} \times d + \text{(One-time fee)}
+                            \]</p>
+                            Given that the cost per day is £25 and the one-time fee is £40, the model is:
+                            <p>\[
+                            C(d) = 25d + 40
+                            \]</p>
+                        </li>
+                        <li><strong>Part (b):</strong> To find the total cost for 5 days, substitute \( d = 5 \) into the model:
+                            <p>\[
+                            C(5) = 25 \times 5 + 40
+                            \]</p>
+                            Calculate:
+                            <p>\[
+                            C(5) = 125 + 40 = £165
+                            \]</p>
+                        </li>
+                        <li><strong>Part (c):</strong> A limitation of this model is that it does not account for possible discounts for long-term rentals or additional charges for extra services. It assumes a constant rate of cost per day without considering real-world variables such as promotions or additional fees.</li>
+                    </ol>
+                </div><br>
+            
+                <h3>2. Polynomial Models</h3>
+                <p>Polynomial models involve functions where the relationship between variables is represented by a polynomial. These models can describe more complex relationships than linear models and are useful for data that show curves or varying rates of change.</p>
+                <p><strong>Example:</strong> A company wants to model the profit \( P \) from selling \( x \) units of a product. The profit function can be represented as:</p>
+                <p>\[
+                P(x) = -2x^2 + 30x - 50
+                \]</p>
+                <p><strong>Exam-Style Question:</strong></p>
+                
+                <p><strong>Part (a):</strong> Calculate the profit when 10 units are sold using the model you created.</p>
+                <p><strong>Part (b):</strong> Discuss a limitation of this polynomial model in a real-world context.</p>
+                <div class="solution">
+                    <p><strong>Solution:</strong></p>
+                    <ul>
+                       
+                        <li><strong>Part (a):</strong> To find the profit when 10 units are sold, substitute \( x = 10 \) into the model:
+                            <p>\[
+                            P(10) = -10^2 + 20 \times 10 - 100
+                            \]</p>
+                            Calculate:
+                            <p>\[
+                            P(10) = -100 + 200 - 100 = £0
+                            \]</p>
+                        </li>
+                        <li><strong>Part (b):</strong> A limitation of this model is that it assumes profit decreases quadratically after a certain number of units. In reality, factors such as market saturation or changes in production costs might affect the profit differently, and the model may not accurately represent these real-world complexities.</li>
+                    </ul>
+                </div>
+            </div><br>
+             
+            <h3>Understanding Modulus Functions</h3> <p>In A-Level mathematics, the modulus function, denoted as \( |f(x)| \), 
+                plays a crucial role in solving equations and inequalities where the output must be non-negative. The modulus function can be understood as follows:</p> <p>For a function \( f(x) \), the modulus function \( |f(x)| \) is defined as:</p> <p>\[ |f(x)| = \begin{cases} f(x) & \text{if } f(x) \geq 0 \\ -f(x) & \text{if } f(x) < 0 \end{cases} \]</p> <p>This means that \( |f(x)| \) outputs the absolute value of \( f(x) \). If \( f(x) \) is positive or zero, \( |f(x)| \) is just \( f(x) \). If \( f(x) \) is negative, \( |f(x)| \) is the positive version of \( f(x) \). This is particularly useful for modeling scenarios where only the magnitude of a quantity matters, regardless of its direction or sign.</p> <p><strong>Example:</strong> Consider the modulus function \( |x - 4| \). This function will produce the same output as \( x - 4 \) when \( x \geq 4 \), but will produce \( 4 - x \) when \( x < 4 \). Therefore:</p> <ul> <li>For \( x \geq 4 \), \( |x - 4| = x - 4 \)</li> <li>For \( x < 4 \), \( |x - 4| = 4 - x \)</li> </ul> <p>This understanding helps in solving equations and inequalities involving modulus functions by breaking them into simpler
+                 linear equations or inequalities based on the definition of the modulus function.</p>
+            
+            <p>Modulus functions can be used to solve equations where the expression inside the modulus could be positive or negative. To solve such equations, you need to consider both cases separately.</p>
+            
+            <h3>Solving Modulus Equations</h3>
+            <p>To solve an equation involving a modulus, follow these steps:</p>
+            <ol>
+                <li>Isolate the modulus on one side of the equation.</li>
+                <li>Set up two separate equations based on the definition of the modulus:</li>
+                <ul>
+                    <li>One equation where the expression inside the modulus is equal to the right-hand side of the equation.</li>
+                    <li>Another equation where the expression inside the modulus is equal to the negative of the right-hand side of the equation.</li>
+                </ul>
+                <li>Solve each of the equations separately.</li>
+                <li>Check all solutions in the original equation to ensure they are valid.</li>
+            </ol>
+            
+            <p><strong>Example:</strong> Solve the equation \( |x - 3| = 5 \).</p>
+            <p><strong>Solution:</strong></p>
+            <ol>
+                <li>Isolate the modulus: \( |x - 3| = 5 \).</li>
+                <li>Set up the two cases:
+                    <ul>
+                        <li>Case 1: \( x - 3 = 5 \)</li>
+                        <li>Case 2: \( x - 3 = -5 \)</li>
+                    </ul>
+                </li>
+                <li>Solve each case:
+                    <ul>
+                        <li>For Case 1: \( x - 3 = 5 \) ⟹ \( x = 8 \)</li>
+                        <li>For Case 2: \( x - 3 = -5 \) ⟹ \( x = -2 \)</li>
+                    </ul>
+                </li>
+                <li>The solutions are \( x = 8 \) and \( x = -2 \). Check both solutions in the original equation to confirm they are valid.</li>
+            </ol>
+            <div class="question-box" data-question="27">
+                <p>Try this exam-style question for yourself!</p>
+                <p><strong>Solve the modulus inequality:</strong></p>
+                <p>
+                    \[
+                    |x - 4| > 2
+                    \]
+                </p>
+                <div class="answer-box" data-option="A" onclick="checkAnswer(27, 'A')">A. \( x < 2 \text{ or } x > 6 \)</div>
+                <div class="answer-box" data-option="B" onclick="checkAnswer(27, 'B')">B. \( x < 6 \text{ or } x > 2 \)</div>
+                <div class="answer-box" data-option="C" onclick="checkAnswer(27, 'C')">C. \( x < 2 \text{ or } x > 8 \)</div>
+                <div class="answer-box" data-option="D" onclick="checkAnswer(27, 'D')">D. \( x < 6 \text{ or } x > 4 \)</div>
+                <div id="feedback27" class="feedback"></div>
+                <button class="toggle-solution" onclick="toggleSolution(27)">Show Solution</button>
+                <div id="solution27" class="solution-box" style="display: none;">
+                    <p><strong>Solution:</strong></p>
+                    <ol>
+                        <li>Start with the modulus inequality: \( |x - 4| > 2 \).</li>
+                        <li>Break it into two separate inequalities:
+                            <ul>
+                                <li>Case 1: \( x - 4 > 2 \)</li>
+                                <li>Case 2: \( -(x - 4) > 2 \), which simplifies to \( x - 4 < -2 \)</li>
+                                <li><strong>Note:</strong>Remember, when solving inequalities, if you multiply or divide by a negative number, you must flip the inequality sign.</li>
+
+                            </ul>
+                        </li>
+                        <li>Solve each case:
+                            <ul>
+                                <li>For Case 1: \( x - 4 > 2 \)
+                                    <ul>
+                                        <li>Add 4 to both sides: \( x > 6 \)</li>
+                                    </ul>
+                                </li>
+                                <li>For Case 2: \( x - 4 < -2 \)
+                                    <ul>
+                                        <li>Add 4 to both sides: \( x < 2 \)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Combine the results from both cases: \( x < 2 \text{ or } x > 6 \).</li>
+                        <li>So, the solution is \( x < 2 \text{ or } x > 6 \). Check the solution by substituting values from both ranges back into the original inequality to confirm they satisfy it.</li>
+                    </ol>
+                </div>
+            </div>
+            
+            
+            
+            
+            <p><strong>Graphical Representation:</strong> Modulus functions can be visualized using Desmos graphs. Here is a basic example:</p>
+            <iframe src="https://www.desmos.com/calculator/r7k6hnyar7?embed" width="600" height="400" frameborder="0"></iframe>
+            
+            <h3>Solving Modulus Inequalities</h3>
+            <p>To solve inequalities involving modulus functions, follow similar steps as for equations, but focus on the range of values that satisfy the inequality. For example, to solve \( |x - 3| < 5 \), you would set up the inequality as:</p>
+            <p>\[-5 < x - 3 < 5\]</p>
+            <p>Then solve the compound inequality:</p>
+            <p>\[-5 < x - 3 < 5\]</p>
+            <p>Add 3 to all parts:</p>
+            <p>\[-2 < x < 8\]</p>
+            <p>So, the solution is \( -2 < x < 8 \).</p>
+            
+            <h3>Solving Modulus Equations by Squaring Both Sides</h3>
+            <p>When solving equations that involve modulus functions, you might need to square both sides to get rid of the modulus. Here’s how to do it:</p>
+            <p>For example, consider the equation \( |x - 2| = x + 1 \). Follow these steps:</p>
+            <p>1. **Square Both Sides**: To eliminate the absolute value, square both sides of the equation:</p>
+            <p>\[(|x - 2|)^2 = (x + 1)^2\]</p>
+            <p>This simplifies to:</p>
+            <p>\[(x - 2)^2 = (x + 1)^2\]</p>
+            <p>2. **Expand and Simplify**: Next, expand both sides:</p>
+            <p>\[x^2 - 4x + 4 = x^2 + 2x + 1\]</p>
+            <p>Subtract \(x^2\) from both sides and simplify:</p>
+            <p>\[-4x + 4 = 2x + 1\]</p>
+            <p>Combine like terms:</p>
+            <p>\[-6x = -3\]</p>
+            <p>So:</p>
+            <p>\[x = \frac{1}{2}\]</p>
+            <p>3. **Check Your Solution**: Always substitute your solution back into the original equation to make sure it works:</p>
+            <p>For \( x = \frac{1}{2} \), check:</p>
+            <p>\[|\frac{1}{2} - 2| = \frac{1}{2} + 1\]</p>
+            <p>\[|\frac{-3}{2}| = \frac{3}{2}\]</p>
+            <p>This is true, so \( x = \frac{1}{2} \) is a valid solution.</p>
+            <p>**Why Square Both Sides?**: Squaring both sides helps to remove the modulus function, which simplifies the equation. However, squaring can sometimes introduce extra solutions, so it’s important to check each solution in the original equation.</p>
+            
+            <p><strong>Note:</strong> For more details on drawing and interpreting modulus graphs, refer to the graphs of functions section.</p>
+            
+            
+        </div>
+        
+        
+        
+      
+
+
+
+
+    </div>
+    
+
+
+                    
+                  
+                    
                 </div>
                 
                 <div class="review-box">
@@ -181,6 +1155,9 @@
                         <li>Inverse functions</li>
                         <li>Transformations of functions</li>
                         <li>Examples and practice problems</li>
+                        <li>Decomposition of functions (using partial fractions, factorisation, comparing coefficients)</li>
+                        <li>Use of functions in modelling</li>
+                        <li>The modulus</li>
                     </ul>
                 </div>
 

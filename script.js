@@ -99,6 +99,42 @@ function checkAnswer(questionNumber, option) {
             correctOption = 'B'; 
             feedbackMessage = 'Correct!';
             break;
+        case 18:
+            correctOption = 'A'; 
+            feedbackMessage = 'Correct!';
+            break;
+        case 19:
+                correctOption = 'B'; 
+                feedbackMessage = 'Correct!';
+                break;
+        case 20:
+                correctOption = 'D'; 
+                feedbackMessage = 'Correct!';
+                break;
+        case 21:
+                correctOption = 'A'; 
+                feedbackMessage = 'Correct!';
+                break;
+        case 22:
+                correctOption = 'A'; 
+                feedbackMessage = 'Correct!';
+                break;
+        case 23:
+                correctOption = 'C'; 
+                feedbackMessage = 'Correct!';
+                break;
+        case 24:
+                correctOption = 'B'; 
+                feedbackMessage = 'Correct!';
+                break;
+        case 25:
+                correctOption = 'A'; 
+                feedbackMessage = 'Correct!';
+                break;
+        case 26:
+                correctOption = 'A'; 
+                feedbackMessage = 'Correct!';
+                break;
         default:
             correctOption = '';
             feedbackMessage = 'Incorrect. Try again.';

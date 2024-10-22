@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Home - A-Level Maths Course</title>
+    
 </head>
 <body>
     <!-- Header Navigation -->
@@ -33,10 +34,15 @@
         <div class="split-container">
             <!-- Left Side: Course Content -->
             <section class="course-section">
-                
-
                 <section class="course-modules">
-                    <h2><u>Course Modules</u></h2>
+                    <section class="premium-notes" id="premium-notes">
+                        <div class="icon">✨</div>
+                        <h2><u>Premium Notes</u></h2>
+                        <p class="description">Explore detailed interactive notes organized by module, featuring interactive questions and graphs.</p>
+                        <p class="pros">Pros: Comprehensive coverage, interactive learning experience, detailed explanations.</p>
+                        <p class="price">£9.99</p>
+                        <a href="#" class="buy-now">Buy Now</a>
+                    </section>
 
                     <div class="module-category">
                         <h3>Pure Mathematics</h3>
@@ -130,5 +136,12 @@
             </section>
         </div>
     </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const premiumNotes = document.getElementById('premium-notes');
+            premiumNotes.classList.add('show');
+        });
+    </script>
 </body>
 </html>

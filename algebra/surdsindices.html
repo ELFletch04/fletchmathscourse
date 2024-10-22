@@ -82,8 +82,11 @@
         <section class="module-content textbox">
             
             <div class="content-box">
-               <div id="surdsandindices"><h2>Surds and Indices</h2>
-                <a  class="reveal-method-btn skip" href="#indices_section" style="margin-left: 70%;" onclick="smoothScroll(event)">Skip to indices</a></div>
+                <div id="surdsandindices">
+                    <h2>Surds and Indices</h2>
+                    <a class="skip" href="#indices_section" onclick="smoothScroll(event)">Skip to indices</a>
+                </div>
+            </div>
                 
                 <div class="surd-info">
                     <h3>Understanding Surds</h3>
@@ -549,9 +552,9 @@
                                         <p>This might look quite daunting at first, but we can break it down into small steps to simplify the expression, using 
                                             the rules we've looked at. </p>
                                         <p>Firstly, let's <strong>rationalise</strong> the denominator.</p>
-                                        <p>\[{\frac{10 +5x -2x^{\frac{1}{2}}-x^\frac{3}{2}}{5-\sqrt{x}}} \times {\frac{5+\sqrt{x}}{5+\sqrt{x}}}=
-                                            {\frac{(10 +5x -2x^{\frac{1}{2}}-x^\frac{3}{2})(5+\sqrt{x})}{(5-\sqrt{x})(5+\sqrt{x})}}=
-                                            {\frac{(10 +5x -2x^{\frac{1}{2}}-x^\frac{3}{2})(5+\sqrt{x})}{25-x}}\]</p>
+                                        <p>\[{\frac{10 +5x -2x^{\frac{1}{2}}-x^\frac{3}{2}}{5-\sqrt{x}}} \times {\frac{5+\sqrt{x}}{5+\sqrt{x}}}\]=
+                                            \[{\frac{(10 +5x -2x^{\frac{1}{2}}-x^\frac{3}{2})(5+\sqrt{x})}{(5-\sqrt{x})(5+\sqrt{x})}}\]=
+                                            \[{\frac{(10 +5x -2x^{\frac{1}{2}}-x^\frac{3}{2})(5+\sqrt{x})}{25-x}}\]</p>
                                         <p>Now we have to handle the numerator. To expand these brackets, we should start by converting \(\sqrt{x}\) to \(x^{\frac{1}{2}}\), to
                                             ensure every term is in the same form.
                                             \[{\frac{(10 +5x -2x^{\frac{1}{2}}-x^\frac{3}{2})(5+x^{\frac{1}{2}})}{25-x}}\]</p>
@@ -561,38 +564,73 @@
                                                 
                                                     
                                                     <p>
-                                                        First, multiply each term in the first bracket by \(5\):
-                                                        \[
-                                                        (10 \cdot 5) + (5x \cdot 5) - (2x^{\frac{1}{2}} \cdot 5) - (x^{\frac{3}{2}} \cdot 5) \]
-                                                        <span style="color: orange;">\[=50 + 25x - 10x^{\frac{1}{2}} - 5x^{\frac{3}{2}}\]</span>  
-                                                        
-                                                        
-                                                    </p>
-                                                    <p>
-                                                        Next, multiply each term in the first bracket by \(x^{\frac{1}{2}}\):
-                                                        <p class="note">Note: Recall that you can add the powers when multiplying with the same base. An \(x\) with no power is just \(x^1\).</p>
-                                                        \[ (10 \cdot x^{\frac{1}{2}}) + (5x \cdot x^{\frac{1}{2}}) - (2x^{\frac{1}{2}} \cdot x^{\frac{1}{2}}) - (x^{\frac{3}{2}} \cdot x^{\frac{1}{2}})   \]
-                                                       <span style="color: green;"> \[ =10x^{\frac{1}{2}} + 5x^{\frac{3}{2}} - 2x - x^2\]</span>
-                                                       
-                                                      
-                                                    </p>
-                                                    Combine these results:
-                                                    <div style="margin-left: 30%;margin-top: 10px;margin-bottom: 10px;">
-                                                        <p>
-                                                      
-                                                     <p style="margin-left: 10%;"> <span style="color: orange;"> \( 50 + 25x - 10x^{\frac{1}{2}} - 5x^{\frac{3}{2}}\)</span>+ <span style="color: green;">\(10x^{\frac{1}{2}} + 5x^{\frac{3}{2}} - 2x - x^2\)</span> </p>
-                                                       = \(50 + (25x - 2x) + (-10x^{\frac{1}{2}} + 10x^{\frac{1}{2}}) + (-5x^{\frac{3}{2}} + 5x^{\frac{3}{2}}) - x^2 
-                                                       = 50 + 23x - x^2\)
-                                                         
-                                                     
-                                                    </p></div>
-                                                    
-                                                    <p>
-                                                        After expanding and combining like terms, the simplified expression is:
-                                                        \[
-                                                        \frac{50 + 23x - x^2}{25 - x}
-                                                        \]
-                                                    </p>
+    First, multiply each term in the first bracket by \(5\):
+</p>
+<p>
+    \[
+    (10 \cdot 5) + (5x \cdot 5) - (2x^{\frac{1}{2}} \cdot 5) - (x^{\frac{3}{2}} \cdot 5)
+    \]
+</p>
+<p>
+    <span style="color: orange;">
+        \[
+        =50 + 25x - 10x^{\frac{1}{2}} - 5x^{\frac{3}{2}}
+        \]
+    </span>
+</p>
+
+<p>
+    Next, multiply each term in the first bracket by \(x^{\frac{1}{2}}\):
+</p>
+<p class="note">
+    Note: Recall that you can add the powers when multiplying with the same base. An \(x\) with no power is just \(x^1\).
+</p>
+<p>
+    \[
+    (10 \cdot x^{\frac{1}{2}}) + (5x \cdot x^{\frac{1}{2}}) - (2x^{\frac{1}{2}} \cdot x^{\frac{1}{2}}) - (x^{\frac{3}{2}} \cdot x^{\frac{1}{2}})
+    \]
+</p>
+<p>
+    <span style="color: green;">
+        \[
+        =10x^{\frac{1}{2}} + 5x^{\frac{3}{2}} - 2x - x^2
+        \]
+    </span>
+</p>
+
+<p>
+    Combine these results:
+</p>
+<div style="margin-left: 0; margin-top: 10px; margin-bottom: 10px;">
+    <p>
+        <span style="color: orange;">
+            \( 50 + 25x - 10x^{\frac{1}{2}} - 5x^{\frac{3}{2}} \)
+        </span>
+        +
+        <span style="color: green;">
+            \(10x^{\frac{1}{2}} + 5x^{\frac{3}{2}} - 2x - x^2 \)
+        </span>
+    </p>
+    <p>
+        =
+        \[
+        50 + (25x - 2x) + (-10x^{\frac{1}{2}} + 10x^{\frac{1}{2}})\] + \[(-5x^{\frac{3}{2}} + 5x^{\frac{3}{2}}) - x^2\]
+        
+        =
+        \[
+        50 + 23x - x^2
+        \]
+    </p>
+</div>
+
+<p>
+    After expanding and combining like terms, the simplified expression is:
+</p>
+<p>
+    \[
+    \frac{50 + 23x - x^2}{25 - x}
+    \]
+</p>
                                                     <p>
                                                        Although it is not immediately obvious, you can actually simplify this further by factorising the numerator. Since we haven't covered quadratics in the course yet,
                                                        don't worry too much if you do not understand this next step, but you may be able to understand it using your knowledge from GCSE maths. </p>
