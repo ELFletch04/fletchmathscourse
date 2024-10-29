@@ -83,7 +83,7 @@
             <div class="content-box">
                 <div>
                     <div class="section">
-                        <h2>Graphs of Functions</h2>
+                        <h2>Graphical Representations of Functions</h2>
                         <p>Graphs of functions provide a visual representation of mathematical relationships. Understanding these graphs is essential for solving equations and interpreting algebraic solutions. Below are some key types of functions and their graphical characteristics.</p>
                 
                         <h3>1. Linear Functions</h3>
@@ -91,19 +91,40 @@
                         <p>\[
                         y = ax + b
                         \]</p>
-                        <p>Where \( a \) is the slope of the line and \( b \) is the y-intercept.</p>
-                        <p><strong>Example:</strong> The function \( y = 2x + 3 \) has a slope of 2 and a y-intercept of 3.</p>
-                        <iframe src="https://www.desmos.com/calculator/oqltvjbyid?embed" width="600" height="400" frameborder="0"></iframe>
+                        <p>Where \( a \) is the gradient of the line and \( b \) is the y-intercept.</p>
+                        <p><strong>Example:</strong> The function \( y = 2x + 3 \) has a gradient of 2 and a y-intercept of 3.</p>
+                        <iframe src="https://www.desmos.com/calculator/q2md3vtric?embed" width="600" height="400" frameborder="0"></iframe>
                 
                         <h3>2. Modulus Functions</h3>
-                        <p>Modulus functions use the absolute value of a linear function. They are represented by:</p>
-                        <p>\[
-                        y = |ax + b|
-                        \]</p>
-                        <p>The graph of a modulus function has a V-shape and reflects across the x-axis where the linear function crosses zero.</p>
-                        <p><strong>Example:</strong> The function \( y = |x - 2| \) reflects at \( x = 2 \).</p>
-                        <iframe src="https://www.desmos.com/calculator/cgxhfrskms?embed" width="600" height="400" frameborder="0"></iframe>
-                
+<p>Modulus functions use the absolute value of a linear function. They are represented by:</p>
+<p>\[
+y = |ax + b|
+\]</p>
+<p>The graph of a modulus function has a V-shape and reflects across the x-axis where the linear function crosses zero.</p>
+<p><strong>Example:</strong> The function \( y = |x - 2| \) reflects at \( x = 2 \).</p>
+<iframe src="https://www.desmos.com/calculator/d2ly2sndl2?embed" width="600" height="400" frameborder="0"></iframe>
+
+<h3>Step-by-Step Guide to Drawing Modulus Graphs</h3>
+<ol>
+    <li><strong>Identify the function:</strong> Start with the modulus function you want to graph, e.g., \( y = |2x - 4| \).</li>
+    <li><strong>Determine the critical point:</strong> Find where the expression inside the absolute value equals zero. Solve \( 2x - 4 = 0 \) to get \( x = 2 \).</li>
+    <li><strong>Evaluate function values:</strong> Choose points on either side of the critical point \( x = 2 \). Let's choose \( x = 0 \) and \( x = 4 \).</li>
+    <li><strong>Calculate corresponding \( y \)-values:</strong>
+        <ul>
+            <li>For \( x = 0 \): \( y = |2(0) - 4| = | - 4| = 4 \)</li>
+            <li>For \( x = 4 \): \( y = |2(4) - 4| = |8 - 4| = 4 \)</li>
+        </ul>
+    </li>
+    <li><strong>Plot the points:</strong> The points to plot are \( (0, 4) \) and \( (4, 4) \). The critical point is \( (2, 0) \).</li>
+    <li><strong>Draw the V-shape:</strong> Connect the points smoothly to form a V-shape that opens upwards, with the vertex at the critical point \( (2, 0) \).</li>
+   
+</ol>
+
+<h3>Example Graph</h3>
+<iframe src="https://www.desmos.com/calculator/8udqxhvbxd?embed" width="600" height="400" frameborder="0"></iframe>
+<h4>Note on Negative Absolute Value Functions</h4>
+<p>When the modulus function includes a negative sign, such as \( y = -|ax + b| \), the graph will form an upside-down V shape. This occurs because the negative sign inverts the values of the function, causing it to open downward instead of upward. The vertex of the upside-down V will be at the critical point, and the arms will extend downward as you move away from the vertex.</p>
+<iframe src="https://www.desmos.com/calculator/wmlgry6eko?embed" width="600" height="400" frameborder="0"></iframe>
                         <h3>3. Quadratic Functions (Brief Overview)</h3>
                         <p>Quadratic functions are polynomial functions of degree 2 and are briefly discussed here. They are represented by:</p>
                         <p>\[
@@ -121,25 +142,31 @@
                         \text{Horizontal Asymptote: } y = \frac{\text{leading coefficient of numerator}}{\text{leading coefficient of denominator}}
                         \]</p>
                         <p><strong>Example:</strong> For the function \( y = \frac{2x}{x - 1} \), the vertical asymptote is \( x = 1 \) and the horizontal asymptote is \( y = 2 \).</p>
-                        <iframe src="https://www.desmos.com/calculator/haazfwht6f?embed" width="600" height="400" frameborder="0"></iframe>
+                        <iframe src="https://www.desmos.com/calculator/jnvn24ztmj?embed" width="600" height="400" frameborder="0"></iframe>
                 
                         <h3>5. Proportional Relationships</h3>
                         <p>Proportional relationships are represented by direct or inverse proportions. The graph of a proportional relationship passes through the origin (for direct proportions) or has a hyperbolic shape (for inverse proportions).</p>
                         <p><strong>Direct Proportionality:</strong> \( y = kx \)</p>
                         <p><strong>Inverse Proportionality:</strong> \( y = \frac{k}{x} \)</p>
-                        <p><strong>Example:</strong> If \( y \) is directly proportional to \( x \) with \( k = 4 \), then \( y = 4x \). If \( y \) is inversely proportional to \( x \) with \( k = 12 \), then \( y = \frac{12}{x} \).</p>
-                        <iframe src="https://www.desmos.com/calculator/4x4e4s7u6j?embed" width="600" height="400" frameborder="0"></iframe>
+                        <p><strong>Example:</strong> If \( y \) is directly proportional to \( x \) with \( k = 4 \), then \( y = 4x \). If \( y \) is inversely proportional to \( x \) with \( k = 12 \), then \( y = \frac{12}{x} \). Here, the blue line represents \( y = 4x \) and the green curve represents \( y = \frac{12}{x} \). </p>
+                        <iframe src="https://www.desmos.com/calculator/wqddr7acbw?embed"" width="600" height="400" frameborder="0"></iframe>
                 
                         <h3>6. Intersection Points</h3>
-                        <p>Intersection points of graphs are solutions to equations where the graphs cross. To find these points:</p>
-                        <ul>
-                            <li>Graph the equations on the same set of axes.</li>
-                            <li>Identify the x-values where the graphs intersect.</li>
-                            <li>Substitute these x-values back into the equations to find corresponding y-values.</li>
-                        </ul>
-                        <p><strong>Example:</strong> To find the intersection of \( y = x^2 \) and \( y = x + 2 \), plot both functions and find the x-values where they intersect.</p>
-                        <iframe src="https://www.desmos.com/calculator/bijxgduz6b?embed" width="600" height="400" frameborder="0"></iframe>
-                    </div>
+<p>Intersection points of graphs represent the solutions to equations where the graphs cross each other. To find these points, follow these steps:</p>
+<ul>
+    <li><strong>Graph the equations:</strong> Plot both equations on the same set of axes.</li>
+    <li><strong>Identify intersection points:</strong> Look for the x-values where the graphs intersect.</li>
+    <li><strong>Calculate corresponding y-values:</strong> Substitute the identified x-values back into the original equations to find their corresponding y-values.</li>
+</ul>
+<p><strong>Example:</strong> To find the intersection of \( y = x^2 \) and \( y = x + 2 \), plot both functions on a graph. The points where they intersect are the solutions to the equations.</p>
+<iframe src="https://www.desmos.com/calculator/yn9m6kxrsm?embed" width="600" height="400" frameborder="0"></iframe>
+<p>In this example, the intersection points occur at \( x = -1 \) and \( x = 2 \). Substituting these values back into the equations gives the corresponding \( y \)-values as follows:</p>
+<ul>
+    <li>For \( x = -1 \): \( y = (-1)^2 = 1 \), so one intersection point is \((-1, 1)\).</li>
+    <li>For \( x = 2 \): \( y = 2 + 2 = 4 \), so the other intersection point is \((2, 4)\).</li>
+</ul>
+<p>By examining the graph, you will notice that the points of intersection correspond to the solutions of the simultaneous equations \( y = x^2 \) and \( y = x + 2 \). This demonstrates that the points of intersection are indeed the solutions to the simultaneous equations, and conversely, the solutions indicate where the graphs intersect.</p>
+
 
 
                 </div>
